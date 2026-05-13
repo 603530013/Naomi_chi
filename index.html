@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>一年級下學期 國語練習 ｜ 目錄</title>
+<style>
+  :root {
+    --pink: #ffd6e0;
+    --pink-dark: #e85a8a;
+    --blue: #cfe8ff;
+    --blue-dark: #1976d2;
+    --green: #c8e6c9;
+    --green-dark: #4caf50;
+    --yellow: #fff4c2;
+    --yellow-dark: #f5a623;
+    --purple: #e1d5f5;
+    --purple-dark: #7b3fa0;
+    --orange: #ffd9b3;
+    --orange-dark: #e67700;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "標楷體", "DFKai-SB", "BiauKai", "KaiTi", "微軟正黑體", "Microsoft JhengHei", serif;
+    margin: 0;
+    padding: 0;
+    background: #fefcf7;
+    color: #333;
+    min-height: 100vh;
+  }
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 20px;
+  }
+  header {
+    background: linear-gradient(135deg, #ffd6e0 0%, #cfe8ff 100%);
+    padding: 40px 24px;
+    text-align: center;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+  header h1 {
+    font-size: 2.6em;
+    margin: 0 0 12px 0;
+    color: var(--pink-dark);
+  }
+  header .subtitle {
+    font-size: 1.2em;
+    color: #666;
+    margin: 8px 0;
+  }
+  header .hint {
+    font-size: 1em;
+    color: #888;
+    margin-top: 16px;
+  }
+  .lesson-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 24px;
+  }
+  .lesson-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 28px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: block;
+    position: relative;
+    border: 3px solid transparent;
+    cursor: pointer;
+  }
+  .lesson-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  }
+  .lesson-card.ready {
+    border-color: var(--green-dark);
+    background: linear-gradient(180deg, #fff 0%, #f0fff4 100%);
+  }
+  .lesson-card.ready:hover {
+    border-color: var(--pink-dark);
+    background: linear-gradient(180deg, #fff 0%, #fff0f5 100%);
+  }
+  .lesson-card.coming-soon {
+    background: #f5f5f5;
+    color: #aaa;
+    cursor: not-allowed;
+  }
+  .lesson-card.coming-soon:hover {
+    transform: none;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  }
+  .lesson-number {
+    font-size: 1.1em;
+    color: var(--blue-dark);
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  .lesson-card.coming-soon .lesson-number {
+    color: #999;
+  }
+  .lesson-title {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: var(--pink-dark);
+    margin: 10px 0;
+    min-height: 1.4em;
+  }
+  .lesson-card.coming-soon .lesson-title {
+    color: #aaa;
+    font-style: italic;
+  }
+  .lesson-card.ready .lesson-title {
+    color: var(--pink-dark);
+  }
+  .lesson-status {
+    font-size: 0.95em;
+    color: #666;
+    margin-top: 12px;
+    padding: 4px 12px;
+    border-radius: 12px;
+    display: inline-block;
+  }
+  .lesson-card.ready .lesson-status {
+    background: var(--green);
+    color: #2e7d32;
+  }
+  .lesson-card.coming-soon .lesson-status {
+    background: #eee;
+    color: #999;
+  }
+  .decor {
+    font-size: 2em;
+    margin: 6px 0;
+  }
+  footer {
+    text-align: center;
+    padding: 24px;
+    color: #999;
+    font-size: 0.9em;
+    margin-top: 30px;
+  }
+  .progress-bar {
+    background: #fff;
+    border-radius: 12px;
+    padding: 14px 24px;
+    margin: 20px 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+  .progress-bar .label {
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 8px;
+  }
+  .progress-bar .bar {
+    height: 12px;
+    background: #f0f0f0;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--pink-dark), var(--yellow-dark));
+    width: 8.3%;
+    border-radius: 6px;
+    transition: width 0.4s;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <h1>一年級下學期　國語練習</h1>
+    <div class="subtitle">114 學年度</div>
+    <div class="hint">點選下方課程進入練習</div>
+  </header>
+
+  <div class="progress-bar">
+    <div class="label">已完成：<b>1</b> / 12 課</div>
+    <div class="bar"><div class="fill"></div></div>
+  </div>
+
+  <div class="lesson-grid">
+
+    <a class="lesson-card ready" href="Class1.html">
+      <div class="lesson-number">第 一 課</div>
+      <div class="lesson-title">春天來了</div>
+      <div class="lesson-status">✓ 開始練習</div>
+    </a>
+
+    <div class="lesson-card coming-soon">
+      <div class="lesson-number">第 二 課</div>
+      <div class="lesson-title">（製作中）</div>
+      <div class="lesson-status">尚未開放</div>
+    </div>
+
+    <div class="lesson-card coming-soon">
+      <div class="lesson-number">第 三 課</div>
+      <div class="lesson-title">（製作中）</div>
+      <div class="lesson-status">尚未開放</div>
+    </div>
+
+    <div class="lesson-card coming-soon">
+      <div class="lesson-number">第 四 課</div>
+      <div class="lesson-title">（製作中）</div>
+      <div class="lesson-status">尚未開放</div>
+    </div>
+
+    <div class="lesson-card coming-soon">
+      <div class="lesson-number">第 五 課</div>
+      <div class="lesson-title">（製作中）</div>
+      <div class="lesson-status">尚未開放</div>
+    </div>
+
+    <div class="lesson-card coming-soon">
+      <div class="lesson-number">第 六 課</div>
+      <div class="lesson-title">（製作中）</div>
+      <div class="lesson-status">尚未開放</div>
+    </div>
+
+    <div class="lesson-card coming-soon">
+      <div class="lesson-number">第 七 課</div>
+      <div class="lesson-title">（製作中）</div>
+      <div class="lesson-status">尚未開放</div>
+    </div>
+
+    <div class="lesson-card coming-soon">
+      <div class="lesson-number">第 八 課</div>
+      <div class="lesson-title">（製作中）</div>
+      <div class="lesson-status">尚未開放</div>
+    </div>
+
+    <div class="lesson-card coming-soon">
+      <div class="lesson-number">第 九 課</div>
+      <div class="lesson-title">（製作中）</div>
+      <div class="lesson-status">尚未開放</div>
+    </div>
+
+    <div class="lesson-card coming-soon">
+      <div class="lesson-number">第 十 課</div>
+      <div class="lesson-title">（製作中）</div>
+      <div class="lesson-status">尚未開放</div>
+    </div>
+
+    <div class="lesson-card coming-soon">
+      <div class="lesson-number">第 十一 課</div>
+      <div class="lesson-title">（製作中）</div>
+      <div class="lesson-status">尚未開放</div>
+    </div>
+
+    <div class="lesson-card coming-soon">
+      <div class="lesson-number">第 十二 課</div>
+      <div class="lesson-title">（製作中）</div>
+      <div class="lesson-status">尚未開放</div>
+    </div>
+
+  </div>
+
+  <footer>
+    114 學年度下學期　一年級國語自學練習
+  </footer>
+
+</div>
+</body>
+</html>
