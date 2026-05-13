@@ -3,26 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>第一課 春天來了 ｜ 一年級下學期國語練習</title>
+<title>一年級下學期 國語練習 ｜ 目錄</title>
 <style>
   :root {
     --pink: #ffd6e0;
     --pink-dark: #e85a8a;
+    --blue: #cfe8ff;
+    --blue-dark: #1976d2;
     --green: #c8e6c9;
     --green-dark: #4caf50;
     --yellow: #fff4c2;
     --yellow-dark: #f5a623;
-    --blue: #cfe8ff;
-    --blue-dark: #1976d2;
     --purple: #e1d5f5;
     --purple-dark: #7b3fa0;
     --orange: #ffd9b3;
     --orange-dark: #e67700;
-    --red: #ffcccc;
-    --red-dark: #c0392b;
-    --grid-red: #ff6b6b;
-    --gray-light: #f5f5f5;
-    --gray: #999;
   }
   * { box-sizing: border-box; }
   body {
@@ -31,885 +26,248 @@
     padding: 0;
     background: #fefcf7;
     color: #333;
-    line-height: 1.8;
+    min-height: 100vh;
   }
   .container {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 30px 20px;
   }
   header {
     background: linear-gradient(135deg, #ffd6e0 0%, #cfe8ff 100%);
-    padding: 30px 20px;
+    padding: 40px 24px;
     text-align: center;
-    border-radius: 16px;
+    border-radius: 20px;
     margin-bottom: 30px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   }
   header h1 {
-    font-size: 2.4em;
-    margin: 0 0 10px 0;
+    font-size: 2.6em;
+    margin: 0 0 12px 0;
     color: var(--pink-dark);
   }
-  header .meta {
-    font-size: 0.95em;
-    color: #777;
-  }
-  .toc {
-    background: #fff;
-    border: 2px dashed var(--yellow-dark);
-    border-radius: 12px;
-    padding: 16px 24px;
-    margin-bottom: 30px;
-  }
-  .toc h3 { margin: 0 0 10px 0; color: var(--orange-dark); }
-  .toc ol { margin: 0; padding-left: 24px; }
-  .toc li { margin: 4px 0; }
-  .toc a { color: #333; text-decoration: none; }
-  .toc a:hover { color: var(--pink-dark); text-decoration: underline; }
-
-  section {
-    background: #fff;
-    border-radius: 16px;
-    padding: 24px;
-    margin-bottom: 24px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    page-break-inside: avoid;
-  }
-  section h2 {
-    font-size: 1.6em;
-    margin: 0 0 16px 0;
-    padding: 10px 16px;
-    border-radius: 8px;
-    color: #fff;
-  }
-  .sec-1 h2 { background: var(--pink-dark); }
-  .sec-2 h2 { background: var(--green-dark); }
-  .sec-3 h2 { background: var(--purple-dark); }
-  .sec-4 h2 { background: var(--orange-dark); }
-  .sec-5 h2 { background: var(--yellow-dark); }
-  .sec-6 h2 { background: var(--red-dark); }
-
-  /* 課文 */
-  .lesson-text {
-    background: var(--yellow);
-    padding: 24px 36px;
-    border-radius: 12px;
-    font-size: 1.35em;
-    line-height: 2.6;
-  }
-  .lesson-text p { margin: 8px 0; }
-
-  /* 注音 — 直行寫在國字右邊（台灣傳統課本標準格式） */
-  /* 一聲：無聲符；二三四聲：聲符與注音同大小，在注音直行的右邊；輕聲：聲符在注音直行的正上方 */
-  .zy {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 4px;
-    line-height: 1.6;
-    white-space: nowrap;
-  }
-  .zy > .zh {
-    font-size: 1em;
-    display: inline-block;
-    vertical-align: middle;
-  }
-  .zhu-wrap {
-    display: inline-flex;
-    flex-direction: row;
-    align-items: flex-start;
-    font-size: 0.5em;
-    font-family: "標楷體", "DFKai-SB", "Microsoft JhengHei", serif;
-    color: #333;
-    margin-left: 2px;
-    line-height: 1;
-    vertical-align: middle;
-  }
-  /* 輕聲：聲符在注音上方（直行排列） */
-  .zhu-wrap.light {
-    flex-direction: column;
-    align-items: center;
-  }
-  .zhu {
-    display: inline-block;
-    writing-mode: vertical-rl;
-    -webkit-writing-mode: vertical-rl;
-    text-orientation: upright;
-    -webkit-text-orientation: upright;
-    line-height: 1.05;
-    letter-spacing: -0.06em;
-  }
-  /* 二三四聲：放在注音直行的右邊，與注音同大小，頂端對齊 */
-  .tone {
-    display: inline-block;
-    line-height: 1;
-    align-self: flex-start;
-    padding-top: 0.05em;
-  }
-  /* 輕聲：放在注音直行的正上方，與注音同大小 */
-  .tone-light {
-    display: inline-block;
-    line-height: 0.6;
-    margin-bottom: -2px;
-    font-weight: bold;
-  }
-  /* 課文段落需要拉開行高，讓直書注音不會壓到下一行 */
-  .lesson-text p { line-height: 2.4; }
-
-  /* 問答題 */
-  .question {
-    background: var(--gray-light);
-    padding: 14px 18px;
-    border-radius: 10px;
-    margin: 10px 0;
-    border-left: 5px solid var(--pink-dark);
-  }
-  .question .q { font-weight: bold; color: var(--pink-dark); }
-  .question .ans-line {
-    border-bottom: 1px solid #aaa;
-    display: inline-block;
-    min-width: 280px;
-    height: 28px;
-  }
-
-  /* 生字筆順卡片 */
-  .char-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-    margin-top: 16px;
-  }
-  .char-card {
-    background: #fff;
-    border: 2px solid var(--green);
-    border-radius: 12px;
-    padding: 18px;
-    text-align: center;
-  }
-  .char-card h3 {
-    margin: 0 0 8px 0;
-    color: var(--green-dark);
-    font-size: 1.5em;
-  }
-  .char-info {
-    font-size: 1em;
-    color: #555;
-    margin-bottom: 14px;
-  }
-  .char-info span { margin: 0 8px; }
-  .char-info b { color: var(--green-dark); }
-
-  /* 大田字格＋筆順動畫容器 */
-  .stroke-anim {
-    width: 220px;
-    height: 220px;
-    margin: 0 auto 12px;
-    background: #fff;
-    border: 3px solid var(--grid-red);
-    position: relative;
-  }
-  .stroke-anim::before, .stroke-anim::after {
-    content: '';
-    position: absolute;
-    opacity: 0.5;
-  }
-  .stroke-anim::before {
-    width: 100%; height: 0;
-    top: 50%; left: 0;
-    border-top: 2px dashed var(--grid-red);
-  }
-  .stroke-anim::after {
-    height: 100%; width: 0;
-    left: 50%; top: 0;
-    border-left: 2px dashed var(--grid-red);
-  }
-  .stroke-anim svg { position: relative; z-index: 2; }
-  .anim-buttons {
-    margin: 10px 0 4px;
-  }
-  .anim-buttons button {
-    background: var(--green-dark);
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 8px;
-    margin: 4px;
-    cursor: pointer;
-    font-family: inherit;
-    font-size: 1em;
-    font-weight: bold;
-  }
-  .anim-buttons button:hover { background: #2e7d32; }
-  .anim-buttons button.quiz { background: var(--orange-dark); }
-  .anim-buttons button.quiz:hover { background: #b85a00; }
-
-  /* 同字異音 */
-  .duoyin-card {
-    background: var(--purple);
-    border-radius: 12px;
-    padding: 18px 22px;
-    margin: 14px 0;
-  }
-  .duoyin-card .big-ch {
-    font-size: 3em;
-    color: var(--purple-dark);
-    font-family: "標楷體", serif;
-    float: left;
-    margin-right: 20px;
-    line-height: 1;
-  }
-  .duoyin-card .reading {
+  header .subtitle {
+    font-size: 1.2em;
+    color: #666;
     margin: 8px 0;
   }
-  .duoyin-card .reading b { color: var(--purple-dark); }
-  .duoyin-practice {
-    margin-top: 10px;
-    padding: 10px 14px;
+  header .hint {
+    font-size: 1em;
+    color: #888;
+    margin-top: 16px;
+  }
+  .lesson-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 24px;
+  }
+  .lesson-card {
     background: #fff;
-    border-radius: 8px;
-  }
-
-  /* 相似字 */
-  .similar-row {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    background: var(--orange);
-    border-radius: 10px;
-    padding: 14px;
-    margin: 10px 0;
-    flex-wrap: wrap;
-  }
-  .similar-row .main-ch {
-    font-size: 2.4em;
-    font-family: "標楷體", serif;
-    color: var(--orange-dark);
-    border: 3px solid var(--orange-dark);
-    border-radius: 8px;
-    width: 70px; height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #fff;
-    flex-shrink: 0;
-  }
-  .similar-row .vs { font-size: 1.4em; color: var(--orange-dark); font-weight: bold; }
-  .similar-row .similar-chars {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
-  .similar-chars .item {
-    background: #fff;
-    border: 2px solid #ddd;
-    padding: 6px 10px;
-    border-radius: 8px;
+    border-radius: 16px;
+    padding: 28px 20px;
     text-align: center;
-    min-width: 70px;
-  }
-  .similar-chars .item .ch {
-    font-size: 1.8em;
-    font-family: "標楷體", serif;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
     display: block;
+    position: relative;
+    border: 3px solid transparent;
+    cursor: pointer;
   }
-  .similar-chars .item .note {
-    font-size: 0.78em;
-    color: #555;
+  .lesson-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
   }
-
-  /* 造句 */
-  .pattern-box {
-    background: var(--yellow);
-    border-radius: 10px;
-    padding: 16px;
-    margin: 10px 0;
+  .lesson-card.ready {
+    border-color: var(--green-dark);
+    background: linear-gradient(180deg, #fff 0%, #f0fff4 100%);
   }
-  .pattern-box .pattern {
-    font-size: 1.2em;
+  .lesson-card.ready:hover {
+    border-color: var(--pink-dark);
+    background: linear-gradient(180deg, #fff 0%, #fff0f5 100%);
+  }
+  .lesson-card.coming-soon {
+    background: #f5f5f5;
+    color: #aaa;
+    cursor: not-allowed;
+  }
+  .lesson-card.coming-soon:hover {
+    transform: none;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  }
+  .lesson-number {
+    font-size: 1.1em;
+    color: var(--blue-dark);
+    margin-bottom: 8px;
     font-weight: bold;
-    color: var(--orange-dark);
   }
-  .pattern-box .example {
-    margin: 6px 0;
-    padding-left: 16px;
-    color: #555;
-  }
-  .pattern-box .practice {
-    margin-top: 10px;
-    padding-top: 10px;
-    border-top: 1px dashed #ccc;
-  }
-  .practice-line {
-    border-bottom: 1px solid #888;
-    display: inline-block;
-    min-width: 300px;
-    height: 28px;
-    margin-left: 8px;
-  }
-
-  /* 成語 */
-  .idiom-section {
-    margin: 16px 0;
-  }
-  .idiom-section h4 {
-    color: var(--red-dark);
-    background: var(--red);
-    padding: 8px 16px;
-    border-radius: 6px;
-    margin: 0 0 8px 0;
-    display: inline-block;
-    font-size: 1.4em;
-    font-family: "標楷體", serif;
-  }
-  .idiom-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .idiom-list li {
-    background: #fff;
-    border-left: 5px solid var(--red-dark);
-    padding: 10px 14px;
-    margin: 6px 0;
-    border-radius: 6px;
-  }
-  .idiom-list .idiom {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: var(--red-dark);
-    margin-right: 12px;
-  }
-  .idiom-list .meaning {
-    color: #555;
-  }
-  .no-idiom {
+  .lesson-card.coming-soon .lesson-number {
     color: #999;
-    font-style: italic;
-    padding: 8px 14px;
   }
-
+  .lesson-title {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: var(--pink-dark);
+    margin: 10px 0;
+    min-height: 1.4em;
+  }
+  .lesson-card.coming-soon .lesson-title {
+    color: #aaa;
+    font-style: italic;
+  }
+  .lesson-card.ready .lesson-title {
+    color: var(--pink-dark);
+  }
+  .lesson-status {
+    font-size: 0.95em;
+    color: #666;
+    margin-top: 12px;
+    padding: 4px 12px;
+    border-radius: 12px;
+    display: inline-block;
+  }
+  .lesson-card.ready .lesson-status {
+    background: var(--green);
+    color: #2e7d32;
+  }
+  .lesson-card.coming-soon .lesson-status {
+    background: #eee;
+    color: #999;
+  }
+  .decor {
+    font-size: 2em;
+    margin: 6px 0;
+  }
   footer {
     text-align: center;
-    padding: 20px;
-    color: #888;
+    padding: 24px;
+    color: #999;
     font-size: 0.9em;
+    margin-top: 30px;
   }
-
-  @media print {
-    body { background: white; }
-    .anim-buttons { display: none; }
-    section { page-break-inside: avoid; box-shadow: none; }
-    header { background: #f0f0f0 !important; -webkit-print-color-adjust: exact; }
+  .progress-bar {
+    background: #fff;
+    border-radius: 12px;
+    padding: 14px 24px;
+    margin: 20px 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+  .progress-bar .label {
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 8px;
+  }
+  .progress-bar .bar {
+    height: 12px;
+    background: #f0f0f0;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--pink-dark), var(--yellow-dark));
+    width: 8.3%;
+    border-radius: 6px;
+    transition: width 0.4s;
   }
 </style>
 </head>
 <body>
 <div class="container">
 
-<header>
-  <h1>第一課　春天來了</h1>
-  <div class="meta">114 學年度　一年級下學期　國語練習</div>
-</header>
+  <header>
+    <h1>一年級下學期　國語練習</h1>
+    <div class="subtitle">114 學年度</div>
+    <div class="hint">點選下方課程進入練習</div>
+  </header>
 
-<div class="toc">
-  <h3>目錄</h3>
-  <ol>
-    <li><a href="#s1">課文內容理解</a></li>
-    <li><a href="#s2">生字筆順練習</a>（含部首與筆畫，點按鈕看筆順／手寫練習）</li>
-    <li><a href="#s3">同字異音練習</a></li>
-    <li><a href="#s4">相似字分辨</a></li>
-    <li><a href="#s5">造樣造句練習</a></li>
-    <li><a href="#s6">生字成語</a></li>
-  </ol>
-</div>
-
-<!-- =========== 一、課文內容理解 =========== -->
-<section id="s1" class="sec-1">
-  <h2>一、課文內容理解</h2>
-  <div class="lesson-text">
-    <p><span class="zy"><span class="zh">花</span><span class="zhu-wrap"><span class="zhu">ㄏㄨㄚ</span></span></span><span class="zy"><span class="zh">園</span><span class="zhu-wrap"><span class="zhu">ㄩㄢ</span><span class="tone">ˊ</span></span></span><span class="zy"><span class="zh">裡</span><span class="zhu-wrap"><span class="zhu">ㄌㄧ</span><span class="tone">ˇ</span></span></span>，<span class="zy"><span class="zh">草</span><span class="zhu-wrap"><span class="zhu">ㄘㄠ</span><span class="tone">ˇ</span></span></span><span class="zy"><span class="zh">綠</span><span class="zhu-wrap"><span class="zhu">ㄌㄩ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">了</span><span class="zhu-wrap light"><span class="tone-light">˙</span><span class="zhu">ㄌㄜ</span></span></span>，</p>
-    <p><span class="zy"><span class="zh">花</span><span class="zhu-wrap"><span class="zhu">ㄏㄨㄚ</span></span></span><span class="zy"><span class="zh">開</span><span class="zhu-wrap"><span class="zhu">ㄎㄞ</span></span></span><span class="zy"><span class="zh">了</span><span class="zhu-wrap light"><span class="tone-light">˙</span><span class="zhu">ㄌㄜ</span></span></span>，<span class="zy"><span class="zh">好</span><span class="zhu-wrap"><span class="zhu">ㄏㄠ</span><span class="tone">ˇ</span></span></span><span class="zy"><span class="zh">美</span><span class="zhu-wrap"><span class="zhu">ㄇㄟ</span><span class="tone">ˇ</span></span></span><span class="zy"><span class="zh">呀</span><span class="zhu-wrap light"><span class="tone-light">˙</span><span class="zhu">ㄧㄚ</span></span></span>！</p>
-    <p><span class="zy"><span class="zh">媽</span><span class="zhu-wrap"><span class="zhu">ㄇㄚ</span></span></span><span class="zy"><span class="zh">媽</span><span class="zhu-wrap light"><span class="tone-light">˙</span><span class="zhu">ㄇㄚ</span></span></span><span class="zy"><span class="zh">說</span><span class="zhu-wrap"><span class="zhu">ㄕㄨㄛ</span></span></span>：「<span class="zy"><span class="zh">春</span><span class="zhu-wrap"><span class="zhu">ㄔㄨㄣ</span></span></span><span class="zy"><span class="zh">天</span><span class="zhu-wrap"><span class="zhu">ㄊㄧㄢ</span></span></span><span class="zy"><span class="zh">來</span><span class="zhu-wrap"><span class="zhu">ㄌㄞ</span><span class="tone">ˊ</span></span></span><span class="zy"><span class="zh">了</span><span class="zhu-wrap light"><span class="tone-light">˙</span><span class="zhu">ㄌㄜ</span></span></span>。」</p>
-    <p><span class="zy"><span class="zh">弟</span><span class="zhu-wrap"><span class="zhu">ㄉㄧ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">弟</span><span class="zhu-wrap light"><span class="tone-light">˙</span><span class="zhu">ㄉㄧ</span></span></span><span class="zy"><span class="zh">問</span><span class="zhu-wrap"><span class="zhu">ㄨㄣ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">媽</span><span class="zhu-wrap"><span class="zhu">ㄇㄚ</span></span></span><span class="zy"><span class="zh">媽</span><span class="zhu-wrap light"><span class="tone-light">˙</span><span class="zhu">ㄇㄚ</span></span></span>：「<span class="zy"><span class="zh">春</span><span class="zhu-wrap"><span class="zhu">ㄔㄨㄣ</span></span></span><span class="zy"><span class="zh">天</span><span class="zhu-wrap"><span class="zhu">ㄊㄧㄢ</span></span></span><span class="zy"><span class="zh">是</span><span class="zhu-wrap"><span class="zhu">ㄕ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">誰</span><span class="zhu-wrap"><span class="zhu">ㄕㄟ</span><span class="tone">ˊ</span></span></span>？<span class="zy"><span class="zh">他</span><span class="zhu-wrap"><span class="zhu">ㄊㄚ</span></span></span><span class="zy"><span class="zh">是</span><span class="zhu-wrap"><span class="zhu">ㄕ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">坐</span><span class="zhu-wrap"><span class="zhu">ㄗㄨㄛ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">車</span><span class="zhu-wrap"><span class="zhu">ㄔㄜ</span></span></span><span class="zy"><span class="zh">來</span><span class="zhu-wrap"><span class="zhu">ㄌㄞ</span><span class="tone">ˊ</span></span></span><span class="zy"><span class="zh">的</span><span class="zhu-wrap light"><span class="tone-light">˙</span><span class="zhu">ㄉㄜ</span></span></span>，<span class="zy"><span class="zh">還</span><span class="zhu-wrap"><span class="zhu">ㄏㄞ</span><span class="tone">ˊ</span></span></span><span class="zy"><span class="zh">是</span><span class="zhu-wrap"><span class="zhu">ㄕ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">走</span><span class="zhu-wrap"><span class="zhu">ㄗㄡ</span><span class="tone">ˇ</span></span></span><span class="zy"><span class="zh">路</span><span class="zhu-wrap"><span class="zhu">ㄌㄨ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">來</span><span class="zhu-wrap"><span class="zhu">ㄌㄞ</span><span class="tone">ˊ</span></span></span><span class="zy"><span class="zh">的</span><span class="zhu-wrap light"><span class="tone-light">˙</span><span class="zhu">ㄉㄜ</span></span></span>？」</p>
-    <p><span class="zy"><span class="zh">媽</span><span class="zhu-wrap"><span class="zhu">ㄇㄚ</span></span></span><span class="zy"><span class="zh">媽</span><span class="zhu-wrap light"><span class="tone-light">˙</span><span class="zhu">ㄇㄚ</span></span></span><span class="zy"><span class="zh">笑</span><span class="zhu-wrap"><span class="zhu">ㄒㄧㄠ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">著</span><span class="zhu-wrap light"><span class="tone-light">˙</span><span class="zhu">ㄓㄜ</span></span></span><span class="zy"><span class="zh">說</span><span class="zhu-wrap"><span class="zhu">ㄕㄨㄛ</span></span></span>：「<span class="zy"><span class="zh">花</span><span class="zhu-wrap"><span class="zhu">ㄏㄨㄚ</span></span></span><span class="zy"><span class="zh">開</span><span class="zhu-wrap"><span class="zhu">ㄎㄞ</span></span></span><span class="zy"><span class="zh">了</span><span class="zhu-wrap light"><span class="tone-light">˙</span><span class="zhu">ㄌㄜ</span></span></span>，<span class="zy"><span class="zh">草</span><span class="zhu-wrap"><span class="zhu">ㄘㄠ</span><span class="tone">ˇ</span></span></span><span class="zy"><span class="zh">綠</span><span class="zhu-wrap"><span class="zhu">ㄌㄩ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">了</span><span class="zhu-wrap light"><span class="tone-light">˙</span><span class="zhu">ㄌㄜ</span></span></span>，<span class="zy"><span class="zh">天</span><span class="zhu-wrap"><span class="zhu">ㄊㄧㄢ</span></span></span><span class="zy"><span class="zh">氣</span><span class="zhu-wrap"><span class="zhu">ㄑㄧ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">暖</span><span class="zhu-wrap"><span class="zhu">ㄋㄨㄢ</span><span class="tone">ˇ</span></span></span><span class="zy"><span class="zh">和</span><span class="zhu-wrap light"><span class="tone-light">˙</span><span class="zhu">ㄏㄨㄛ</span></span></span><span class="zy"><span class="zh">了</span><span class="zhu-wrap light"><span class="tone-light">˙</span><span class="zhu">ㄌㄜ</span></span></span>，<span class="zy"><span class="zh">就</span><span class="zhu-wrap"><span class="zhu">ㄐㄧㄡ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">是</span><span class="zhu-wrap"><span class="zhu">ㄕ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">春</span><span class="zhu-wrap"><span class="zhu">ㄔㄨㄣ</span></span></span><span class="zy"><span class="zh">天</span><span class="zhu-wrap"><span class="zhu">ㄊㄧㄢ</span></span></span><span class="zy"><span class="zh">來</span><span class="zhu-wrap"><span class="zhu">ㄌㄞ</span><span class="tone">ˊ</span></span></span><span class="zy"><span class="zh">了</span><span class="zhu-wrap light"><span class="tone-light">˙</span><span class="zhu">ㄌㄜ</span></span></span>。」</p>
+  <div class="progress-bar">
+    <div class="label">已完成：<b>1</b> / 12 課</div>
+    <div class="bar"><div class="fill"></div></div>
   </div>
 
-  <h3 style="color:#e85a8a; margin-top:24px;">▍想一想，答一答</h3>
+  <div class="lesson-grid">
 
-  <div class="question">
-    <div class="q">1. 課文中說「好美呀！」，是看到了什麼景色覺得很美？</div>
-    <div class="ans-line"></div>
-  </div>
-  <div class="question">
-    <div class="q">2. 弟弟猜春天可能是怎麼來的？請寫出兩種猜法。</div>
-    <div class="ans-line"></div>
-  </div>
-  <div class="question">
-    <div class="q">3. 媽媽說，發生哪三件事情就是春天來了？</div>
-    <div class="ans-line"></div>
-  </div>
-  <div class="question">
-    <div class="q">4. 「天氣暖和」是什麼意思？請用自己的話說一說。</div>
-    <div class="ans-line"></div>
-  </div>
-  <div class="question">
-    <div class="q">5. 媽媽回答弟弟的問題時，是用什麼表情、什麼樣子？</div>
-    <div class="ans-line"></div>
-  </div>
-  <div class="question">
-    <div class="q">6. 你最喜歡春天的什麼？為什麼？</div>
-    <div class="ans-line"></div>
-  </div>
-</section>
+    <a class="lesson-card ready" href="Class1.html">
+      <div class="lesson-number">第 一 課</div>
+      <div class="lesson-title">春天來了</div>
+      <div class="lesson-status">✓ 開始練習</div>
+    </a>
 
-<!-- =========== 二、生字筆順練習 =========== -->
-<section id="s2" class="sec-2">
-  <h2>二、生字筆順練習</h2>
-  <p style="color:#555;">每個生字都有大田字格。<b>點「▶ 播放筆順」</b>看每一筆怎麼寫；<b>點「✏ 我要寫寫看」</b>可以直接用滑鼠（或手指）在格子裡練寫，會自動批改喔！</p>
-
-  <div class="char-grid">
-
-    <div class="char-card">
-      <h3>春　ㄔㄨㄣ</h3>
-      <div class="char-info">部首：<b>日</b>　總筆畫：<b>9 畫</b></div>
-      <div id="anim-春" class="stroke-anim"></div>
-      <div class="anim-buttons">
-        <button onclick="playStroke('春')">▶ 播放筆順</button>
-        <button class="quiz" onclick="quizStroke('春')">✏ 我要寫寫看</button>
-      </div>
+    <div class="lesson-card coming-soon">
+      <div class="lesson-number">第 二 課</div>
+      <div class="lesson-title">（製作中）</div>
+      <div class="lesson-status">尚未開放</div>
     </div>
 
-    <div class="char-card">
-      <h3>裡　ㄌㄧˇ</h3>
-      <div class="char-info">部首：<b>衣（衤）</b>　總筆畫：<b>13 畫</b></div>
-      <div id="anim-裡" class="stroke-anim"></div>
-      <div class="anim-buttons">
-        <button onclick="playStroke('裡')">▶ 播放筆順</button>
-        <button class="quiz" onclick="quizStroke('裡')">✏ 我要寫寫看</button>
-      </div>
+    <div class="lesson-card coming-soon">
+      <div class="lesson-number">第 三 課</div>
+      <div class="lesson-title">（製作中）</div>
+      <div class="lesson-status">尚未開放</div>
     </div>
 
-    <div class="char-card">
-      <h3>綠　ㄌㄩˋ</h3>
-      <div class="char-info">部首：<b>糸</b>　總筆畫：<b>14 畫</b></div>
-      <div id="anim-綠" class="stroke-anim"></div>
-      <div class="anim-buttons">
-        <button onclick="playStroke('綠')">▶ 播放筆順</button>
-        <button class="quiz" onclick="quizStroke('綠')">✏ 我要寫寫看</button>
-      </div>
+    <div class="lesson-card coming-soon">
+      <div class="lesson-number">第 四 課</div>
+      <div class="lesson-title">（製作中）</div>
+      <div class="lesson-status">尚未開放</div>
     </div>
 
-    <div class="char-card">
-      <h3>美　ㄇㄟˇ</h3>
-      <div class="char-info">部首：<b>羊</b>　總筆畫：<b>9 畫</b></div>
-      <div id="anim-美" class="stroke-anim"></div>
-      <div class="anim-buttons">
-        <button onclick="playStroke('美')">▶ 播放筆順</button>
-        <button class="quiz" onclick="quizStroke('美')">✏ 我要寫寫看</button>
-      </div>
+    <div class="lesson-card coming-soon">
+      <div class="lesson-number">第 五 課</div>
+      <div class="lesson-title">（製作中）</div>
+      <div class="lesson-status">尚未開放</div>
     </div>
 
-    <div class="char-card">
-      <h3>呀　ㄧㄚ</h3>
-      <div class="char-info">部首：<b>口</b>　總筆畫：<b>7 畫</b></div>
-      <div id="anim-呀" class="stroke-anim"></div>
-      <div class="anim-buttons">
-        <button onclick="playStroke('呀')">▶ 播放筆順</button>
-        <button class="quiz" onclick="quizStroke('呀')">✏ 我要寫寫看</button>
-      </div>
+    <div class="lesson-card coming-soon">
+      <div class="lesson-number">第 六 課</div>
+      <div class="lesson-title">（製作中）</div>
+      <div class="lesson-status">尚未開放</div>
     </div>
 
-    <div class="char-card">
-      <h3>媽　ㄇㄚ</h3>
-      <div class="char-info">部首：<b>女</b>　總筆畫：<b>13 畫</b></div>
-      <div id="anim-媽" class="stroke-anim"></div>
-      <div class="anim-buttons">
-        <button onclick="playStroke('媽')">▶ 播放筆順</button>
-        <button class="quiz" onclick="quizStroke('媽')">✏ 我要寫寫看</button>
-      </div>
+    <div class="lesson-card coming-soon">
+      <div class="lesson-number">第 七 課</div>
+      <div class="lesson-title">（製作中）</div>
+      <div class="lesson-status">尚未開放</div>
     </div>
 
-    <div class="char-card">
-      <h3>弟　ㄉㄧˋ</h3>
-      <div class="char-info">部首：<b>弓</b>　總筆畫：<b>7 畫</b></div>
-      <div id="anim-弟" class="stroke-anim"></div>
-      <div class="anim-buttons">
-        <button onclick="playStroke('弟')">▶ 播放筆順</button>
-        <button class="quiz" onclick="quizStroke('弟')">✏ 我要寫寫看</button>
-      </div>
+    <div class="lesson-card coming-soon">
+      <div class="lesson-number">第 八 課</div>
+      <div class="lesson-title">（製作中）</div>
+      <div class="lesson-status">尚未開放</div>
     </div>
 
-    <div class="char-card">
-      <h3>坐　ㄗㄨㄛˋ</h3>
-      <div class="char-info">部首：<b>土</b>　總筆畫：<b>7 畫</b></div>
-      <div id="anim-坐" class="stroke-anim"></div>
-      <div class="anim-buttons">
-        <button onclick="playStroke('坐')">▶ 播放筆順</button>
-        <button class="quiz" onclick="quizStroke('坐')">✏ 我要寫寫看</button>
-      </div>
+    <div class="lesson-card coming-soon">
+      <div class="lesson-number">第 九 課</div>
+      <div class="lesson-title">（製作中）</div>
+      <div class="lesson-status">尚未開放</div>
     </div>
 
-    <div class="char-card">
-      <h3>還　ㄏㄞˊ／ㄏㄨㄢˊ</h3>
-      <div class="char-info">部首：<b>辵（辶）</b>　總筆畫：<b>17 畫</b></div>
-      <div id="anim-還" class="stroke-anim"></div>
-      <div class="anim-buttons">
-        <button onclick="playStroke('還')">▶ 播放筆順</button>
-        <button class="quiz" onclick="quizStroke('還')">✏ 我要寫寫看</button>
-      </div>
+    <div class="lesson-card coming-soon">
+      <div class="lesson-number">第 十 課</div>
+      <div class="lesson-title">（製作中）</div>
+      <div class="lesson-status">尚未開放</div>
     </div>
 
-    <div class="char-card">
-      <h3>路　ㄌㄨˋ</h3>
-      <div class="char-info">部首：<b>足</b>　總筆畫：<b>13 畫</b></div>
-      <div id="anim-路" class="stroke-anim"></div>
-      <div class="anim-buttons">
-        <button onclick="playStroke('路')">▶ 播放筆順</button>
-        <button class="quiz" onclick="quizStroke('路')">✏ 我要寫寫看</button>
-      </div>
+    <div class="lesson-card coming-soon">
+      <div class="lesson-number">第 十一 課</div>
+      <div class="lesson-title">（製作中）</div>
+      <div class="lesson-status">尚未開放</div>
+    </div>
+
+    <div class="lesson-card coming-soon">
+      <div class="lesson-number">第 十二 課</div>
+      <div class="lesson-title">（製作中）</div>
+      <div class="lesson-status">尚未開放</div>
     </div>
 
   </div>
-</section>
 
-<!-- =========== 三、同字異音練習 =========== -->
-<section id="s3" class="sec-3">
-  <h2>三、同字異音練習</h2>
-  <p>有些字會有不同的讀音，意思也不一樣，要看上下文才知道怎麼念。本課有兩個字有不同的讀音：</p>
-
-  <div class="duoyin-card">
-    <div class="big-ch">還</div>
-    <div class="reading"><b>讀音一：ㄏㄞˊ</b>　表示「仍然、又、再」的意思。<br>
-    例句：天黑了，弟弟<b>還</b>沒回家。／我<b>還</b>想再吃一塊蛋糕。</div>
-    <div class="reading"><b>讀音二：ㄏㄨㄢˊ</b>　表示「歸還、把東西交回去」的意思。<br>
-    例句：這本書看完了要<b>還</b>給圖書館。／我<b>還</b>你五元。</div>
-    <div style="clear:both"></div>
-    <div class="duoyin-practice">
-      <b>▍練習：</b>請在括號內填入正確的注音<br>
-      （1）爸爸下班<u>還</u>（　　　）沒回家。<br>
-      （2）借的東西要記得<u>還</u>（　　　）給人家。<br>
-      （3）下雨了，<u>還</u>（　　　）要出去玩嗎？<br>
-      （4）他把錢<u>還</u>（　　　）給我了。
-    </div>
-  </div>
-
-  <div class="duoyin-card">
-    <div class="big-ch">呀</div>
-    <div class="reading"><b>讀音一：˙ㄧㄚ（輕聲）</b>　放在句末，表示驚嘆或疑問。<br>
-    例句：好美<b>呀</b>！／你怎麼來了<b>呀</b>？</div>
-    <div class="reading"><b>讀音二：ㄧㄚˊ</b>　單獨出現，表示驚訝。<br>
-    例句：<b>呀</b>！下雨了！／<b>呀</b>，我忘了帶課本！</div>
-    <div style="clear:both"></div>
-    <div class="duoyin-practice">
-      <b>▍練習：</b>說說看，下面的「呀」要念什麼？<br>
-      （1）這朵花好香<u>呀</u>！（　　　）<br>
-      （2）<u>呀</u>！我的書包不見了！（　　　）
-    </div>
-  </div>
-</section>
-
-<!-- =========== 四、相似字分辨 =========== -->
-<section id="s4" class="sec-4">
-  <h2>四、相似字分辨</h2>
-  <p>下面這些字長得很像，要仔細看清楚再寫喔！</p>
-
-  <div class="similar-row">
-    <div class="main-ch">春</div>
-    <div class="vs">vs.</div>
-    <div class="similar-chars">
-      <div class="item"><span class="ch">香</span><span class="note">ㄒㄧㄤ<br>香味</span></div>
-      <div class="item"><span class="ch">奉</span><span class="note">ㄈㄥˋ<br>奉送</span></div>
-      <div class="item"><span class="ch">秦</span><span class="note">ㄑㄧㄣˊ<br>秦朝</span></div>
-    </div>
-  </div>
-
-  <div class="similar-row">
-    <div class="main-ch">裡</div>
-    <div class="vs">vs.</div>
-    <div class="similar-chars">
-      <div class="item"><span class="ch">理</span><span class="note">ㄌㄧˇ<br>道理</span></div>
-      <div class="item"><span class="ch">埋</span><span class="note">ㄇㄞˊ<br>埋頭</span></div>
-      <div class="item"><span class="ch">里</span><span class="note">ㄌㄧˇ<br>公里</span></div>
-    </div>
-  </div>
-
-  <div class="similar-row">
-    <div class="main-ch">綠</div>
-    <div class="vs">vs.</div>
-    <div class="similar-chars">
-      <div class="item"><span class="ch">緣</span><span class="note">ㄩㄢˊ<br>緣分</span></div>
-      <div class="item"><span class="ch">錄</span><span class="note">ㄌㄨˋ<br>錄音</span></div>
-      <div class="item"><span class="ch">線</span><span class="note">ㄒㄧㄢˋ<br>線條</span></div>
-    </div>
-  </div>
-
-  <div class="similar-row">
-    <div class="main-ch">美</div>
-    <div class="vs">vs.</div>
-    <div class="similar-chars">
-      <div class="item"><span class="ch">羊</span><span class="note">ㄧㄤˊ<br>小羊</span></div>
-      <div class="item"><span class="ch">羞</span><span class="note">ㄒㄧㄡ<br>害羞</span></div>
-      <div class="item"><span class="ch">差</span><span class="note">ㄔㄚ<br>差別</span></div>
-    </div>
-  </div>
-
-  <div class="similar-row">
-    <div class="main-ch">呀</div>
-    <div class="vs">vs.</div>
-    <div class="similar-chars">
-      <div class="item"><span class="ch">牙</span><span class="note">ㄧㄚˊ<br>牙齒</span></div>
-      <div class="item"><span class="ch">芽</span><span class="note">ㄧㄚˊ<br>發芽</span></div>
-      <div class="item"><span class="ch">雅</span><span class="note">ㄧㄚˇ<br>文雅</span></div>
-    </div>
-  </div>
-
-  <div class="similar-row">
-    <div class="main-ch">媽</div>
-    <div class="vs">vs.</div>
-    <div class="similar-chars">
-      <div class="item"><span class="ch">嗎</span><span class="note">˙ㄇㄚ<br>是嗎？</span></div>
-      <div class="item"><span class="ch">罵</span><span class="note">ㄇㄚˋ<br>責罵</span></div>
-      <div class="item"><span class="ch">馬</span><span class="note">ㄇㄚˇ<br>小馬</span></div>
-    </div>
-  </div>
-
-  <div class="similar-row">
-    <div class="main-ch">弟</div>
-    <div class="vs">vs.</div>
-    <div class="similar-chars">
-      <div class="item"><span class="ch">第</span><span class="note">ㄉㄧˋ<br>第一</span></div>
-      <div class="item"><span class="ch">梯</span><span class="note">ㄊㄧ<br>樓梯</span></div>
-    </div>
-  </div>
-
-  <div class="similar-row">
-    <div class="main-ch">坐</div>
-    <div class="vs">vs.</div>
-    <div class="similar-chars">
-      <div class="item"><span class="ch">座</span><span class="note">ㄗㄨㄛˋ<br>座位</span></div>
-      <div class="item"><span class="ch">生</span><span class="note">ㄕㄥ<br>生日</span></div>
-      <div class="item"><span class="ch">坎</span><span class="note">ㄎㄢˇ<br>門坎</span></div>
-    </div>
-  </div>
-
-  <div class="similar-row">
-    <div class="main-ch">還</div>
-    <div class="vs">vs.</div>
-    <div class="similar-chars">
-      <div class="item"><span class="ch">環</span><span class="note">ㄏㄨㄢˊ<br>環境</span></div>
-      <div class="item"><span class="ch">園</span><span class="note">ㄩㄢˊ<br>公園</span></div>
-    </div>
-  </div>
-
-  <div class="similar-row">
-    <div class="main-ch">路</div>
-    <div class="vs">vs.</div>
-    <div class="similar-chars">
-      <div class="item"><span class="ch">露</span><span class="note">ㄌㄨˋ<br>露水</span></div>
-      <div class="item"><span class="ch">洛</span><span class="note">ㄌㄨㄛˋ<br>洛陽</span></div>
-      <div class="item"><span class="ch">略</span><span class="note">ㄌㄩㄝˋ<br>大略</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- =========== 五、造樣造句 =========== -->
-<section id="s5" class="sec-5">
-  <h2>五、造樣造句練習</h2>
-  <p>看看課文中的句子，再學著寫寫看！</p>
-
-  <div class="pattern-box">
-    <div class="pattern">句型 ①：好 ＿＿ 呀！</div>
-    <div class="example">課文例句：好<b>美</b>呀！</div>
-    <div class="example">仿作例句：好<b>香</b>呀！ ／ 好<b>大</b>呀！ ／ 好<b>可愛</b>呀！</div>
-    <div class="practice">
-      <b>換你寫：</b><br>
-      （1）好<span class="practice-line"></span>呀！<br>
-      （2）好<span class="practice-line"></span>呀！
-    </div>
-  </div>
-
-  <div class="pattern-box">
-    <div class="pattern">句型 ②：＿＿＿，＿＿ 了。</div>
-    <div class="example">課文例句：花，<b>開</b>了。／草，<b>綠</b>了。</div>
-    <div class="example">仿作例句：天，<b>黑</b>了。／葉子，<b>黃</b>了。</div>
-    <div class="practice">
-      <b>換你寫：</b><br>
-      （1）<span class="practice-line"></span>，<span class="practice-line" style="min-width:120px"></span>了。<br>
-      （2）<span class="practice-line"></span>，<span class="practice-line" style="min-width:120px"></span>了。
-    </div>
-  </div>
-
-  <div class="pattern-box">
-    <div class="pattern">句型 ③：＿＿＿ 來了。</div>
-    <div class="example">課文例句：<b>春天</b>來了。</div>
-    <div class="example">仿作例句：<b>夏天</b>來了。／<b>爸爸</b>來了。／<b>小狗</b>來了。</div>
-    <div class="practice">
-      <b>換你寫：</b><br>
-      （1）<span class="practice-line"></span>來了。<br>
-      （2）<span class="practice-line"></span>來了。
-    </div>
-  </div>
-
-  <div class="pattern-box">
-    <div class="pattern">句型 ④：是 ＿＿ 來的？還是 ＿＿ 來的？</div>
-    <div class="example">課文例句：他是<b>坐車</b>來的，還是<b>走路</b>來的？</div>
-    <div class="example">仿作例句：是<b>騎腳踏車</b>來的？還是<b>搭公車</b>來的？</div>
-    <div class="practice">
-      <b>換你寫：</b><br>
-      是<span class="practice-line" style="min-width:160px"></span>來的？還是<span class="practice-line" style="min-width:160px"></span>來的？
-    </div>
-  </div>
-
-  <div class="pattern-box">
-    <div class="pattern">句型 ⑤：媽媽笑著說：「＿＿＿＿。」</div>
-    <div class="example">課文例句：媽媽<b>笑</b>著說：「花開了，草綠了，⋯⋯」</div>
-    <div class="example">仿作例句：爸爸<b>急</b>著說：「快遲到了！」／哥哥<b>跑</b>著說：「我先到了！」</div>
-    <div class="practice">
-      <b>換你寫：</b><br>
-      <span class="practice-line" style="min-width:120px"></span><span class="practice-line" style="min-width:80px"></span>著說：「<span class="practice-line" style="min-width:200px"></span>。」
-    </div>
-  </div>
-</section>
-
-<!-- =========== 六、生字成語 =========== -->
-<section id="s6" class="sec-6">
-  <h2>六、生字成語</h2>
-  <p>下面這些生字可以和其他字組成有趣的成語，認識成語可以讓你的話更精采喔！</p>
-
-  <div class="idiom-section">
-    <h4>春</h4>
-    <ul class="idiom-list">
-      <li><span class="idiom">春暖花開</span><span class="meaning">春天天氣變暖，花朵都開了。形容春天美麗的景色。</span></li>
-      <li><span class="idiom">春風滿面</span><span class="meaning">臉上充滿了像春風一樣溫和的笑容，形容人很高興、心情很好。</span></li>
-      <li><span class="idiom">妙手回春</span><span class="meaning">形容醫生醫術很高明，能把病人從重病中救回來。</span></li>
-    </ul>
-  </div>
-
-  <div class="idiom-section">
-    <h4>裡</h4>
-    <ul class="idiom-list">
-      <li><span class="idiom">表裡如一</span><span class="meaning">外表和內心一樣，形容人很真誠、不虛假。</span></li>
-      <li><span class="idiom">裡應外合</span><span class="meaning">裡面的人和外面的人互相配合行動。</span></li>
-    </ul>
-  </div>
-
-  <div class="idiom-section">
-    <h4>綠</h4>
-    <ul class="idiom-list">
-      <li><span class="idiom">花紅柳綠</span><span class="meaning">紅色的花配上綠色的柳樹，形容春天五彩繽紛的景色。</span></li>
-      <li><span class="idiom">青山綠水</span><span class="meaning">青色的山和綠色的水，形容大自然美麗的風景。</span></li>
-      <li><span class="idiom">綠草如茵</span><span class="meaning">綠色的草像鋪上墊子一樣茂密又柔軟。</span></li>
-    </ul>
-  </div>
-
-  <div class="idiom-section">
-    <h4>美</h4>
-    <ul class="idiom-list">
-      <li><span class="idiom">十全十美</span><span class="meaning">每一方面都非常好，沒有任何缺點。</span></li>
-      <li><span class="idiom">美中不足</span><span class="meaning">雖然很美好，但還是有一點點小缺點。</span></li>
-      <li><span class="idiom">盡善盡美</span><span class="meaning">非常完美，沒有任何缺點。</span></li>
-    </ul>
-  </div>
-
-  <div class="idiom-section">
-    <h4>呀</h4>
-    <div class="no-idiom">※「呀」多半當作驚嘆的語氣詞，沒有常用的成語。</div>
-  </div>
-
-  <div class="idiom-section">
-    <h4>媽</h4>
-    <div class="no-idiom">※「媽」是親屬的稱呼，沒有常用的成語。</div>
-  </div>
-
-  <div class="idiom-section">
-    <h4>弟</h4>
-    <ul class="idiom-list">
-      <li><span class="idiom">兄友弟恭</span><span class="meaning">哥哥對弟弟很友愛，弟弟對哥哥很恭敬，形容兄弟相處得很好。</span></li>
-      <li><span class="idiom">難兄難弟</span><span class="meaning">一起共患難、處境相同的好兄弟、好朋友。</span></li>
-      <li><span class="idiom">稱兄道弟</span><span class="meaning">彼此互相當作兄弟，形容感情很好。</span></li>
-    </ul>
-  </div>
-
-  <div class="idiom-section">
-    <h4>坐</h4>
-    <ul class="idiom-list">
-      <li><span class="idiom">坐立不安</span><span class="meaning">坐著也不是、站著也不是，形容心裡很緊張、不安。</span></li>
-      <li><span class="idiom">坐井觀天</span><span class="meaning">坐在井底看天空，比喻看到的範圍很小，見識不夠多。</span></li>
-      <li><span class="idiom">坐享其成</span><span class="meaning">自己不努力，卻想要享受別人的成果。</span></li>
-    </ul>
-  </div>
-
-  <div class="idiom-section">
-    <h4>還</h4>
-    <ul class="idiom-list">
-      <li><span class="idiom">討價還價</span><span class="meaning">買賣東西時，雙方互相提出價錢、商量到合適為止。</span></li>
-      <li><span class="idiom">以牙還牙</span><span class="meaning">別人怎麼對你，你就怎麼對別人。</span></li>
-      <li><span class="idiom">返老還童</span><span class="meaning">由老年回到童年，形容人變得年輕又有活力。</span></li>
-    </ul>
-  </div>
-
-  <div class="idiom-section">
-    <h4>路</h4>
-    <ul class="idiom-list">
-      <li><span class="idiom">路不拾遺</span><span class="meaning">路上掉的東西沒有人會撿走，形容社會風氣很好。</span></li>
-      <li><span class="idiom">走投無路</span><span class="meaning">沒有路可以走了，形容遇到很大的困難，想不到辦法。</span></li>
-      <li><span class="idiom">一路平安</span><span class="meaning">祝福別人在旅途上一路順利、平平安安。</span></li>
-    </ul>
-  </div>
-</section>
-
-<footer>
-  <p>114 學年度下學期　一年級國語自學練習　｜　第一課 春天來了</p>
-</footer>
+  <footer>
+    114 學年度下學期　一年級國語自學練習
+  </footer>
 
 </div>
-
-<script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.5/dist/hanzi-writer.min.js"></script>
-<script>
-  const chars = ['春','裡','綠','美','呀','媽','弟','坐','還','路'];
-  const writers = {};
-
-  window.addEventListener('load', function() {
-    if (typeof HanziWriter === 'undefined') {
-      chars.forEach(c => {
-        const el = document.getElementById('anim-' + c);
-        if (el) el.innerHTML = '<div style="text-align:center;padding-top:90px;color:#999;font-size:0.95em;">需要網路連線<br>才能顯示筆順</div>';
-      });
-      return;
-    }
-    chars.forEach(c => {
-      try {
-        writers[c] = HanziWriter.create('anim-' + c, c, {
-          width: 220,
-          height: 220,
-          padding: 10,
-          strokeColor: '#2e7d32',
-          radicalColor: '#e85a8a',
-          showOutline: true,
-          showCharacter: true,
-          strokeAnimationSpeed: 1,
-          delayBetweenStrokes: 300,
-          charDataLoader: function(char, onComplete, onError) {
-            const url = 'https://cdn.jsdelivr.net/npm/hanzi-writer-data@2/' + encodeURIComponent(char) + '.json';
-            fetch(url)
-              .then(r => r.json())
-              .then(onComplete)
-              .catch(onError);
-          }
-        });
-      } catch(e) {
-        console.error('無法載入字：' + c, e);
-      }
-    });
-  });
-
-  function playStroke(c) {
-    if (writers[c]) writers[c].animateCharacter();
-  }
-  function quizStroke(c) {
-    if (writers[c]) writers[c].quiz({ showHintAfterMisses: 3 });
-  }
-</script>
 </body>
 </html>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
