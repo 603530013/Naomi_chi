@@ -156,21 +156,94 @@
   /* 課文段落需要拉開行高，讓直書注音不會壓到下一行 */
   .lesson-text p { line-height: 2.4; }
 
-  /* 問答題 */
-  .question {
+  /* 選擇題 */
+  .mc-question {
     background: var(--gray-light);
-    padding: 14px 18px;
+    padding: 16px 20px;
     border-radius: 10px;
-    margin: 10px 0;
+    margin: 12px 0;
     border-left: 5px solid var(--pink-dark);
   }
-  .question .q { font-weight: bold; color: var(--pink-dark); }
-  .question .ans-line {
-    border-bottom: 1px solid #aaa;
-    display: inline-block;
-    min-width: 280px;
-    height: 28px;
+  .mc-question .q {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.05em;
   }
+  .mc-question .q .num {
+    color: var(--pink-dark);
+    margin-right: 6px;
+  }
+  .mc-question .options {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0 0;
+  }
+  .mc-question .options li {
+    padding: 8px 12px;
+    margin: 5px 0;
+    background: #fff;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .mc-question .options li:hover {
+    background: #fff8e1;
+    border-color: var(--yellow-dark);
+  }
+  .mc-question .options li.selected {
+    background: #e3f2fd;
+    border-color: var(--blue-dark);
+  }
+  .mc-question .options li.correct {
+    background: #e8f5e9;
+    border-color: var(--green-dark);
+    font-weight: bold;
+  }
+  .mc-question .options .letter {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--pink);
+    color: var(--pink-dark);
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+  .mc-question .options li.correct .letter {
+    background: var(--green-dark);
+    color: white;
+  }
+  .mc-question .reveal-btn {
+    margin-top: 12px;
+    background: var(--orange-dark);
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1em;
+    line-height: 1.4;
+    min-height: 36px;
+  }
+  .mc-question .reveal-btn:hover { background: #b85a00; }
+  .mc-question .answer-text {
+    margin-top: 8px;
+    padding: 8px 12px;
+    background: #fff;
+    border-radius: 6px;
+    color: var(--green-dark);
+    font-weight: bold;
+    display: none;
+  }
+  .mc-question.show-answer .answer-text { display: block; }
 
   /* 生字筆順卡片 */
   .char-grid {
@@ -434,31 +507,78 @@
     <p><span class="zy"><span class="zh">媽</span><span class="zhu-wrap"><span class="zhu">ㄇㄚ</span></span></span><span class="zy"><span class="zh">媽</span><span class="zhu-wrap light"><span class="tone-light">˙</span><span class="zhu">ㄇㄚ</span></span></span><span class="zy"><span class="zh">笑</span><span class="zhu-wrap"><span class="zhu">ㄒㄧㄠ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">著</span><span class="zhu-wrap light"><span class="tone-light">˙</span><span class="zhu">ㄓㄜ</span></span></span><span class="zy"><span class="zh">說</span><span class="zhu-wrap"><span class="zhu">ㄕㄨㄛ</span></span></span>：「<span class="zy"><span class="zh">花</span><span class="zhu-wrap"><span class="zhu">ㄏㄨㄚ</span></span></span><span class="zy"><span class="zh">開</span><span class="zhu-wrap"><span class="zhu">ㄎㄞ</span></span></span><span class="zy"><span class="zh">了</span><span class="zhu-wrap light"><span class="tone-light">˙</span><span class="zhu">ㄌㄜ</span></span></span>，<span class="zy"><span class="zh">草</span><span class="zhu-wrap"><span class="zhu">ㄘㄠ</span><span class="tone">ˇ</span></span></span><span class="zy"><span class="zh">綠</span><span class="zhu-wrap"><span class="zhu">ㄌㄩ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">了</span><span class="zhu-wrap light"><span class="tone-light">˙</span><span class="zhu">ㄌㄜ</span></span></span>，<span class="zy"><span class="zh">天</span><span class="zhu-wrap"><span class="zhu">ㄊㄧㄢ</span></span></span><span class="zy"><span class="zh">氣</span><span class="zhu-wrap"><span class="zhu">ㄑㄧ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">暖</span><span class="zhu-wrap"><span class="zhu">ㄋㄨㄢ</span><span class="tone">ˇ</span></span></span><span class="zy"><span class="zh">和</span><span class="zhu-wrap light"><span class="tone-light">˙</span><span class="zhu">ㄏㄨㄛ</span></span></span><span class="zy"><span class="zh">了</span><span class="zhu-wrap light"><span class="tone-light">˙</span><span class="zhu">ㄌㄜ</span></span></span>，<span class="zy"><span class="zh">就</span><span class="zhu-wrap"><span class="zhu">ㄐㄧㄡ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">是</span><span class="zhu-wrap"><span class="zhu">ㄕ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">春</span><span class="zhu-wrap"><span class="zhu">ㄔㄨㄣ</span></span></span><span class="zy"><span class="zh">天</span><span class="zhu-wrap"><span class="zhu">ㄊㄧㄢ</span></span></span><span class="zy"><span class="zh">來</span><span class="zhu-wrap"><span class="zhu">ㄌㄞ</span><span class="tone">ˊ</span></span></span><span class="zy"><span class="zh">了</span><span class="zhu-wrap light"><span class="tone-light">˙</span><span class="zhu">ㄌㄜ</span></span></span>。」</p>
   </div>
 
-  <h3 style="color:#e85a8a; margin-top:24px;">▍想一想，答一答</h3>
+  <h3 style="color:#e85a8a; margin-top:24px;">▍想一想，選一選</h3>
 
-  <div class="question">
-    <div class="q">1. 課文中說「好美呀！」，是看到了什麼景色覺得很美？</div>
-    <div class="ans-line"></div>
+  <div class="mc-question" data-answer="B">
+    <div class="q"><span class="num">1.</span>課文中說「好美呀！」，是看到了什麼景色覺得很美？</div>
+    <ul class="options">
+      <li><span class="letter">A</span>花園裡下著大雪的景色</li>
+      <li><span class="letter">B</span>花開了、草綠了的春天景色</li>
+      <li><span class="letter">C</span>樹葉變黃落下的秋天景色</li>
+      <li><span class="letter">D</span>海邊浪花拍打的景色</li>
+    </ul>
+    <button class="reveal-btn" onclick="revealAnswer(this)">看答案</button>
+    <div class="answer-text">正確答案：B　花開了、草綠了的春天景色</div>
   </div>
-  <div class="question">
-    <div class="q">2. 弟弟猜春天可能是怎麼來的？請寫出兩種猜法。</div>
-    <div class="ans-line"></div>
+
+  <div class="mc-question" data-answer="C">
+    <div class="q"><span class="num">2.</span>弟弟猜春天可能是怎麼來的？</div>
+    <ul class="options">
+      <li><span class="letter">A</span>飛機飛來的，或者開船來的</li>
+      <li><span class="letter">B</span>跑步跑來的，或者跳跳來的</li>
+      <li><span class="letter">C</span>坐車來的，或者走路來的</li>
+      <li><span class="letter">D</span>騎腳踏車來的，或者搭捷運來的</li>
+    </ul>
+    <button class="reveal-btn" onclick="revealAnswer(this)">看答案</button>
+    <div class="answer-text">正確答案：C　坐車來的，或者走路來的</div>
   </div>
-  <div class="question">
-    <div class="q">3. 媽媽說，發生哪三件事情就是春天來了？</div>
-    <div class="ans-line"></div>
+
+  <div class="mc-question" data-answer="B">
+    <div class="q"><span class="num">3.</span>媽媽說，發生哪三件事情就是春天來了？</div>
+    <ul class="options">
+      <li><span class="letter">A</span>下雪了、結冰了、起風了</li>
+      <li><span class="letter">B</span>花開了、草綠了、天氣暖和了</li>
+      <li><span class="letter">C</span>樹葉黃了、落葉多了、樹枝光了</li>
+      <li><span class="letter">D</span>下大雨了、起大霧了、打雷了</li>
+    </ul>
+    <button class="reveal-btn" onclick="revealAnswer(this)">看答案</button>
+    <div class="answer-text">正確答案：B　花開了、草綠了、天氣暖和了</div>
   </div>
-  <div class="question">
-    <div class="q">4. 「天氣暖和」是什麼意思？請用自己的話說一說。</div>
-    <div class="ans-line"></div>
+
+  <div class="mc-question" data-answer="C">
+    <div class="q"><span class="num">4.</span>「天氣暖和」是什麼意思？</div>
+    <ul class="options">
+      <li><span class="letter">A</span>天氣很冷，要穿厚厚的衣服</li>
+      <li><span class="letter">B</span>天氣很熱，會流很多汗</li>
+      <li><span class="letter">C</span>天氣不冷也不熱，舒舒服服</li>
+      <li><span class="letter">D</span>天氣下大雨，到處都是水</li>
+    </ul>
+    <button class="reveal-btn" onclick="revealAnswer(this)">看答案</button>
+    <div class="answer-text">正確答案：C　天氣不冷也不熱，舒舒服服</div>
   </div>
-  <div class="question">
-    <div class="q">5. 媽媽回答弟弟的問題時，是用什麼表情、什麼樣子？</div>
-    <div class="ans-line"></div>
+
+  <div class="mc-question" data-answer="B">
+    <div class="q"><span class="num">5.</span>媽媽回答弟弟的問題時，是什麼表情？</div>
+    <ul class="options">
+      <li><span class="letter">A</span>哭著說</li>
+      <li><span class="letter">B</span>笑著說</li>
+      <li><span class="letter">C</span>生氣的說</li>
+      <li><span class="letter">D</span>害怕的說</li>
+    </ul>
+    <button class="reveal-btn" onclick="revealAnswer(this)">看答案</button>
+    <div class="answer-text">正確答案：B　笑著說</div>
   </div>
-  <div class="question">
-    <div class="q">6. 你最喜歡春天的什麼？為什麼？</div>
-    <div class="ans-line"></div>
+
+  <div class="mc-question" data-answer="C">
+    <div class="q"><span class="num">6.</span>下面哪一個<u>不是</u>課文中說的春天景色？</div>
+    <ul class="options">
+      <li><span class="letter">A</span>花開了</li>
+      <li><span class="letter">B</span>草綠了</li>
+      <li><span class="letter">C</span>下大雪</li>
+      <li><span class="letter">D</span>天氣暖和</li>
+    </ul>
+    <button class="reveal-btn" onclick="revealAnswer(this)">看答案</button>
+    <div class="answer-text">正確答案：C　下大雪（春天不會下雪）</div>
   </div>
 </section>
 
@@ -584,13 +704,6 @@
     <div class="reading"><b>讀音二：ㄏㄨㄢˊ</b>　表示「歸還、把東西交回去」的意思。<br>
     例句：這本書看完了要<b>還</b>給圖書館。／我<b>還</b>你五元。</div>
     <div style="clear:both"></div>
-    <div class="duoyin-practice">
-      <b>▍練習：</b>請在括號內填入正確的注音<br>
-      （1）爸爸下班<u>還</u>（　　　）沒回家。<br>
-      （2）借的東西要記得<u>還</u>（　　　）給人家。<br>
-      （3）下雨了，<u>還</u>（　　　）要出去玩嗎？<br>
-      （4）他把錢<u>還</u>（　　　）給我了。
-    </div>
   </div>
 
   <div class="duoyin-card">
@@ -600,11 +713,80 @@
     <div class="reading"><b>讀音二：ㄧㄚˊ</b>　單獨出現，表示驚訝。<br>
     例句：<b>呀</b>！下雨了！／<b>呀</b>，我忘了帶課本！</div>
     <div style="clear:both"></div>
-    <div class="duoyin-practice">
-      <b>▍練習：</b>說說看，下面的「呀」要念什麼？<br>
-      （1）這朵花好香<u>呀</u>！（　　　）<br>
-      （2）<u>呀</u>！我的書包不見了！（　　　）
-    </div>
+  </div>
+
+  <h3 style="color:#7b3fa0; margin-top:24px;">▍考考你！選出正確的讀音</h3>
+
+  <div class="mc-question" data-answer="A">
+    <div class="q"><span class="num">1.</span>「爸爸下班<u>還</u>沒回家。」這裡的「還」要念什麼？</div>
+    <ul class="options">
+      <li><span class="letter">A</span>ㄏㄞˊ</li>
+      <li><span class="letter">B</span>ㄏㄨㄢˊ</li>
+      <li><span class="letter">C</span>ㄏㄢˊ</li>
+      <li><span class="letter">D</span>ㄏㄨㄣˊ</li>
+    </ul>
+    <button class="reveal-btn" onclick="revealAnswer(this)">看答案</button>
+    <div class="answer-text">正確答案：A　ㄏㄞˊ（仍然、還沒回家）</div>
+  </div>
+
+  <div class="mc-question" data-answer="B">
+    <div class="q"><span class="num">2.</span>「借的東西要記得<u>還</u>給人家。」這裡的「還」要念什麼？</div>
+    <ul class="options">
+      <li><span class="letter">A</span>ㄏㄞˊ</li>
+      <li><span class="letter">B</span>ㄏㄨㄢˊ</li>
+      <li><span class="letter">C</span>ㄏㄢˊ</li>
+      <li><span class="letter">D</span>ㄏㄨㄣˊ</li>
+    </ul>
+    <button class="reveal-btn" onclick="revealAnswer(this)">看答案</button>
+    <div class="answer-text">正確答案：B　ㄏㄨㄢˊ（歸還、把東西交回去）</div>
+  </div>
+
+  <div class="mc-question" data-answer="A">
+    <div class="q"><span class="num">3.</span>「下雨了，<u>還</u>要出去玩嗎？」這裡的「還」要念什麼？</div>
+    <ul class="options">
+      <li><span class="letter">A</span>ㄏㄞˊ</li>
+      <li><span class="letter">B</span>ㄏㄨㄢˊ</li>
+      <li><span class="letter">C</span>ㄏㄢˊ</li>
+      <li><span class="letter">D</span>ㄏㄨㄣˊ</li>
+    </ul>
+    <button class="reveal-btn" onclick="revealAnswer(this)">看答案</button>
+    <div class="answer-text">正確答案：A　ㄏㄞˊ（仍然、還要不要的「還」）</div>
+  </div>
+
+  <div class="mc-question" data-answer="B">
+    <div class="q"><span class="num">4.</span>「他把錢<u>還</u>給我了。」這裡的「還」要念什麼？</div>
+    <ul class="options">
+      <li><span class="letter">A</span>ㄏㄞˊ</li>
+      <li><span class="letter">B</span>ㄏㄨㄢˊ</li>
+      <li><span class="letter">C</span>ㄏㄢˊ</li>
+      <li><span class="letter">D</span>ㄏㄨㄣˊ</li>
+    </ul>
+    <button class="reveal-btn" onclick="revealAnswer(this)">看答案</button>
+    <div class="answer-text">正確答案：B　ㄏㄨㄢˊ（還錢、歸還）</div>
+  </div>
+
+  <div class="mc-question" data-answer="A">
+    <div class="q"><span class="num">5.</span>「這朵花好香<u>呀</u>！」這裡的「呀」要念什麼？</div>
+    <ul class="options">
+      <li><span class="letter">A</span>˙ㄧㄚ（輕聲）</li>
+      <li><span class="letter">B</span>ㄧㄚˊ（二聲）</li>
+      <li><span class="letter">C</span>ㄧㄚˇ（三聲）</li>
+      <li><span class="letter">D</span>ㄧㄚˋ（四聲）</li>
+    </ul>
+    <button class="reveal-btn" onclick="revealAnswer(this)">看答案</button>
+    <div class="answer-text">正確答案：A　˙ㄧㄚ（輕聲，放句末表示驚嘆）</div>
+  </div>
+
+  <div class="mc-question" data-answer="B">
+    <div class="q"><span class="num">6.</span>「<u>呀</u>！我的書包不見了！」這裡的「呀」要念什麼？</div>
+    <ul class="options">
+      <li><span class="letter">A</span>˙ㄧㄚ（輕聲）</li>
+      <li><span class="letter">B</span>ㄧㄚˊ（二聲）</li>
+      <li><span class="letter">C</span>ㄧㄚˇ（三聲）</li>
+      <li><span class="letter">D</span>ㄧㄚˋ（四聲）</li>
+    </ul>
+    <button class="reveal-btn" onclick="revealAnswer(this)">看答案</button>
+    <div class="answer-text">正確答案：B　ㄧㄚˊ（單獨出現，表示驚訝）</div>
   </div>
 </section>
 
@@ -710,64 +892,151 @@
       <div class="item"><span class="ch">略</span><span class="note">ㄌㄩㄝˋ<br>大略</span></div>
     </div>
   </div>
+
+  <h3 style="color:#e67700; margin-top:24px;">▍考考你！把對的字找出來</h3>
+
+  <div class="mc-question" data-answer="B">
+    <div class="q"><span class="num">1.</span>「<u>＿＿</u> 天來了，花開了。」應該填哪個字？</div>
+    <ul class="options">
+      <li><span class="letter">A</span>香</li>
+      <li><span class="letter">B</span>春</li>
+      <li><span class="letter">C</span>奉</li>
+      <li><span class="letter">D</span>秦</li>
+    </ul>
+    <button class="reveal-btn" onclick="revealAnswer(this)">看答案</button>
+    <div class="answer-text">正確答案：B　春（春天）</div>
+  </div>
+
+  <div class="mc-question" data-answer="A">
+    <div class="q"><span class="num">2.</span>「公園 <u>＿＿</u> 有很多花。」應該填哪個字？</div>
+    <ul class="options">
+      <li><span class="letter">A</span>裡</li>
+      <li><span class="letter">B</span>理</li>
+      <li><span class="letter">C</span>埋</li>
+      <li><span class="letter">D</span>里</li>
+    </ul>
+    <button class="reveal-btn" onclick="revealAnswer(this)">看答案</button>
+    <div class="answer-text">正確答案：A　裡（公園裡）</div>
+  </div>
+
+  <div class="mc-question" data-answer="B">
+    <div class="q"><span class="num">3.</span>「草地變 <u>＿＿</u> 了。」應該填哪個字？</div>
+    <ul class="options">
+      <li><span class="letter">A</span>緣</li>
+      <li><span class="letter">B</span>綠</li>
+      <li><span class="letter">C</span>錄</li>
+      <li><span class="letter">D</span>線</li>
+    </ul>
+    <button class="reveal-btn" onclick="revealAnswer(this)">看答案</button>
+    <div class="answer-text">正確答案：B　綠（綠色）</div>
+  </div>
+
+  <div class="mc-question" data-answer="C">
+    <div class="q"><span class="num">4.</span>「春天好 <u>＿＿</u> 呀！」應該填哪個字？</div>
+    <ul class="options">
+      <li><span class="letter">A</span>善</li>
+      <li><span class="letter">B</span>羊</li>
+      <li><span class="letter">C</span>美</li>
+      <li><span class="letter">D</span>義</li>
+    </ul>
+    <button class="reveal-btn" onclick="revealAnswer(this)">看答案</button>
+    <div class="answer-text">正確答案：C　美（好美）</div>
+  </div>
+
+  <div class="mc-question" data-answer="B">
+    <div class="q"><span class="num">5.</span>「我愛我的 <u>＿＿</u> ！」應該填哪個字？</div>
+    <ul class="options">
+      <li><span class="letter">A</span>嗎</li>
+      <li><span class="letter">B</span>媽</li>
+      <li><span class="letter">C</span>罵</li>
+      <li><span class="letter">D</span>馬</li>
+    </ul>
+    <button class="reveal-btn" onclick="revealAnswer(this)">看答案</button>
+    <div class="answer-text">正確答案：B　媽（媽媽）</div>
+  </div>
+
+  <div class="mc-question" data-answer="A">
+    <div class="q"><span class="num">6.</span>「我的 <u>＿＿</u> 比我小三歲。」應該填哪個字？</div>
+    <ul class="options">
+      <li><span class="letter">A</span>弟弟</li>
+      <li><span class="letter">B</span>第第</li>
+      <li><span class="letter">C</span>梯梯</li>
+      <li><span class="letter">D</span>體體</li>
+    </ul>
+    <button class="reveal-btn" onclick="revealAnswer(this)">看答案</button>
+    <div class="answer-text">正確答案：A　弟弟</div>
+  </div>
+
+  <div class="mc-question" data-answer="A">
+    <div class="q"><span class="num">7.</span>「請大家 <u>＿＿</u> 下！」應該填哪個字？</div>
+    <ul class="options">
+      <li><span class="letter">A</span>坐</li>
+      <li><span class="letter">B</span>座</li>
+      <li><span class="letter">C</span>生</li>
+      <li><span class="letter">D</span>全</li>
+    </ul>
+    <button class="reveal-btn" onclick="revealAnswer(this)">看答案</button>
+    <div class="answer-text">正確答案：A　坐（坐下）</div>
+  </div>
+
+  <div class="mc-question" data-answer="A">
+    <div class="q"><span class="num">8.</span>「天黑了，弟弟 <u>＿＿</u> 沒回家。」應該填哪個字？</div>
+    <ul class="options">
+      <li><span class="letter">A</span>還</li>
+      <li><span class="letter">B</span>環</li>
+      <li><span class="letter">C</span>園</li>
+      <li><span class="letter">D</span>圓</li>
+    </ul>
+    <button class="reveal-btn" onclick="revealAnswer(this)">看答案</button>
+    <div class="answer-text">正確答案：A　還（還沒回家）</div>
+  </div>
+
+  <div class="mc-question" data-answer="A">
+    <div class="q"><span class="num">9.</span>「不要走小 <u>＿＿</u> ，要走大 <u>＿＿</u> 。」應該填哪個字？</div>
+    <ul class="options">
+      <li><span class="letter">A</span>路</li>
+      <li><span class="letter">B</span>露</li>
+      <li><span class="letter">C</span>洛</li>
+      <li><span class="letter">D</span>略</li>
+    </ul>
+    <button class="reveal-btn" onclick="revealAnswer(this)">看答案</button>
+    <div class="answer-text">正確答案：A　路（小路／大路）</div>
+  </div>
 </section>
 
 <!-- =========== 五、造樣造句 =========== -->
 <section id="s5" class="sec-5">
-  <h2>五、造樣造句練習</h2>
-  <p>看看課文中的句子，再學著寫寫看！</p>
+  <h2>五、造樣造句</h2>
+  <p>看看課文中的句子，學一學這些常見的句型怎麼用！</p>
 
   <div class="pattern-box">
     <div class="pattern">句型 ①：好 ＿＿ 呀！</div>
     <div class="example">課文例句：好<b>美</b>呀！</div>
-    <div class="example">仿作例句：好<b>香</b>呀！ ／ 好<b>大</b>呀！ ／ 好<b>可愛</b>呀！</div>
-    <div class="practice">
-      <b>換你寫：</b><br>
-      （1）好<span class="practice-line"></span>呀！<br>
-      （2）好<span class="practice-line"></span>呀！
-    </div>
+    <div class="example">類似句子：好<b>香</b>呀！　好<b>大</b>呀！　好<b>可愛</b>呀！　好<b>厲害</b>呀！</div>
   </div>
 
   <div class="pattern-box">
-    <div class="pattern">句型 ②：＿＿＿，＿＿ 了。</div>
-    <div class="example">課文例句：花，<b>開</b>了。／草，<b>綠</b>了。</div>
-    <div class="example">仿作例句：天，<b>黑</b>了。／葉子，<b>黃</b>了。</div>
-    <div class="practice">
-      <b>換你寫：</b><br>
-      （1）<span class="practice-line"></span>，<span class="practice-line" style="min-width:120px"></span>了。<br>
-      （2）<span class="practice-line"></span>，<span class="practice-line" style="min-width:120px"></span>了。
-    </div>
+    <div class="pattern">句型 ②：＿＿，＿＿ 了。</div>
+    <div class="example">課文例句：花，<b>開</b>了。　草，<b>綠</b>了。</div>
+    <div class="example">類似句子：天，<b>黑</b>了。　葉子，<b>黃</b>了。　肚子，<b>餓</b>了。</div>
   </div>
 
   <div class="pattern-box">
-    <div class="pattern">句型 ③：＿＿＿ 來了。</div>
+    <div class="pattern">句型 ③：＿＿ 來了。</div>
     <div class="example">課文例句：<b>春天</b>來了。</div>
-    <div class="example">仿作例句：<b>夏天</b>來了。／<b>爸爸</b>來了。／<b>小狗</b>來了。</div>
-    <div class="practice">
-      <b>換你寫：</b><br>
-      （1）<span class="practice-line"></span>來了。<br>
-      （2）<span class="practice-line"></span>來了。
-    </div>
+    <div class="example">類似句子：<b>夏天</b>來了。　<b>爸爸</b>來了。　<b>小狗</b>來了。　<b>客人</b>來了。</div>
   </div>
 
   <div class="pattern-box">
     <div class="pattern">句型 ④：是 ＿＿ 來的？還是 ＿＿ 來的？</div>
     <div class="example">課文例句：他是<b>坐車</b>來的，還是<b>走路</b>來的？</div>
-    <div class="example">仿作例句：是<b>騎腳踏車</b>來的？還是<b>搭公車</b>來的？</div>
-    <div class="practice">
-      <b>換你寫：</b><br>
-      是<span class="practice-line" style="min-width:160px"></span>來的？還是<span class="practice-line" style="min-width:160px"></span>來的？
-    </div>
+    <div class="example">類似句子：你是<b>騎腳踏車</b>來的？還是<b>搭公車</b>來的？</div>
   </div>
 
   <div class="pattern-box">
-    <div class="pattern">句型 ⑤：媽媽笑著說：「＿＿＿＿。」</div>
-    <div class="example">課文例句：媽媽<b>笑</b>著說：「花開了，草綠了，⋯⋯」</div>
-    <div class="example">仿作例句：爸爸<b>急</b>著說：「快遲到了！」／哥哥<b>跑</b>著說：「我先到了！」</div>
-    <div class="practice">
-      <b>換你寫：</b><br>
-      <span class="practice-line" style="min-width:120px"></span><span class="practice-line" style="min-width:80px"></span>著說：「<span class="practice-line" style="min-width:200px"></span>。」
-    </div>
+    <div class="pattern">句型 ⑤：媽媽 ＿＿ 著說：「＿＿＿。」</div>
+    <div class="example">課文例句：媽媽<b>笑</b>著說：「花開了，草綠了…」</div>
+    <div class="example">類似句子：爸爸<b>急</b>著說：「快遲到了！」　哥哥<b>跑</b>著說：「我先到了！」</div>
   </div>
 </section>
 
@@ -856,6 +1125,104 @@
       <li><span class="idiom">一路平安</span><span class="meaning">祝福別人在旅途上一路順利、平平安安。</span></li>
     </ul>
   </div>
+
+  <h3 style="color:#c0392b; margin-top:24px;">▍考考你！選出正確的成語</h3>
+
+  <div class="mc-question" data-answer="A">
+    <div class="q"><span class="num">1.</span>形容春天天氣變暖、花朵都開了的美麗景色，可以用哪個成語？</div>
+    <ul class="options">
+      <li><span class="letter">A</span>春暖花開</li>
+      <li><span class="letter">B</span>山高水遠</li>
+      <li><span class="letter">C</span>千言萬語</li>
+      <li><span class="letter">D</span>五湖四海</li>
+    </ul>
+    <button class="reveal-btn" onclick="revealAnswer(this)">看答案</button>
+    <div class="answer-text">正確答案：A　春暖花開</div>
+  </div>
+
+  <div class="mc-question" data-answer="A">
+    <div class="q"><span class="num">2.</span>「外表和內心一樣真誠、不虛假」可以用哪個成語形容？</div>
+    <ul class="options">
+      <li><span class="letter">A</span>表裡如一</li>
+      <li><span class="letter">B</span>裡應外合</li>
+      <li><span class="letter">C</span>三心二意</li>
+      <li><span class="letter">D</span>一心一意</li>
+    </ul>
+    <button class="reveal-btn" onclick="revealAnswer(this)">看答案</button>
+    <div class="answer-text">正確答案：A　表裡如一</div>
+  </div>
+
+  <div class="mc-question" data-answer="B">
+    <div class="q"><span class="num">3.</span>「青青的山，綠綠的水，形容大自然美麗的風景」是哪個成語？</div>
+    <ul class="options">
+      <li><span class="letter">A</span>花紅柳綠</li>
+      <li><span class="letter">B</span>青山綠水</li>
+      <li><span class="letter">C</span>綠草如茵</li>
+      <li><span class="letter">D</span>一望無際</li>
+    </ul>
+    <button class="reveal-btn" onclick="revealAnswer(this)">看答案</button>
+    <div class="answer-text">正確答案：B　青山綠水</div>
+  </div>
+
+  <div class="mc-question" data-answer="A">
+    <div class="q"><span class="num">4.</span>「每一方面都非常好，沒有任何缺點」可以用哪個成語？</div>
+    <ul class="options">
+      <li><span class="letter">A</span>十全十美</li>
+      <li><span class="letter">B</span>美中不足</li>
+      <li><span class="letter">C</span>春風滿面</li>
+      <li><span class="letter">D</span>坐立不安</li>
+    </ul>
+    <button class="reveal-btn" onclick="revealAnswer(this)">看答案</button>
+    <div class="answer-text">正確答案：A　十全十美</div>
+  </div>
+
+  <div class="mc-question" data-answer="A">
+    <div class="q"><span class="num">5.</span>「形容哥哥對弟弟很友愛，弟弟對哥哥很恭敬」用哪個成語？</div>
+    <ul class="options">
+      <li><span class="letter">A</span>兄友弟恭</li>
+      <li><span class="letter">B</span>難兄難弟</li>
+      <li><span class="letter">C</span>稱兄道弟</li>
+      <li><span class="letter">D</span>表裡如一</li>
+    </ul>
+    <button class="reveal-btn" onclick="revealAnswer(this)">看答案</button>
+    <div class="answer-text">正確答案：A　兄友弟恭</div>
+  </div>
+
+  <div class="mc-question" data-answer="B">
+    <div class="q"><span class="num">6.</span>「坐在井底看天空，比喻看到的範圍很小、見識不夠多」是哪個成語？</div>
+    <ul class="options">
+      <li><span class="letter">A</span>坐立不安</li>
+      <li><span class="letter">B</span>坐井觀天</li>
+      <li><span class="letter">C</span>坐享其成</li>
+      <li><span class="letter">D</span>春暖花開</li>
+    </ul>
+    <button class="reveal-btn" onclick="revealAnswer(this)">看答案</button>
+    <div class="answer-text">正確答案：B　坐井觀天</div>
+  </div>
+
+  <div class="mc-question" data-answer="C">
+    <div class="q"><span class="num">7.</span>「祝福別人在旅途上一路順利、平平安安」是哪個成語？</div>
+    <ul class="options">
+      <li><span class="letter">A</span>路不拾遺</li>
+      <li><span class="letter">B</span>走投無路</li>
+      <li><span class="letter">C</span>一路平安</li>
+      <li><span class="letter">D</span>千言萬語</li>
+    </ul>
+    <button class="reveal-btn" onclick="revealAnswer(this)">看答案</button>
+    <div class="answer-text">正確答案：C　一路平安</div>
+  </div>
+
+  <div class="mc-question" data-answer="A">
+    <div class="q"><span class="num">8.</span>形容醫生醫術很高明、能把病人從重病中救回來，是哪個成語？</div>
+    <ul class="options">
+      <li><span class="letter">A</span>妙手回春</li>
+      <li><span class="letter">B</span>春風滿面</li>
+      <li><span class="letter">C</span>春暖花開</li>
+      <li><span class="letter">D</span>返老還童</li>
+    </ul>
+    <button class="reveal-btn" onclick="revealAnswer(this)">看答案</button>
+    <div class="answer-text">正確答案：A　妙手回春</div>
+  </div>
 </section>
 
 <footer>
@@ -866,6 +1233,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.5/dist/hanzi-writer.min.js"></script>
 <script>
+  // ==== 生字筆順 ====
   const chars = ['春','裡','綠','美','呀','媽','弟','坐','還','路'];
   const writers = {};
 
@@ -909,7 +1277,33 @@
   function quizStroke(c) {
     if (writers[c]) writers[c].quiz({ showHintAfterMisses: 3 });
   }
+
+  // ==== 選擇題 ====
+  function revealAnswer(btn) {
+    const q = btn.closest('.mc-question');
+    const correct = q.dataset.answer;
+    const isShown = q.classList.contains('show-answer');
+    if (isShown) {
+      q.classList.remove('show-answer');
+      q.querySelectorAll('.options li').forEach(li => li.classList.remove('correct'));
+      btn.textContent = '看答案';
+    } else {
+      q.classList.add('show-answer');
+      q.querySelectorAll('.options li').forEach((li, i) => {
+        const letter = 'ABCD'[i];
+        if (letter === correct) li.classList.add('correct');
+      });
+      btn.textContent = '隱藏答案';
+    }
+  }
+
+  document.addEventListener('click', function(e) {
+    const li = e.target.closest('.mc-question .options li');
+    if (!li) return;
+    const ul = li.parentElement;
+    ul.querySelectorAll('li').forEach(l => l.classList.remove('selected'));
+    li.classList.add('selected');
+  });
 </script>
 </body>
 </html>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
