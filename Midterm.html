@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>期中考總複習（一～六課） ｜ 一年級下學期國語練習</title>
+<style>
+  :root { --pink:#ffd6e0; --pink-dark:#e85a8a; --green:#c8e6c9; --green-dark:#4caf50; --yellow:#fff4c2; --yellow-dark:#f5a623; --blue:#cfe8ff; --blue-dark:#1976d2; --purple:#e1d5f5; --purple-dark:#7b3fa0; --orange:#ffd9b3; --orange-dark:#e67700; --red:#ffcccc; --red-dark:#c0392b; --gray-light:#f5f5f5; }
+  * { box-sizing: border-box; }
+  body { font-family:"標楷體","DFKai-SB","BiauKai","KaiTi","微軟正黑體",serif; margin:0; padding:0; background:#fefcf7; color:#333; line-height:1.8; }
+  .container { max-width:1100px; margin:0 auto; padding:20px; }
+  header { background:linear-gradient(135deg,#e1d5f5 0%,#ffd6e0 50%,#fff4c2 100%); padding:30px 20px; text-align:center; border-radius:16px; margin-bottom:30px; box-shadow:0 4px 12px rgba(0,0,0,0.08); }
+  header h1 { font-size:2.4em; margin:0 0 10px 0; color:var(--red-dark); }
+  header .meta { font-size:0.95em; color:#555; }
+  header .scope { display:inline-block; background:rgba(255,255,255,0.7); padding:6px 16px; border-radius:20px; margin-top:10px; font-weight:bold; color:var(--purple-dark); }
+  .home-link { display:inline-block; background:var(--blue); color:var(--blue-dark); padding:6px 14px; border-radius:8px; text-decoration:none; margin-bottom:14px; font-size:0.95em; }
+  .home-link:hover { background:var(--blue-dark); color:white; }
+  section { background:#fff; border-radius:16px; padding:24px; margin-bottom:24px; box-shadow:0 2px 8px rgba(0,0,0,0.06); }
+  section h2 { font-size:1.5em; margin:0 0 16px 0; padding:10px 16px; border-radius:8px; color:#fff; }
+  .sec-A h2 { background:var(--pink-dark); }
+  .sec-B h2 { background:var(--blue-dark); }
+  .sec-C h2 { background:var(--green-dark); }
+  .sec-D h2 { background:var(--purple-dark); }
+  .sec-E h2 { background:var(--orange-dark); }
+  .sec-F h2 { background:var(--red-dark); }
+  .sec-G h2 { background:var(--yellow-dark); }
+  .mc-question { background:var(--gray-light); padding:16px 20px; border-radius:10px; margin:12px 0; border-left:5px solid var(--pink-dark); }
+  .mc-question .q { font-weight:bold; color:#333; margin-bottom:10px; font-size:1.05em; }
+  .mc-question .q .num { color:var(--pink-dark); margin-right:6px; }
+  .mc-question .options { list-style:none; padding:0; margin:8px 0 0 0; }
+  .mc-question .options li { padding:8px 12px; margin:5px 0; background:#fff; border-radius:8px; border:2px solid transparent; cursor:pointer; transition:all 0.2s; display:flex; align-items:center; gap:10px; }
+  .mc-question .options li:hover { background:#fff8e1; border-color:var(--yellow-dark); }
+  .mc-question .options li.selected { background:#e3f2fd; border-color:var(--blue-dark); }
+  .mc-question .options li.correct { background:#e8f5e9; border-color:var(--green-dark); font-weight:bold; }
+  .mc-question .options .letter { display:inline-flex; align-items:center; justify-content:center; width:28px; height:28px; border-radius:50%; background:var(--pink); color:var(--pink-dark); font-weight:bold; flex-shrink:0; }
+  .mc-question .options li.correct .letter { background:var(--green-dark); color:white; }
+  .mc-question .reveal-btn { margin-top:12px; background:var(--orange-dark); color:white; border:none; padding:8px 18px; border-radius:8px; cursor:pointer; font-family:inherit; font-size:1em; line-height:1.4; min-height:36px; }
+  .mc-question .reveal-btn:hover { background:#b85a00; }
+  .mc-question .answer-text { margin-top:8px; padding:8px 12px; background:#fff; border-radius:6px; color:var(--green-dark); font-weight:bold; display:none; }
+  .mc-question.show-answer .answer-text { display:block; }
+  .toc { background:#fff; border:2px dashed var(--yellow-dark); border-radius:12px; padding:16px 24px; margin-bottom:30px; }
+  .toc h3 { margin:0 0 10px 0; color:var(--orange-dark); }
+  .toc ol { margin:0; padding-left:24px; } .toc li { margin:4px 0; }
+  .toc a { color:#333; text-decoration:none; } .toc a:hover { color:var(--pink-dark); text-decoration:underline; }
+  .reveal-all { text-align:center; margin:20px 0; }
+  .reveal-all button { background:var(--purple-dark); color:white; border:none; padding:12px 28px; border-radius:10px; font-size:1.1em; font-family:inherit; font-weight:bold; cursor:pointer; }
+  .reveal-all button:hover { background:#5b2e7a; }
+  footer { text-align:center; padding:20px; color:#888; font-size:0.9em; }
+  .score { display:inline-block; background:#e8f5e9; color:var(--green-dark); padding:10px 24px; border-radius:24px; font-size:1.2em; font-weight:bold; margin:14px 0; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<a href="index.html" class="home-link">← 回目錄</a>
+
+<header>
+  <h1>期中考總複習</h1>
+  <div class="meta">114 學年度　一年級下學期　國語</div>
+  <div class="scope">範圍：第一課 ～ 第六課</div>
+</header>
+
+<div class="toc">
+  <h3>本卷七大題</h3>
+  <ol>
+    <li><a href="#sA">課文內容</a>（10 題）</li>
+    <li><a href="#sB">注音</a>（8 題）</li>
+    <li><a href="#sC">部首與筆畫</a>（6 題）</li>
+    <li><a href="#sD">同字異音</a>（6 題）</li>
+    <li><a href="#sE">相似字</a>（10 題）</li>
+    <li><a href="#sF">成語</a>（8 題）</li>
+    <li><a href="#sG">造句句型</a>（4 題）</li>
+  </ol>
+  <p style="text-align:center; margin-top:16px;"><b>共 52 道選擇題</b>，每題點「看答案」可以對照。</p>
+</div>
+
+<div class="reveal-all">
+  <button onclick="revealAll()">一鍵顯示／隱藏全部答案</button>
+</div>
+
+<!-- ============ 一、課文內容 ============ -->
+<section id="sA" class="sec-A">
+  <h2>一、課文內容（10 題）</h2>
+
+  <div class="mc-question" data-answer="B"><div class="q"><span class="num">1.</span>第一課「春天來了」中，誰說「春天來了」？</div><ul class="options"><li><span class="letter">A</span>弟弟</li><li><span class="letter">B</span>媽媽</li><li><span class="letter">C</span>姐姐</li><li><span class="letter">D</span>爸爸</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">2.</span>第一課中，弟弟問春天是怎麼來的？</div><ul class="options"><li><span class="letter">A</span>坐車來的，還是走路來的</li><li><span class="letter">B</span>飛來的，還是游來的</li><li><span class="letter">C</span>跑來的，還是跳來的</li><li><span class="letter">D</span>沒有問</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="B"><div class="q"><span class="num">3.</span>第二課「小雨」中，小雨最喜歡做什麼？</div><ul class="options"><li><span class="letter">A</span>跳舞</li><li><span class="letter">B</span>唱歌</li><li><span class="letter">C</span>畫畫</li><li><span class="letter">D</span>睡覺</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B</div></div>
+
+  <div class="mc-question" data-answer="C"><div class="q"><span class="num">4.</span>第二課中，小雨走過小河時，發出的聲音是？</div><ul class="options"><li><span class="letter">A</span>ㄐㄧㄡ ㄐㄧㄡ ㄐㄧㄡ</li><li><span class="letter">B</span>ㄓ ㄓ ㄓㄚ ㄓㄚ</li><li><span class="letter">C</span>ㄒㄧ ㄌㄧˋ ㄒㄧ ㄌㄧˋ</li><li><span class="letter">D</span>ㄉㄧㄥ ㄉㄨㄥ ㄉㄧㄥ ㄉㄨㄥ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">C</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">5.</span>第三課「美好的一天」中，妹妹穿著什麼顏色的衣服？</div><ul class="options"><li><span class="letter">A</span>粉紅色</li><li><span class="letter">B</span>白色</li><li><span class="letter">C</span>綠色</li><li><span class="letter">D</span>黃色</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="D"><div class="q"><span class="num">6.</span>第三課中，「春天」帶給我們的是？</div><ul class="options"><li><span class="letter">A</span>很多禮物</li><li><span class="letter">B</span>許多功課</li><li><span class="letter">C</span>很大的雨</li><li><span class="letter">D</span>美好的一天</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">D</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">7.</span>第四課「送什麼呢」中，誰要送媽媽一束花？</div><ul class="options"><li><span class="letter">A</span>爸爸</li><li><span class="letter">B</span>姐姐</li><li><span class="letter">C</span>「我」</li><li><span class="letter">D</span>哥哥</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="B"><div class="q"><span class="num">8.</span>第四課中，姐姐要送媽媽什麼？</div><ul class="options"><li><span class="letter">A</span>一束花</li><li><span class="letter">B</span>一張卡片</li><li><span class="letter">C</span>一個蛋糕</li><li><span class="letter">D</span>一本書</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B</div></div>
+
+  <div class="mc-question" data-answer="B"><div class="q"><span class="num">9.</span>第五課「窗外的小麻雀」中，「我」什麼時候才能玩遊戲？</div><ul class="options"><li><span class="letter">A</span>上課時</li><li><span class="letter">B</span>下課時</li><li><span class="letter">C</span>睡覺時</li><li><span class="letter">D</span>吃飯時</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B</div></div>
+
+  <div class="mc-question" data-answer="C"><div class="q"><span class="num">10.</span>第六課「毛毛蟲過河」中，誰幫毛毛蟲過河？</div><ul class="options"><li><span class="letter">A</span>只有青蛙</li><li><span class="letter">B</span>只有小魚</li><li><span class="letter">C</span>青蛙和小魚</li><li><span class="letter">D</span>小鳥和蝴蝶</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">C</div></div>
+</section>
+
+<!-- ============ 二、注音 ============ -->
+<section id="sB" class="sec-B">
+  <h2>二、注音（8 題）</h2>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">1.</span>「春天」的「春」念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄔㄨㄣ</li><li><span class="letter">B</span>ㄔㄣˊ</li><li><span class="letter">C</span>ㄔㄨㄥ</li><li><span class="letter">D</span>ㄔㄨㄛ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="B"><div class="q"><span class="num">2.</span>「綠色」的「綠」念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄌㄨˋ</li><li><span class="letter">B</span>ㄌㄩˋ</li><li><span class="letter">C</span>ㄌㄧㄡˋ</li><li><span class="letter">D</span>ㄌㄛˋ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">3.</span>「高興」的「興」念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄒㄧㄥˋ</li><li><span class="letter">B</span>ㄒㄧㄥ</li><li><span class="letter">C</span>ㄒㄧㄥˊ</li><li><span class="letter">D</span>ㄒㄧㄥˇ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">4.</span>「真快樂」的「樂」念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄌㄜˋ</li><li><span class="letter">B</span>ㄩㄝˋ</li><li><span class="letter">C</span>ㄌㄜˇ</li><li><span class="letter">D</span>ㄩㄝ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="B"><div class="q"><span class="num">5.</span>「拍照」的「照」念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄓㄠˇ</li><li><span class="letter">B</span>ㄓㄠˋ</li><li><span class="letter">C</span>ㄔㄠˋ</li><li><span class="letter">D</span>ㄓㄚˋ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B</div></div>
+
+  <div class="mc-question" data-answer="B"><div class="q"><span class="num">6.</span>「窗外」的「窗」念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄔㄤ</li><li><span class="letter">B</span>ㄔㄨㄤ</li><li><span class="letter">C</span>ㄓㄨㄤ</li><li><span class="letter">D</span>ㄕㄨㄤ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B</div></div>
+
+  <div class="mc-question" data-answer="B"><div class="q"><span class="num">7.</span>「麻雀」的「雀」念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄔㄩㄝˋ</li><li><span class="letter">B</span>ㄑㄩㄝˋ</li><li><span class="letter">C</span>ㄑㄩˋ</li><li><span class="letter">D</span>ㄑㄩㄝ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">8.</span>「青蛙」的「青」念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄑㄧㄥ</li><li><span class="letter">B</span>ㄑㄧㄥˊ</li><li><span class="letter">C</span>ㄔㄧㄥ</li><li><span class="letter">D</span>ㄑㄧㄥˋ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+</section>
+
+<!-- ============ 三、部首與筆畫 ============ -->
+<section id="sC" class="sec-C">
+  <h2>三、部首與筆畫（6 題）</h2>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">1.</span>「春」字的部首是什麼？</div><ul class="options"><li><span class="letter">A</span>日</li><li><span class="letter">B</span>夫</li><li><span class="letter">C</span>三</li><li><span class="letter">D</span>木</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="C"><div class="q"><span class="num">2.</span>「河」字的部首是什麼？</div><ul class="options"><li><span class="letter">A</span>口</li><li><span class="letter">B</span>可</li><li><span class="letter">C</span>水（氵）</li><li><span class="letter">D</span>木</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">C</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">3.</span>「拍」字的部首是什麼？</div><ul class="options"><li><span class="letter">A</span>手（扌）</li><li><span class="letter">B</span>白</li><li><span class="letter">C</span>人</li><li><span class="letter">D</span>口</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="C"><div class="q"><span class="num">4.</span>「雨」字一共幾畫？</div><ul class="options"><li><span class="letter">A</span>6 畫</li><li><span class="letter">B</span>7 畫</li><li><span class="letter">C</span>8 畫</li><li><span class="letter">D</span>9 畫</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">C</div></div>
+
+  <div class="mc-question" data-answer="C"><div class="q"><span class="num">5.</span>「日」字一共幾畫？</div><ul class="options"><li><span class="letter">A</span>2 畫</li><li><span class="letter">B</span>3 畫</li><li><span class="letter">C</span>4 畫</li><li><span class="letter">D</span>5 畫</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">C</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">6.</span>下列哪一個字的筆畫最多？</div><ul class="options"><li><span class="letter">A</span>幫</li><li><span class="letter">B</span>毛</li><li><span class="letter">C</span>日</li><li><span class="letter">D</span>才</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A（幫 17 畫；毛 4 畫；日 4 畫；才 3 畫）</div></div>
+</section>
+
+<!-- ============ 四、同字異音 ============ -->
+<section id="sD" class="sec-D">
+  <h2>四、同字異音（6 題）</h2>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">1.</span>「弟弟<u>還</u>沒回家。」這裡的「還」念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄏㄞˊ</li><li><span class="letter">B</span>ㄏㄨㄢˊ</li><li><span class="letter">C</span>ㄏㄢˊ</li><li><span class="letter">D</span>ㄏㄨㄣˊ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="B"><div class="q"><span class="num">2.</span>「我把書<u>還</u>給圖書館。」這裡的「還」念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄏㄞˊ</li><li><span class="letter">B</span>ㄏㄨㄢˊ</li><li><span class="letter">C</span>ㄏㄢˊ</li><li><span class="letter">D</span>ㄏㄨㄣˊ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B</div></div>
+
+  <div class="mc-question" data-answer="B"><div class="q"><span class="num">3.</span>「我學音<u>樂</u>。」這裡的「樂」念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄌㄜˋ</li><li><span class="letter">B</span>ㄩㄝˋ</li><li><span class="letter">C</span>ㄌㄜˇ</li><li><span class="letter">D</span>ㄩㄝˇ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B</div></div>
+
+  <div class="mc-question" data-answer="B"><div class="q"><span class="num">4.</span>「他開心<u>地</u>跳起來。」這裡的「地」念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄉㄧˋ</li><li><span class="letter">B</span>˙ㄉㄜ</li><li><span class="letter">C</span>ㄉㄜˊ</li><li><span class="letter">D</span>ㄉㄚˋ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">5.</span>「<u>什</u>麼時候？」這裡的「什」念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄕㄜˊ</li><li><span class="letter">B</span>ㄕˊ</li><li><span class="letter">C</span>ㄕˋ</li><li><span class="letter">D</span>ㄕˇ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="B"><div class="q"><span class="num">6.</span>「我射<u>中</u>目標。」這裡的「中」念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄓㄨㄥ</li><li><span class="letter">B</span>ㄓㄨㄥˋ</li><li><span class="letter">C</span>ㄓㄨㄥˊ</li><li><span class="letter">D</span>ㄓㄨㄥˇ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B</div></div>
+</section>
+
+<!-- ============ 五、相似字 ============ -->
+<section id="sE" class="sec-E">
+  <h2>五、相似字（10 題）</h2>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">1.</span>「<u>＿＿</u> 天來了。」應該填哪個字？</div><ul class="options"><li><span class="letter">A</span>春</li><li><span class="letter">B</span>香</li><li><span class="letter">C</span>奉</li><li><span class="letter">D</span>秦</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="C"><div class="q"><span class="num">2.</span>「我家公園 <u>＿＿</u> 有許多花。」應該填哪個字？</div><ul class="options"><li><span class="letter">A</span>理</li><li><span class="letter">B</span>埋</li><li><span class="letter">C</span>裡</li><li><span class="letter">D</span>里</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">C</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">3.</span>「我愛我的 <u>＿＿</u>。」應該填哪個字？</div><ul class="options"><li><span class="letter">A</span>媽</li><li><span class="letter">B</span>嗎</li><li><span class="letter">C</span>罵</li><li><span class="letter">D</span>馬</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="B"><div class="q"><span class="num">4.</span>「小朋友一起 <u>＿＿</u> 歌。」應該填哪個字？</div><ul class="options"><li><span class="letter">A</span>昌</li><li><span class="letter">B</span>唱</li><li><span class="letter">C</span>晶</li><li><span class="letter">D</span>暢</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">5.</span>「在草 <u>＿＿</u> 上跑。」應該填哪個字？</div><ul class="options"><li><span class="letter">A</span>地</li><li><span class="letter">B</span>池</li><li><span class="letter">C</span>他</li><li><span class="letter">D</span>也</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">6.</span>「<u>＿＿</u> 紅色的衣服。」應該填哪個字？</div><ul class="options"><li><span class="letter">A</span>粉</li><li><span class="letter">B</span>紛</li><li><span class="letter">C</span>份</li><li><span class="letter">D</span>分</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">7.</span>「我要 <u>＿＿</u> 媽媽生日禮物。」應該填哪個字？</div><ul class="options"><li><span class="letter">A</span>送</li><li><span class="letter">B</span>迷</li><li><span class="letter">C</span>達</li><li><span class="letter">D</span>選</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">8.</span>「我會寫好多 <u>＿＿</u>。」應該填哪個字？</div><ul class="options"><li><span class="letter">A</span>字</li><li><span class="letter">B</span>守</li><li><span class="letter">C</span>安</li><li><span class="letter">D</span>宇</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">9.</span>「太 <u>＿＿</u> 出來了。」應該填哪個字？</div><ul class="options"><li><span class="letter">A</span>陽</li><li><span class="letter">B</span>楊</li><li><span class="letter">C</span>揚</li><li><span class="letter">D</span>湯</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">10.</span>「我來 <u>＿＿</u> 你！」應該填哪個字？</div><ul class="options"><li><span class="letter">A</span>幫</li><li><span class="letter">B</span>邦</li><li><span class="letter">C</span>綁</li><li><span class="letter">D</span>梆</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+</section>
+
+<!-- ============ 六、成語 ============ -->
+<section id="sF" class="sec-F">
+  <h2>六、成語（8 題）</h2>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">1.</span>「形容春天美麗的景色」用哪個成語？</div><ul class="options"><li><span class="letter">A</span>春暖花開</li><li><span class="letter">B</span>春風滿面</li><li><span class="letter">C</span>千言萬語</li><li><span class="letter">D</span>五湖四海</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">2.</span>「形容每一方面都很好，沒有缺點」是哪個成語？</div><ul class="options"><li><span class="letter">A</span>十全十美</li><li><span class="letter">B</span>美中不足</li><li><span class="letter">C</span>盡善盡美</li><li><span class="letter">D</span>春暖花開</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">3.</span>「形容雨下得很大」是哪個成語？</div><ul class="options"><li><span class="letter">A</span>傾盆大雨</li><li><span class="letter">B</span>春風化雨</li><li><span class="letter">C</span>風雨無阻</li><li><span class="letter">D</span>口若懸河</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">4.</span>「一邊唱歌一邊跳舞，形容很開心」是哪個成語？</div><ul class="options"><li><span class="letter">A</span>載歌載舞</li><li><span class="letter">B</span>一唱一和</li><li><span class="letter">C</span>四面楚歌</li><li><span class="letter">D</span>引吭高歌</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">5.</span>「形容顏色很多、很鮮豔」是哪個成語？</div><ul class="options"><li><span class="letter">A</span>五顏六色</li><li><span class="letter">B</span>萬紫千紅</li><li><span class="letter">C</span>大紅大紫</li><li><span class="letter">D</span>都對</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A（B、C 也描述顏色，但「五顏六色」最直接形容多種顏色）</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">6.</span>「形容時間過得很快」是哪個成語？</div><ul class="options"><li><span class="letter">A</span>光陰似箭</li><li><span class="letter">B</span>日新月異</li><li><span class="letter">C</span>度日如年</li><li><span class="letter">D</span>千真萬確</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">7.</span>「形容人非常高興、開心」是哪個成語？</div><ul class="options"><li><span class="letter">A</span>興高采烈</li><li><span class="letter">B</span>興風作浪</li><li><span class="letter">C</span>大快人心</li><li><span class="letter">D</span>大街小巷</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">8.</span>「形容做事很慌張、沒有條理」是哪個成語？</div><ul class="options"><li><span class="letter">A</span>手忙腳亂</li><li><span class="letter">B</span>忙裡偷閒</li><li><span class="letter">C</span>悠游自在</li><li><span class="letter">D</span>百發百中</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+</section>
+
+<!-- ============ 七、造句句型 ============ -->
+<section id="sG" class="sec-G">
+  <h2>七、造句句型（4 題）</h2>
+
+  <div class="mc-question" data-answer="C"><div class="q"><span class="num">1.</span>下列哪一句的句型和「好美呀！」一樣？</div><ul class="options"><li><span class="letter">A</span>我去公園。</li><li><span class="letter">B</span>媽媽笑著說。</li><li><span class="letter">C</span>好大呀！</li><li><span class="letter">D</span>小狗會叫。</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">C（「好＿呀！」句型）</div></div>
+
+  <div class="mc-question" data-answer="B"><div class="q"><span class="num">2.</span>下列哪一句的句型和「花，開了。」一樣？</div><ul class="options"><li><span class="letter">A</span>我吃飯。</li><li><span class="letter">B</span>葉子，黃了。</li><li><span class="letter">C</span>我很開心。</li><li><span class="letter">D</span>媽媽笑著說。</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B（「＿，＿了。」句型）</div></div>
+
+  <div class="mc-question" data-answer="B"><div class="q"><span class="num">3.</span>下列哪一句的句型和「小雨愛唱歌」一樣？</div><ul class="options"><li><span class="letter">A</span>我的鉛筆。</li><li><span class="letter">B</span>弟弟愛吃糖果。</li><li><span class="letter">C</span>春天來了。</li><li><span class="letter">D</span>媽媽很美。</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B（「＿愛＿」句型）</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">4.</span>下列哪一句的句型和「又叫又跳」一樣？</div><ul class="options"><li><span class="letter">A</span>又哭又笑</li><li><span class="letter">B</span>笑著說</li><li><span class="letter">C</span>慢慢的走</li><li><span class="letter">D</span>真著急</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A（「又＿又＿」句型）</div></div>
+</section>
+
+<div class="reveal-all">
+  <button onclick="revealAll()">一鍵顯示／隱藏全部答案</button>
+</div>
+
+<footer><p>114 學年度下學期　一年級國語自學練習　｜　期中考總複習（第一課～第六課）</p></footer>
+
+</div>
+
+<script>
+  function revealAnswer(btn) {
+    const q = btn.closest('.mc-question'); const correct = q.dataset.answer; const isShown = q.classList.contains('show-answer');
+    if (isShown) { q.classList.remove('show-answer'); q.querySelectorAll('.options li').forEach(li => li.classList.remove('correct')); btn.textContent = '看答案'; }
+    else { q.classList.add('show-answer'); q.querySelectorAll('.options li').forEach((li, i) => { if ('ABCD'[i] === correct) li.classList.add('correct'); }); btn.textContent = '隱藏答案'; }
+  }
+  function revealAll() {
+    const allQuestions = document.querySelectorAll('.mc-question');
+    const anyHidden = Array.from(allQuestions).some(q => !q.classList.contains('show-answer'));
+    allQuestions.forEach(q => {
+      const btn = q.querySelector('.reveal-btn');
+      const correct = q.dataset.answer;
+      if (anyHidden) {
+        q.classList.add('show-answer');
+        q.querySelectorAll('.options li').forEach((li, i) => { if ('ABCD'[i] === correct) li.classList.add('correct'); });
+        if (btn) btn.textContent = '隱藏答案';
+      } else {
+        q.classList.remove('show-answer');
+        q.querySelectorAll('.options li').forEach(li => li.classList.remove('correct'));
+        if (btn) btn.textContent = '看答案';
+      }
+    });
+  }
+  document.addEventListener('click', function(e) {
+    const li = e.target.closest('.mc-question .options li'); if (!li) return;
+    const ul = li.parentElement;
+    ul.querySelectorAll('li').forEach(l => l.classList.remove('selected'));
+    li.classList.add('selected');
+  });
+</script>
+</body>
+</html>
