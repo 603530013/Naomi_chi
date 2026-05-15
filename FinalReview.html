@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>期末考總複習（七～十二課） ｜ 一年級下學期國語練習</title>
+<style>
+  :root { --pink:#ffd6e0; --pink-dark:#e85a8a; --green:#c8e6c9; --green-dark:#4caf50; --yellow:#fff4c2; --yellow-dark:#f5a623; --blue:#cfe8ff; --blue-dark:#1976d2; --purple:#e1d5f5; --purple-dark:#7b3fa0; --orange:#ffd9b3; --orange-dark:#e67700; --red:#ffcccc; --red-dark:#c0392b; --gray-light:#f5f5f5; }
+  * { box-sizing: border-box; }
+  body { font-family:"標楷體","DFKai-SB","BiauKai","KaiTi","微軟正黑體",serif; margin:0; padding:0; background:#fefcf7; color:#333; line-height:1.8; }
+  .container { max-width:1100px; margin:0 auto; padding:20px; }
+  header { background:linear-gradient(135deg,#c8e6c9 0%,#cfe8ff 50%,#e1d5f5 100%); padding:30px 20px; text-align:center; border-radius:16px; margin-bottom:30px; box-shadow:0 4px 12px rgba(0,0,0,0.08); }
+  header h1 { font-size:2.4em; margin:0 0 10px 0; color:var(--red-dark); }
+  header .meta { font-size:0.95em; color:#555; }
+  header .scope { display:inline-block; background:rgba(255,255,255,0.7); padding:6px 16px; border-radius:20px; margin-top:10px; font-weight:bold; color:var(--purple-dark); }
+  .home-link { display:inline-block; background:var(--blue); color:var(--blue-dark); padding:6px 14px; border-radius:8px; text-decoration:none; margin-bottom:14px; font-size:0.95em; }
+  .home-link:hover { background:var(--blue-dark); color:white; }
+  section { background:#fff; border-radius:16px; padding:24px; margin-bottom:24px; box-shadow:0 2px 8px rgba(0,0,0,0.06); }
+  section h2 { font-size:1.5em; margin:0 0 16px 0; padding:10px 16px; border-radius:8px; color:#fff; }
+  .sec-A h2 { background:var(--pink-dark); }
+  .sec-B h2 { background:var(--blue-dark); }
+  .sec-C h2 { background:var(--green-dark); }
+  .sec-D h2 { background:var(--purple-dark); }
+  .sec-E h2 { background:var(--orange-dark); }
+  .sec-F h2 { background:var(--red-dark); }
+  .sec-G h2 { background:var(--yellow-dark); }
+  .mc-question { background:var(--gray-light); padding:16px 20px; border-radius:10px; margin:12px 0; border-left:5px solid var(--pink-dark); }
+  .mc-question .q { font-weight:bold; color:#333; margin-bottom:10px; font-size:1.05em; }
+  .mc-question .q .num { color:var(--pink-dark); margin-right:6px; }
+  .mc-question .options { list-style:none; padding:0; margin:8px 0 0 0; }
+  .mc-question .options li { padding:8px 12px; margin:5px 0; background:#fff; border-radius:8px; border:2px solid transparent; cursor:pointer; transition:all 0.2s; display:flex; align-items:center; gap:10px; }
+  .mc-question .options li:hover { background:#fff8e1; border-color:var(--yellow-dark); }
+  .mc-question .options li.selected { background:#e3f2fd; border-color:var(--blue-dark); }
+  .mc-question .options li.correct { background:#e8f5e9; border-color:var(--green-dark); font-weight:bold; }
+  .mc-question .options .letter { display:inline-flex; align-items:center; justify-content:center; width:28px; height:28px; border-radius:50%; background:var(--pink); color:var(--pink-dark); font-weight:bold; flex-shrink:0; }
+  .mc-question .options li.correct .letter { background:var(--green-dark); color:white; }
+  .mc-question .reveal-btn { margin-top:12px; background:var(--orange-dark); color:white; border:none; padding:8px 18px; border-radius:8px; cursor:pointer; font-family:inherit; font-size:1em; line-height:1.4; min-height:36px; }
+  .mc-question .reveal-btn:hover { background:#b85a00; }
+  .mc-question .answer-text { margin-top:8px; padding:8px 12px; background:#fff; border-radius:6px; color:var(--green-dark); font-weight:bold; display:none; }
+  .mc-question.show-answer .answer-text { display:block; }
+  .toc { background:#fff; border:2px dashed var(--yellow-dark); border-radius:12px; padding:16px 24px; margin-bottom:30px; }
+  .toc h3 { margin:0 0 10px 0; color:var(--orange-dark); }
+  .toc ol { margin:0; padding-left:24px; } .toc li { margin:4px 0; }
+  .toc a { color:#333; text-decoration:none; } .toc a:hover { color:var(--pink-dark); text-decoration:underline; }
+  .reveal-all { text-align:center; margin:20px 0; }
+  .reveal-all button { background:var(--purple-dark); color:white; border:none; padding:12px 28px; border-radius:10px; font-size:1.1em; font-family:inherit; font-weight:bold; cursor:pointer; }
+  .reveal-all button:hover { background:#5b2e7a; }
+  footer { text-align:center; padding:20px; color:#888; font-size:0.9em; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<a href="index.html" class="home-link">← 回目錄</a>
+
+<header>
+  <h1>期末考總複習</h1>
+  <div class="meta">114 學年度　一年級下學期　國語</div>
+  <div class="scope">範圍：第七課 ～ 第十二課</div>
+</header>
+
+<div class="toc">
+  <h3>本卷七大題</h3>
+  <ol>
+    <li><a href="#sA">課文內容</a>（12 題）</li>
+    <li><a href="#sB">注音</a>（8 題）</li>
+    <li><a href="#sC">部首與筆畫</a>（6 題）</li>
+    <li><a href="#sD">同字異音</a>（6 題）</li>
+    <li><a href="#sE">相似字</a>（10 題）</li>
+    <li><a href="#sF">成語</a>（8 題）</li>
+    <li><a href="#sG">造句句型</a>（4 題）</li>
+  </ol>
+  <p style="text-align:center; margin-top:16px;"><b>共 54 道選擇題</b>，每題點「看答案」可以對照。</p>
+</div>
+
+<div class="reveal-all"><button onclick="revealAll()">一鍵顯示／隱藏全部答案</button></div>
+
+<section id="sA" class="sec-A">
+  <h2>一、課文內容（12 題）</h2>
+
+  <div class="mc-question" data-answer="B"><div class="q"><span class="num">1.</span>第七課《借筆》中，小可為什麼會拿大光的筆？</div><ul class="options"><li><span class="letter">A</span>大光送給她</li><li><span class="letter">B</span>大光不在，她沒問就拿了</li><li><span class="letter">C</span>大光要她拿</li><li><span class="letter">D</span>她撿到的</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B</div></div>
+
+  <div class="mc-question" data-answer="C"><div class="q"><span class="num">2.</span>第七課中，大光後來怎麼回家？</div><ul class="options"><li><span class="letter">A</span>和小可一起</li><li><span class="letter">B</span>媽媽接他</li><li><span class="letter">C</span>自己背書包先走了</li><li><span class="letter">D</span>留在學校</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">C</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">3.</span>第八課《兩張卡片》中，他們最後做了什麼？</div><ul class="options"><li><span class="letter">A</span>互相原諒，一起用彩色筆畫畫</li><li><span class="letter">B</span>還在生氣</li><li><span class="letter">C</span>分別回家了</li><li><span class="letter">D</span>找老師告狀</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="B"><div class="q"><span class="num">4.</span>第八課中，大光忘了帶什麼？</div><ul class="options"><li><span class="letter">A</span>書包</li><li><span class="letter">B</span>彩色筆</li><li><span class="letter">C</span>便當</li><li><span class="letter">D</span>水壺</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B</div></div>
+
+  <div class="mc-question" data-answer="B"><div class="q"><span class="num">5.</span>第九課《友情的拐杖》中，大山和小彩怎麼幫「我」？</div><ul class="options"><li><span class="letter">A</span>背「我」回家</li><li><span class="letter">B</span>蹲下來像小矮人，一個在左、一個在右陪「我」走</li><li><span class="letter">C</span>叫救護車</li><li><span class="letter">D</span>幫「我」做功課</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B</div></div>
+
+  <div class="mc-question" data-answer="B"><div class="q"><span class="num">6.</span>第九課中，「我」要去哪裡？</div><ul class="options"><li><span class="letter">A</span>教室</li><li><span class="letter">B</span>健康中心</li><li><span class="letter">C</span>家裡</li><li><span class="letter">D</span>操場</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B</div></div>
+
+  <div class="mc-question" data-answer="B"><div class="q"><span class="num">7.</span>第十課《一棵小樹》中，故事的「我」是誰？</div><ul class="options"><li><span class="letter">A</span>小朋友</li><li><span class="letter">B</span>一棵小樹（土裡的種子）</li><li><span class="letter">C</span>麻雀</li><li><span class="letter">D</span>小草</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B</div></div>
+
+  <div class="mc-question" data-answer="D"><div class="q"><span class="num">8.</span>第十課中，小樹最後決定怎麼做？</div><ul class="options"><li><span class="letter">A</span>繼續躲</li><li><span class="letter">B</span>哭著等媽媽</li><li><span class="letter">C</span>請小草幫忙</li><li><span class="letter">D</span>張開雙手，勇敢長大</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">D</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">9.</span>第十一課《鉛筆和橡皮擦》中，橡皮擦怎麼幫鉛筆？</div><ul class="options"><li><span class="letter">A</span>擦掉錯字，鼓勵鉛筆加油</li><li><span class="letter">B</span>幫鉛筆寫字</li><li><span class="letter">C</span>把鉛筆藏起來</li><li><span class="letter">D</span>笑鉛筆</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="B"><div class="q"><span class="num">10.</span>第十一課中，鉛筆說以後還要學什麼？</div><ul class="options"><li><span class="letter">A</span>唱歌</li><li><span class="letter">B</span>畫畫</li><li><span class="letter">C</span>跳舞</li><li><span class="letter">D</span>跑步</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B</div></div>
+
+  <div class="mc-question" data-answer="C"><div class="q"><span class="num">11.</span>第十二課《上臺說故事》中，他們怎麼解決上臺的問題？</div><ul class="options"><li><span class="letter">A</span>請老師幫忙</li><li><span class="letter">B</span>不上臺</li><li><span class="letter">C</span>三人一起上臺，分配角色（千千說故事、亮亮演狼、我演小羊）</li><li><span class="letter">D</span>用唱的</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">C</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">12.</span>第十二課最後，故事說完同學們的反應是？</div><ul class="options"><li><span class="letter">A</span>拍手叫好</li><li><span class="letter">B</span>沒有反應</li><li><span class="letter">C</span>笑他們</li><li><span class="letter">D</span>提早離開</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+</section>
+
+<section id="sB" class="sec-B">
+  <h2>二、注音（8 題）</h2>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">1.</span>「借筆」的「借」念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄐㄧㄝˋ</li><li><span class="letter">B</span>ㄐㄧㄝ</li><li><span class="letter">C</span>ㄐㄧㄝˇ</li><li><span class="letter">D</span>ㄐㄧˋ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">2.</span>「教室」的「室」念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄕˋ</li><li><span class="letter">B</span>ㄓˋ</li><li><span class="letter">C</span>ㄕㄜˋ</li><li><span class="letter">D</span>ㄕ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">3.</span>「友情」的「情」念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄑㄧㄥˊ</li><li><span class="letter">B</span>ㄑㄧㄥ</li><li><span class="letter">C</span>ㄑㄧㄥˋ</li><li><span class="letter">D</span>ㄐㄧㄥˊ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">4.</span>「打雷」的「雷」念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄌㄟˊ</li><li><span class="letter">B</span>ㄌㄟ</li><li><span class="letter">C</span>ㄌㄟˇ</li><li><span class="letter">D</span>ㄌㄟˋ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">5.</span>「鉛筆」的「鉛」念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄑㄧㄢ</li><li><span class="letter">B</span>ㄑㄧㄢˊ</li><li><span class="letter">C</span>ㄐㄧㄢ</li><li><span class="letter">D</span>ㄒㄧㄢ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">6.</span>「常常」的「常」念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄔㄤˊ</li><li><span class="letter">B</span>ㄔㄤ</li><li><span class="letter">C</span>ㄔㄤˇ</li><li><span class="letter">D</span>ㄔㄤˋ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">7.</span>「故事」的「故」念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄍㄨˋ</li><li><span class="letter">B</span>ㄍㄨˇ</li><li><span class="letter">C</span>ㄍㄨ</li><li><span class="letter">D</span>ㄎㄨˋ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">8.</span>「決定」的「決」念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄐㄩㄝˊ</li><li><span class="letter">B</span>ㄐㄩㄝˇ</li><li><span class="letter">C</span>ㄎㄨㄞˋ</li><li><span class="letter">D</span>ㄐㄩㄝ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+</section>
+
+<section id="sC" class="sec-C">
+  <h2>三、部首與筆畫（6 題）</h2>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">1.</span>「筆」字的部首是什麼？</div><ul class="options"><li><span class="letter">A</span>竹</li><li><span class="letter">B</span>毛</li><li><span class="letter">C</span>木</li><li><span class="letter">D</span>手</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A　竹</div></div>
+
+  <div class="mc-question" data-answer="C"><div class="q"><span class="num">2.</span>「健」字的部首是什麼？</div><ul class="options"><li><span class="letter">A</span>木</li><li><span class="letter">B</span>口</li><li><span class="letter">C</span>人（亻）</li><li><span class="letter">D</span>建</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">C</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">3.</span>「土」字一共幾畫？</div><ul class="options"><li><span class="letter">A</span>3 畫</li><li><span class="letter">B</span>4 畫</li><li><span class="letter">C</span>5 畫</li><li><span class="letter">D</span>2 畫</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="B"><div class="q"><span class="num">4.</span>「久」字一共幾畫？</div><ul class="options"><li><span class="letter">A</span>2 畫</li><li><span class="letter">B</span>3 畫</li><li><span class="letter">C</span>4 畫</li><li><span class="letter">D</span>5 畫</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">5.</span>下列哪一個字的筆畫最多？</div><ul class="options"><li><span class="letter">A</span>樹</li><li><span class="letter">B</span>土</li><li><span class="letter">C</span>久</li><li><span class="letter">D</span>打</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A（樹 16 畫；土 3、久 3、打 5）</div></div>
+
+  <div class="mc-question" data-answer="C"><div class="q"><span class="num">6.</span>「拿」字的部首是什麼？</div><ul class="options"><li><span class="letter">A</span>合</li><li><span class="letter">B</span>口</li><li><span class="letter">C</span>手</li><li><span class="letter">D</span>人</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">C　手</div></div>
+</section>
+
+<section id="sD" class="sec-D">
+  <h2>四、同字異音（6 題）</h2>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">1.</span>「請<u>把</u>書翻開。」這裡的「把」念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄅㄚˇ</li><li><span class="letter">B</span>ㄅㄚˋ</li><li><span class="letter">C</span>ㄅㄚ</li><li><span class="letter">D</span>ㄅㄚˊ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="B"><div class="q"><span class="num">2.</span>「首<u>都</u>是台北。」這裡的「都」念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄉㄡ</li><li><span class="letter">B</span>ㄉㄨ</li><li><span class="letter">C</span>ㄉㄨˋ</li><li><span class="letter">D</span>ㄉㄡˋ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B</div></div>
+
+  <div class="mc-question" data-answer="B"><div class="q"><span class="num">3.</span>「老師<u>教</u>我們寫字。」這裡的「教」念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄐㄧㄠˋ</li><li><span class="letter">B</span>ㄐㄧㄠ</li><li><span class="letter">C</span>ㄐㄧㄠˇ</li><li><span class="letter">D</span>ㄐㄧㄠˊ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">4.</span>「<u>長</u>長的鉛筆。」這裡的「長」念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄔㄤˊ</li><li><span class="letter">B</span>ㄓㄤˇ</li><li><span class="letter">C</span>ㄔㄤˇ</li><li><span class="letter">D</span>ㄓㄤˋ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="B"><div class="q"><span class="num">5.</span>「小樹勇敢的<u>長</u>大。」這裡的「長」念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄔㄤˊ</li><li><span class="letter">B</span>ㄓㄤˇ</li><li><span class="letter">C</span>ㄔㄤˇ</li><li><span class="letter">D</span>ㄓㄤˋ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">6.</span>「什<u>麼</u>東西？」這裡的「麼」念什麼？</div><ul class="options"><li><span class="letter">A</span>˙ㄇㄜ（輕聲）</li><li><span class="letter">B</span>ㄇㄛˊ</li><li><span class="letter">C</span>ㄇㄚ</li><li><span class="letter">D</span>ㄇㄚˋ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+</section>
+
+<section id="sE" class="sec-E">
+  <h2>五、相似字（10 題）</h2>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">1.</span>「跟同學 <u>＿＿</u> 鉛筆。」應該填哪個字？</div><ul class="options"><li><span class="letter">A</span>借</li><li><span class="letter">B</span>惜</li><li><span class="letter">C</span>錯</li><li><span class="letter">D</span>措</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">2.</span>「<u>＿＿</u> 是我妹妹。」（指女生）</div><ul class="options"><li><span class="letter">A</span>她</li><li><span class="letter">B</span>他</li><li><span class="letter">C</span>地</li><li><span class="letter">D</span>奶</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">3.</span>「看 <u>＿＿</u> 桌上的書。」應該填哪個字？</div><ul class="options"><li><span class="letter">A</span>見</li><li><span class="letter">B</span>貝</li><li><span class="letter">C</span>具</li><li><span class="letter">D</span>員</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">4.</span>「我 <u>＿＿</u> 不住笑了出來。」應該填哪個字？</div><ul class="options"><li><span class="letter">A</span>忍</li><li><span class="letter">B</span>認</li><li><span class="letter">C</span>忽</li><li><span class="letter">D</span>恩</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">5.</span>「身體 <u>＿＿</u> 康。」應該填哪個字？</div><ul class="options"><li><span class="letter">A</span>健</li><li><span class="letter">B</span>建</li><li><span class="letter">C</span>鍵</li><li><span class="letter">D</span>件</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">6.</span>「一 <u>＿＿</u> 小樹。」應該填哪個字？</div><ul class="options"><li><span class="letter">A</span>棵</li><li><span class="letter">B</span>課</li><li><span class="letter">C</span>果</li><li><span class="letter">D</span>顆</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">7.</span>「<u>＿＿</u> 怕黑。」應該填哪個字？</div><ul class="options"><li><span class="letter">A</span>害</li><li><span class="letter">B</span>割</li><li><span class="letter">C</span>轄</li><li><span class="letter">D</span>瞎</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">8.</span>「<u>＿＿</u> 油！加油！」應該填哪個字？</div><ul class="options"><li><span class="letter">A</span>加</li><li><span class="letter">B</span>咖</li><li><span class="letter">C</span>架</li><li><span class="letter">D</span>嫁</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">9.</span>「忘 <u>＿＿</u> 帶課本。」應該填哪個字？</div><ul class="options"><li><span class="letter">A</span>記</li><li><span class="letter">B</span>己</li><li><span class="letter">C</span>紀</li><li><span class="letter">D</span>起</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">10.</span>「<u>＿＿</u> 定一起上臺。」應該填哪個字？</div><ul class="options"><li><span class="letter">A</span>決</li><li><span class="letter">B</span>缺</li><li><span class="letter">C</span>快</li><li><span class="letter">D</span>訣</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+</section>
+
+<section id="sF" class="sec-F">
+  <h2>六、成語（8 題）</h2>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">1.</span>「形容非常有名」是哪個成語？</div><ul class="options"><li><span class="letter">A</span>家喻戶曉</li><li><span class="letter">B</span>家常便飯</li><li><span class="letter">C</span>每況愈下</li><li><span class="letter">D</span>拿手好戲</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">2.</span>「形容心思不定、想這想那」是哪個成語？</div><ul class="options"><li><span class="letter">A</span>三心二意</li><li><span class="letter">B</span>一心一意</li><li><span class="letter">C</span>兩全其美</li><li><span class="letter">D</span>不可思議</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">3.</span>「形容好朋友感情非常好」是哪個成語？</div><ul class="options"><li><span class="letter">A</span>情同手足</li><li><span class="letter">B</span>步步高升</li><li><span class="letter">C</span>身強體健</li><li><span class="letter">D</span>不可思議</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">4.</span>「比喻培養人或事都需要時間」是哪個成語？</div><ul class="options"><li><span class="letter">A</span>十年樹木</li><li><span class="letter">B</span>樹大根深</li><li><span class="letter">C</span>捲土重來</li><li><span class="letter">D</span>取長補短</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">5.</span>「比喻情形更糟糕」是哪個成語？</div><ul class="options"><li><span class="letter">A</span>雪上加霜</li><li><span class="letter">B</span>火上加油</li><li><span class="letter">C</span>無以復加</li><li><span class="letter">D</span>哭笑不得</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">6.</span>「後面來的人反而超過前面的人」是哪個成語？</div><ul class="options"><li><span class="letter">A</span>後來居上</li><li><span class="letter">B</span>先來後到</li><li><span class="letter">C</span>瞻前顧後</li><li><span class="letter">D</span>每況愈下</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">7.</span>「明明知道不對還故意去做」是哪個成語？</div><ul class="options"><li><span class="letter">A</span>明知故犯</li><li><span class="letter">B</span>一見如故</li><li><span class="letter">C</span>溫故知新</li><li><span class="letter">D</span>事半功倍</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">8.</span>「遇到事情立刻做決定，不拖延」是哪個成語？</div><ul class="options"><li><span class="letter">A</span>當機立斷</li><li><span class="letter">B</span>猶豫不決</li><li><span class="letter">C</span>舉棋不定</li><li><span class="letter">D</span>心神不定</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+</section>
+
+<section id="sG" class="sec-G">
+  <h2>七、造句句型（4 題）</h2>
+
+  <div class="mc-question" data-answer="B"><div class="q"><span class="num">1.</span>下列哪一句的句型和「忍不住笑了出來」一樣？</div><ul class="options"><li><span class="letter">A</span>我們笑了出來。</li><li><span class="letter">B</span>我忍不住哭了出來。</li><li><span class="letter">C</span>大家很開心。</li><li><span class="letter">D</span>媽媽笑著說。</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B（「忍不住＿了出來」句型）</div></div>
+
+  <div class="mc-question" data-answer="C"><div class="q"><span class="num">2.</span>下列哪一句的句型和「一步一步走向健康中心」一樣？</div><ul class="options"><li><span class="letter">A</span>走過小河輕輕的唱。</li><li><span class="letter">B</span>媽媽笑著說。</li><li><span class="letter">C</span>一步一步爬上樓梯。</li><li><span class="letter">D</span>什麼也不說。</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">C（「一步一步＿」疊字句型）</div></div>
+
+  <div class="mc-question" data-answer="C"><div class="q"><span class="num">3.</span>下列哪一句的句型和「又正確又漂亮」一樣？</div><ul class="options"><li><span class="letter">A</span>正確的字。</li><li><span class="letter">B</span>漂亮極了。</li><li><span class="letter">C</span>又高又大</li><li><span class="letter">D</span>真的好漂亮。</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">C（「又＿又＿」句型）</div></div>
+
+  <div class="mc-question" data-answer="B"><div class="q"><span class="num">4.</span>下列哪一句的句型和「我做到了，我們做到了！」一樣？</div><ul class="options"><li><span class="letter">A</span>大家都做完了。</li><li><span class="letter">B</span>我成功了，我們成功了！</li><li><span class="letter">C</span>故事說完了。</li><li><span class="letter">D</span>同學們拍手叫好。</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B（個體＋集體疊字強調的句型）</div></div>
+</section>
+
+<div class="reveal-all"><button onclick="revealAll()">一鍵顯示／隱藏全部答案</button></div>
+
+<footer><p>114 學年度下學期　一年級國語自學練習　｜　期末考總複習（第七課～第十二課）</p></footer>
+
+</div>
+
+<script>
+  function revealAnswer(btn) { const q = btn.closest('.mc-question'); const correct = q.dataset.answer; const isShown = q.classList.contains('show-answer');
+    if (isShown) { q.classList.remove('show-answer'); q.querySelectorAll('.options li').forEach(li => li.classList.remove('correct')); btn.textContent = '看答案'; }
+    else { q.classList.add('show-answer'); q.querySelectorAll('.options li').forEach((li, i) => { if ('ABCD'[i] === correct) li.classList.add('correct'); }); btn.textContent = '隱藏答案'; }
+  }
+  function revealAll() { const allQuestions = document.querySelectorAll('.mc-question'); const anyHidden = Array.from(allQuestions).some(q => !q.classList.contains('show-answer'));
+    allQuestions.forEach(q => { const btn = q.querySelector('.reveal-btn'); const correct = q.dataset.answer;
+      if (anyHidden) { q.classList.add('show-answer'); q.querySelectorAll('.options li').forEach((li, i) => { if ('ABCD'[i] === correct) li.classList.add('correct'); }); if (btn) btn.textContent = '隱藏答案'; }
+      else { q.classList.remove('show-answer'); q.querySelectorAll('.options li').forEach(li => li.classList.remove('correct')); if (btn) btn.textContent = '看答案'; }
+    });
+  }
+  document.addEventListener('click', function(e) { const li = e.target.closest('.mc-question .options li'); if (!li) return; const ul = li.parentElement; ul.querySelectorAll('li').forEach(l => l.classList.remove('selected')); li.classList.add('selected'); });
+</script>
+</body>
+</html>

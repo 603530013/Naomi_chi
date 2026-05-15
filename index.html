@@ -26,21 +26,16 @@
   .lesson-card:hover { transform:translateY(-4px); box-shadow:0 6px 18px rgba(0,0,0,0.12); }
   .lesson-card.ready { border-color:var(--green-dark); background:linear-gradient(180deg,#fff 0%,#f0fff4 100%); }
   .lesson-card.ready:hover { border-color:var(--pink-dark); background:linear-gradient(180deg,#fff 0%,#fff0f5 100%); }
-  .lesson-card.coming-soon { background:#f5f5f5; color:#aaa; cursor:not-allowed; }
-  .lesson-card.coming-soon:hover { transform:none; box-shadow:0 3px 10px rgba(0,0,0,0.08); }
   .lesson-card.midterm { border-color:var(--red-dark); background:linear-gradient(180deg,#fff 0%,#fff5f5 100%); }
   .lesson-card.midterm:hover { border-color:var(--pink-dark); }
   .lesson-card.midterm .lesson-number { color:var(--red-dark); }
   .lesson-card.midterm .lesson-title { color:var(--red-dark); }
   .lesson-card.midterm .lesson-status { background:var(--red); color:var(--red-dark); }
   .lesson-number { font-size:1.1em; color:var(--blue-dark); margin-bottom:8px; font-weight:bold; }
-  .lesson-card.coming-soon .lesson-number { color:#999; }
   .lesson-title { font-size:1.6em; font-weight:bold; color:var(--pink-dark); margin:10px 0; min-height:1.4em; }
-  .lesson-card.coming-soon .lesson-title { color:#aaa; font-style:italic; }
   .lesson-card.ready .lesson-title { color:var(--pink-dark); }
   .lesson-status { font-size:0.95em; color:#666; margin-top:12px; padding:4px 12px; border-radius:12px; display:inline-block; }
   .lesson-card.ready .lesson-status { background:var(--green); color:#2e7d32; }
-  .lesson-card.coming-soon .lesson-status { background:#eee; color:#999; }
   footer { text-align:center; padding:24px; color:#999; font-size:0.9em; margin-top:30px; }
   .progress-bar { background:#fff; border-radius:12px; padding:14px 24px; margin:20px 0; box-shadow:0 2px 6px rgba(0,0,0,0.05); }
   .progress-bar .label { font-size:0.95em; color:#666; margin-bottom:8px; }
@@ -59,11 +54,11 @@
   </header>
 
   <div class="progress-bar">
-    <div class="label">已完成：<b>6</b> / 12 課　＋　期中考總複習</div>
-    <div class="bar"><div class="fill" style="width:50%"></div></div>
+    <div class="label">已完成：<b>12</b> / 12 課　＋　期中考與期末考總複習　★ 全部完成！</div>
+    <div class="bar"><div class="fill" style="width:100%"></div></div>
   </div>
 
-  <div class="section-title">第一單元（期中考範圍）</div>
+  <div class="section-title">第一單元（期中考範圍：第一課～第六課）</div>
 
   <div class="lesson-grid">
 
@@ -111,50 +106,56 @@
 
   </div>
 
-  <div class="section-title">第二單元（期末考範圍）</div>
+  <div class="section-title">第二單元（期末考範圍：第七課～第十二課）</div>
 
   <div class="lesson-grid">
 
-    <div class="lesson-card coming-soon">
+    <a class="lesson-card ready" href="Class7.html">
       <div class="lesson-number">第 七 課</div>
-      <div class="lesson-title">（製作中）</div>
-      <div class="lesson-status">尚未開放</div>
-    </div>
+      <div class="lesson-title">借筆</div>
+      <div class="lesson-status">✓ 開始練習</div>
+    </a>
 
-    <div class="lesson-card coming-soon">
+    <a class="lesson-card ready" href="Class8.html">
       <div class="lesson-number">第 八 課</div>
-      <div class="lesson-title">（製作中）</div>
-      <div class="lesson-status">尚未開放</div>
-    </div>
+      <div class="lesson-title">兩張卡片</div>
+      <div class="lesson-status">✓ 開始練習</div>
+    </a>
 
-    <div class="lesson-card coming-soon">
+    <a class="lesson-card ready" href="Class9.html">
       <div class="lesson-number">第 九 課</div>
-      <div class="lesson-title">（製作中）</div>
-      <div class="lesson-status">尚未開放</div>
-    </div>
+      <div class="lesson-title">友情的拐杖</div>
+      <div class="lesson-status">✓ 開始練習</div>
+    </a>
 
-    <div class="lesson-card coming-soon">
+    <a class="lesson-card ready" href="Class10.html">
       <div class="lesson-number">第 十 課</div>
-      <div class="lesson-title">（製作中）</div>
-      <div class="lesson-status">尚未開放</div>
-    </div>
+      <div class="lesson-title">一棵小樹</div>
+      <div class="lesson-status">✓ 開始練習</div>
+    </a>
 
-    <div class="lesson-card coming-soon">
+    <a class="lesson-card ready" href="Class11.html">
       <div class="lesson-number">第 十一 課</div>
-      <div class="lesson-title">（製作中）</div>
-      <div class="lesson-status">尚未開放</div>
-    </div>
+      <div class="lesson-title">鉛筆和橡皮擦</div>
+      <div class="lesson-status">✓ 開始練習</div>
+    </a>
 
-    <div class="lesson-card coming-soon">
+    <a class="lesson-card ready" href="Class12.html">
       <div class="lesson-number">第 十二 課</div>
-      <div class="lesson-title">（製作中）</div>
-      <div class="lesson-status">尚未開放</div>
-    </div>
+      <div class="lesson-title">上臺說故事</div>
+      <div class="lesson-status">✓ 開始練習</div>
+    </a>
+
+    <a class="lesson-card midterm" href="FinalReview.html">
+      <div class="lesson-number">期末考</div>
+      <div class="lesson-title">總複習</div>
+      <div class="lesson-status">★ 七～十二課</div>
+    </a>
 
   </div>
 
   <footer>
-    114 學年度下學期　一年級國語自學練習
+    114 學年度下學期　一年級國語自學練習　｜　第一課 ～ 第十二課 + 期中／期末總複習
   </footer>
 
 </div>

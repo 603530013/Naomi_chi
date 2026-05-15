@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第十一課 鉛筆和橡皮擦 ｜ 一年級下學期國語練習</title>
+<style>
+  :root { --pink:#ffd6e0; --pink-dark:#e85a8a; --green:#c8e6c9; --green-dark:#4caf50; --yellow:#fff4c2; --yellow-dark:#f5a623; --blue:#cfe8ff; --blue-dark:#1976d2; --purple:#e1d5f5; --purple-dark:#7b3fa0; --orange:#ffd9b3; --orange-dark:#e67700; --red:#ffcccc; --red-dark:#c0392b; --grid-red:#ff6b6b; --gray-light:#f5f5f5; }
+  * { box-sizing: border-box; } body { font-family:"標楷體","DFKai-SB","BiauKai","KaiTi","微軟正黑體",serif; margin:0; padding:0; background:#fefcf7; color:#333; line-height:1.8; }
+  .container { max-width:1100px; margin:0 auto; padding:20px; }
+  header { background:linear-gradient(135deg,#fff4c2 0%,#ffd9b3 100%); padding:30px 20px; text-align:center; border-radius:16px; margin-bottom:30px; box-shadow:0 4px 12px rgba(0,0,0,0.08); }
+  header h1 { font-size:2.4em; margin:0 0 10px 0; color:var(--orange-dark); } header .meta { font-size:0.95em; color:#777; }
+  .toc { background:#fff; border:2px dashed var(--yellow-dark); border-radius:12px; padding:16px 24px; margin-bottom:30px; }
+  .toc h3 { margin:0 0 10px 0; color:var(--orange-dark); } .toc ol { margin:0; padding-left:24px; } .toc li { margin:4px 0; }
+  .toc a { color:#333; text-decoration:none; } .toc a:hover { color:var(--pink-dark); text-decoration:underline; }
+  .home-link { display:inline-block; background:var(--blue); color:var(--blue-dark); padding:6px 14px; border-radius:8px; text-decoration:none; margin-bottom:14px; font-size:0.95em; }
+  .home-link:hover { background:var(--blue-dark); color:white; }
+  section { background:#fff; border-radius:16px; padding:24px; margin-bottom:24px; box-shadow:0 2px 8px rgba(0,0,0,0.06); }
+  section h2 { font-size:1.6em; margin:0 0 16px 0; padding:10px 16px; border-radius:8px; color:#fff; }
+  .sec-1 h2 { background:var(--pink-dark); } .sec-2 h2 { background:var(--green-dark); } .sec-3 h2 { background:var(--purple-dark); } .sec-4 h2 { background:var(--orange-dark); } .sec-5 h2 { background:var(--yellow-dark); } .sec-6 h2 { background:var(--red-dark); }
+  .lesson-text { background:var(--yellow); padding:24px 36px; border-radius:12px; font-size:1.35em; line-height:2.6; }
+  .lesson-text p { margin:8px 0; line-height:2.4; }
+  .zy { display:inline-block; vertical-align:middle; margin-right:4px; line-height:1.6; white-space:nowrap; }
+  .zy > .zh { font-size:1em; display:inline-block; vertical-align:middle; }
+  .zhu-wrap { display:inline-flex; flex-direction:row; align-items:flex-start; font-size:0.5em; font-family:"標楷體",serif; color:#333; margin-left:2px; line-height:1; vertical-align:middle; }
+  .zhu-wrap.light { flex-direction:column; align-items:center; }
+  .zhu { display:inline-block; writing-mode:vertical-rl; -webkit-writing-mode:vertical-rl; text-orientation:upright; -webkit-text-orientation:upright; line-height:1.05; letter-spacing:-0.06em; }
+  .tone { display:inline-block; line-height:1; align-self:flex-start; padding-top:0.05em; }
+  .tone-light { display:inline-block; line-height:0.6; margin-bottom:-2px; font-weight:bold; }
+  .mc-question { background:var(--gray-light); padding:16px 20px; border-radius:10px; margin:12px 0; border-left:5px solid var(--pink-dark); }
+  .mc-question .q { font-weight:bold; color:#333; margin-bottom:10px; font-size:1.05em; }
+  .mc-question .q .num { color:var(--pink-dark); margin-right:6px; }
+  .mc-question .options { list-style:none; padding:0; margin:8px 0 0 0; }
+  .mc-question .options li { padding:8px 12px; margin:5px 0; background:#fff; border-radius:8px; border:2px solid transparent; cursor:pointer; transition:all 0.2s; display:flex; align-items:center; gap:10px; }
+  .mc-question .options li:hover { background:#fff8e1; border-color:var(--yellow-dark); }
+  .mc-question .options li.selected { background:#e3f2fd; border-color:var(--blue-dark); }
+  .mc-question .options li.correct { background:#e8f5e9; border-color:var(--green-dark); font-weight:bold; }
+  .mc-question .options .letter { display:inline-flex; align-items:center; justify-content:center; width:28px; height:28px; border-radius:50%; background:var(--pink); color:var(--pink-dark); font-weight:bold; flex-shrink:0; }
+  .mc-question .options li.correct .letter { background:var(--green-dark); color:white; }
+  .mc-question .reveal-btn { margin-top:12px; background:var(--orange-dark); color:white; border:none; padding:8px 18px; border-radius:8px; cursor:pointer; font-family:inherit; font-size:1em; line-height:1.4; min-height:36px; }
+  .mc-question .reveal-btn:hover { background:#b85a00; }
+  .mc-question .answer-text { margin-top:8px; padding:8px 12px; background:#fff; border-radius:6px; color:var(--green-dark); font-weight:bold; display:none; }
+  .mc-question.show-answer .answer-text { display:block; }
+  .char-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:24px; margin-top:16px; }
+  .char-card { background:#fff; border:2px solid var(--green); border-radius:12px; padding:18px; text-align:center; }
+  .char-card h3 { margin:0 0 8px 0; color:var(--green-dark); font-size:1.5em; }
+  .char-info { font-size:1em; color:#555; margin-bottom:14px; } .char-info b { color:var(--green-dark); }
+  .stroke-anim { width:220px; height:220px; margin:0 auto 12px; background:#fff; border:3px solid var(--grid-red); position:relative; }
+  .stroke-anim::before,.stroke-anim::after { content:''; position:absolute; opacity:0.5; }
+  .stroke-anim::before { width:100%; height:0; top:50%; left:0; border-top:2px dashed var(--grid-red); }
+  .stroke-anim::after { height:100%; width:0; left:50%; top:0; border-left:2px dashed var(--grid-red); }
+  .anim-buttons { margin:10px 0 4px; }
+  .anim-buttons button { background:var(--green-dark); color:white; border:none; padding:8px 16px; border-radius:8px; margin:4px; cursor:pointer; font-family:inherit; font-size:1em; font-weight:bold; }
+  .anim-buttons button:hover { background:#2e7d32; } .anim-buttons button.quiz { background:var(--orange-dark); } .anim-buttons button.quiz:hover { background:#b85a00; }
+  .duoyin-card { background:var(--purple); border-radius:12px; padding:18px 22px; margin:14px 0; }
+  .duoyin-card .big-ch { font-size:3em; color:var(--purple-dark); font-family:"標楷體",serif; float:left; margin-right:20px; line-height:1; }
+  .duoyin-card .reading { margin:8px 0; } .duoyin-card .reading b { color:var(--purple-dark); }
+  .similar-row { display:flex; align-items:center; gap:16px; background:var(--orange); border-radius:10px; padding:14px; margin:10px 0; flex-wrap:wrap; }
+  .similar-row .main-ch { font-size:2.4em; font-family:"標楷體",serif; color:var(--orange-dark); border:3px solid var(--orange-dark); border-radius:8px; width:70px; height:70px; display:flex; align-items:center; justify-content:center; background:#fff; flex-shrink:0; }
+  .similar-row .vs { font-size:1.4em; color:var(--orange-dark); font-weight:bold; }
+  .similar-row .similar-chars { display:flex; gap:8px; flex-wrap:wrap; }
+  .similar-chars .item { background:#fff; border:2px solid #ddd; padding:6px 10px; border-radius:8px; text-align:center; min-width:70px; }
+  .similar-chars .item .ch { font-size:1.8em; font-family:"標楷體",serif; display:block; }
+  .similar-chars .item .note { font-size:0.78em; color:#555; }
+  .pattern-box { background:var(--yellow); border-radius:10px; padding:16px; margin:10px 0; }
+  .pattern-box .pattern { font-size:1.2em; font-weight:bold; color:var(--orange-dark); }
+  .pattern-box .example { margin:6px 0; padding-left:16px; color:#555; }
+  .idiom-section { margin:16px 0; }
+  .idiom-section h4 { color:var(--red-dark); background:var(--red); padding:8px 16px; border-radius:6px; margin:0 0 8px 0; display:inline-block; font-size:1.4em; font-family:"標楷體",serif; }
+  .idiom-list { list-style:none; padding:0; margin:0; }
+  .idiom-list li { background:#fff; border-left:5px solid var(--red-dark); padding:10px 14px; margin:6px 0; border-radius:6px; }
+  .idiom-list .idiom { font-size:1.2em; font-weight:bold; color:var(--red-dark); margin-right:12px; }
+  .idiom-list .meaning { color:#555; } .no-idiom { color:#999; font-style:italic; padding:8px 14px; }
+  footer { text-align:center; padding:20px; color:#888; font-size:0.9em; }
+</style>
+</head>
+<body>
+<div class="container">
+<a href="index.html" class="home-link">← 回目錄</a>
+
+<header><h1>第十一課　鉛筆和橡皮擦</h1><div class="meta">114 學年度　一年級下學期　國語練習</div></header>
+
+<div class="toc"><h3>目錄</h3><ol><li><a href="#s1">課文內容理解</a></li><li><a href="#s2">生字筆順練習</a></li><li><a href="#s3">同字異音練習</a></li><li><a href="#s4">相似字分辨</a></li><li><a href="#s5">造樣造句</a></li><li><a href="#s6">生字成語</a></li></ol></div>
+
+<section id="s1" class="sec-1">
+  <h2>一、課文內容理解</h2>
+  <div class="lesson-text">
+    <p><span class="zy"><span class="zh">鉛</span><span class="zhu-wrap"><span class="zhu">ㄑㄧㄢ</span></span></span><span class="zy"><span class="zh">筆</span><span class="zhu-wrap"><span class="zhu">ㄅㄧ</span><span class="tone">ˇ</span></span></span><span class="zy"><span class="zh">和</span><span class="zhu-wrap"><span class="zhu">ㄏㄢ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">橡</span><span class="zhu-wrap"><span class="zhu">ㄒㄧㄤ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">皮</span><span class="zhu-wrap"><span class="zhu">ㄆㄧ</span><span class="tone">ˊ</span></span></span><span class="zy"><span class="zh">擦</span><span class="zhu-wrap"><span class="zhu">ㄘㄚ</span></span></span><span class="zy"><span class="zh">是</span><span class="zhu-wrap"><span class="zhu">ㄕ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">好</span><span class="zhu-wrap"><span class="zhu">ㄏㄠ</span><span class="tone">ˇ</span></span></span><span class="zy"><span class="zh">朋</span><span class="zhu-wrap"><span class="zhu">ㄆㄥ</span><span class="tone">ˊ</span></span></span><span class="zy"><span class="zh">友</span><span class="zhu-wrap"><span class="zhu">ㄧㄡ</span><span class="tone">ˇ</span></span></span>。</p>
+    <p><span class="zy"><span class="zh">鉛</span><span class="zhu-wrap"><span class="zhu">ㄑㄧㄢ</span></span></span><span class="zy"><span class="zh">筆</span><span class="zhu-wrap"><span class="zhu">ㄅㄧ</span><span class="tone">ˇ</span></span></span><span class="zy"><span class="zh">常</span><span class="zhu-wrap"><span class="zhu">ㄔㄤ</span><span class="tone">ˊ</span></span></span><span class="zy"><span class="zh">常</span><span class="zhu-wrap"><span class="zhu">ㄔㄤ</span><span class="tone">ˊ</span></span></span><span class="zy"><span class="zh">說</span><span class="zhu-wrap"><span class="zhu">ㄕㄨㄛ</span></span></span>：「<span class="zy"><span class="zh">我</span><span class="zhu-wrap"><span class="zhu">ㄨㄛ</span><span class="tone">ˇ</span></span></span><span class="zy"><span class="zh">一</span><span class="zhu-wrap"><span class="zhu">ㄧ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">直</span><span class="zhu-wrap"><span class="zhu">ㄓ</span><span class="tone">ˊ</span></span></span><span class="zy"><span class="zh">寫</span><span class="zhu-wrap"><span class="zhu">ㄒㄧㄝ</span><span class="tone">ˇ</span></span></span><span class="zy"><span class="zh">錯</span><span class="zhu-wrap"><span class="zhu">ㄘㄨㄛ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">字</span><span class="zhu-wrap"><span class="zhu">ㄗ</span><span class="tone">ˋ</span></span></span>！」</p>
+    <p><span class="zy"><span class="zh">橡</span><span class="zhu-wrap"><span class="zhu">ㄒㄧㄤ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">皮</span><span class="zhu-wrap"><span class="zhu">ㄆㄧ</span><span class="tone">ˊ</span></span></span><span class="zy"><span class="zh">擦</span><span class="zhu-wrap"><span class="zhu">ㄘㄚ</span></span></span><span class="zy"><span class="zh">說</span><span class="zhu-wrap"><span class="zhu">ㄕㄨㄛ</span></span></span>：「<span class="zy"><span class="zh">我</span><span class="zhu-wrap"><span class="zhu">ㄨㄛ</span><span class="tone">ˇ</span></span></span><span class="zy"><span class="zh">來</span><span class="zhu-wrap"><span class="zhu">ㄌㄞ</span><span class="tone">ˊ</span></span></span><span class="zy"><span class="zh">幫</span><span class="zhu-wrap"><span class="zhu">ㄅㄤ</span></span></span><span class="zy"><span class="zh">你</span><span class="zhu-wrap"><span class="zhu">ㄋㄧ</span><span class="tone">ˇ</span></span></span>！」</p>
+    <p><span class="zy"><span class="zh">不</span><span class="zhu-wrap"><span class="zhu">ㄅㄨ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">久</span><span class="zhu-wrap"><span class="zhu">ㄐㄧㄡ</span><span class="tone">ˇ</span></span></span>，<span class="zy"><span class="zh">鉛</span><span class="zhu-wrap"><span class="zhu">ㄑㄧㄢ</span></span></span><span class="zy"><span class="zh">筆</span><span class="zhu-wrap"><span class="zhu">ㄅㄧ</span><span class="tone">ˇ</span></span></span><span class="zy"><span class="zh">哭</span><span class="zhu-wrap"><span class="zhu">ㄎㄨ</span></span></span><span class="zy"><span class="zh">著</span><span class="zhu-wrap light"><span class="tone-light">˙</span><span class="zhu">ㄓㄜ</span></span></span><span class="zy"><span class="zh">說</span><span class="zhu-wrap"><span class="zhu">ㄕㄨㄛ</span></span></span>：「<span class="zy"><span class="zh">我</span><span class="zhu-wrap"><span class="zhu">ㄨㄛ</span><span class="tone">ˇ</span></span></span><span class="zy"><span class="zh">的</span><span class="zhu-wrap light"><span class="tone-light">˙</span><span class="zhu">ㄉㄜ</span></span></span><span class="zy"><span class="zh">字</span><span class="zhu-wrap"><span class="zhu">ㄗ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">寫</span><span class="zhu-wrap"><span class="zhu">ㄒㄧㄝ</span><span class="tone">ˇ</span></span></span><span class="zy"><span class="zh">得</span><span class="zhu-wrap light"><span class="tone-light">˙</span><span class="zhu">ㄉㄜ</span></span></span><span class="zy"><span class="zh">不</span><span class="zhu-wrap"><span class="zhu">ㄅㄨ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">好</span><span class="zhu-wrap"><span class="zhu">ㄏㄠ</span><span class="tone">ˇ</span></span></span><span class="zy"><span class="zh">看</span><span class="zhu-wrap"><span class="zhu">ㄎㄢ</span><span class="tone">ˋ</span></span></span>。」</p>
+    <p><span class="zy"><span class="zh">橡</span><span class="zhu-wrap"><span class="zhu">ㄒㄧㄤ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">皮</span><span class="zhu-wrap"><span class="zhu">ㄆㄧ</span><span class="tone">ˊ</span></span></span><span class="zy"><span class="zh">擦</span><span class="zhu-wrap"><span class="zhu">ㄘㄚ</span></span></span><span class="zy"><span class="zh">笑</span><span class="zhu-wrap"><span class="zhu">ㄒㄧㄠ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">著</span><span class="zhu-wrap light"><span class="tone-light">˙</span><span class="zhu">ㄓㄜ</span></span></span><span class="zy"><span class="zh">說</span><span class="zhu-wrap"><span class="zhu">ㄕㄨㄛ</span></span></span>：「<span class="zy"><span class="zh">我</span><span class="zhu-wrap"><span class="zhu">ㄨㄛ</span><span class="tone">ˇ</span></span></span><span class="zy"><span class="zh">來</span><span class="zhu-wrap"><span class="zhu">ㄌㄞ</span><span class="tone">ˊ</span></span></span><span class="zy"><span class="zh">幫</span><span class="zhu-wrap"><span class="zhu">ㄅㄤ</span></span></span><span class="zy"><span class="zh">你</span><span class="zhu-wrap"><span class="zhu">ㄋㄧ</span><span class="tone">ˇ</span></span></span><span class="zy"><span class="zh">擦</span><span class="zhu-wrap"><span class="zhu">ㄘㄚ</span></span></span><span class="zy"><span class="zh">一</span><span class="zhu-wrap"><span class="zhu">ㄧ</span></span></span><span class="zy"><span class="zh">擦</span><span class="zhu-wrap"><span class="zhu">ㄘㄚ</span></span></span>。<span class="zy"><span class="zh">加</span><span class="zhu-wrap"><span class="zhu">ㄐㄧㄚ</span></span></span><span class="zy"><span class="zh">油</span><span class="zhu-wrap"><span class="zhu">ㄧㄡ</span><span class="tone">ˊ</span></span></span>！<span class="zy"><span class="zh">再</span><span class="zhu-wrap"><span class="zhu">ㄗㄞ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">試</span><span class="zhu-wrap"><span class="zhu">ㄕ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">試</span><span class="zhu-wrap light"><span class="tone-light">˙</span><span class="zhu">ㄕ</span></span></span><span class="zy"><span class="zh">看</span><span class="zhu-wrap"><span class="zhu">ㄎㄢ</span><span class="tone">ˋ</span></span></span>！」</p>
+    <p><span class="zy"><span class="zh">後</span><span class="zhu-wrap"><span class="zhu">ㄏㄡ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">來</span><span class="zhu-wrap"><span class="zhu">ㄌㄞ</span><span class="tone">ˊ</span></span></span>，<span class="zy"><span class="zh">鉛</span><span class="zhu-wrap"><span class="zhu">ㄑㄧㄢ</span></span></span><span class="zy"><span class="zh">筆</span><span class="zhu-wrap"><span class="zhu">ㄅㄧ</span><span class="tone">ˇ</span></span></span><span class="zy"><span class="zh">的</span><span class="zhu-wrap light"><span class="tone-light">˙</span><span class="zhu">ㄉㄜ</span></span></span><span class="zy"><span class="zh">字</span><span class="zhu-wrap"><span class="zhu">ㄗ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">寫</span><span class="zhu-wrap"><span class="zhu">ㄒㄧㄝ</span><span class="tone">ˇ</span></span></span><span class="zy"><span class="zh">得</span><span class="zhu-wrap light"><span class="tone-light">˙</span><span class="zhu">ㄉㄜ</span></span></span><span class="zy"><span class="zh">又</span><span class="zhu-wrap"><span class="zhu">ㄧㄡ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">正</span><span class="zhu-wrap"><span class="zhu">ㄓㄥ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">確</span><span class="zhu-wrap"><span class="zhu">ㄑㄩㄝ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">又</span><span class="zhu-wrap"><span class="zhu">ㄧㄡ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">漂</span><span class="zhu-wrap"><span class="zhu">ㄆㄧㄠ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">亮</span><span class="zhu-wrap"><span class="zhu">ㄌㄧㄤ</span><span class="tone">ˋ</span></span></span>。</p>
+    <p><span class="zy"><span class="zh">橡</span><span class="zhu-wrap"><span class="zhu">ㄒㄧㄤ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">皮</span><span class="zhu-wrap"><span class="zhu">ㄆㄧ</span><span class="tone">ˊ</span></span></span><span class="zy"><span class="zh">擦</span><span class="zhu-wrap"><span class="zhu">ㄘㄚ</span></span></span><span class="zy"><span class="zh">高</span><span class="zhu-wrap"><span class="zhu">ㄍㄠ</span></span></span><span class="zy"><span class="zh">興</span><span class="zhu-wrap"><span class="zhu">ㄒㄧㄥ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">的</span><span class="zhu-wrap light"><span class="tone-light">˙</span><span class="zhu">ㄉㄜ</span></span></span><span class="zy"><span class="zh">說</span><span class="zhu-wrap"><span class="zhu">ㄕㄨㄛ</span></span></span>：「<span class="zy"><span class="zh">你</span><span class="zhu-wrap"><span class="zhu">ㄋㄧ</span><span class="tone">ˇ</span></span></span><span class="zy"><span class="zh">進</span><span class="zhu-wrap"><span class="zhu">ㄐㄧㄣ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">步</span><span class="zhu-wrap"><span class="zhu">ㄅㄨ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">很</span><span class="zhu-wrap"><span class="zhu">ㄏㄣ</span><span class="tone">ˇ</span></span></span><span class="zy"><span class="zh">多</span><span class="zhu-wrap"><span class="zhu">ㄉㄨㄛ</span></span></span>，<span class="zy"><span class="zh">不</span><span class="zhu-wrap"><span class="zhu">ㄅㄨ</span><span class="tone">ˊ</span></span></span><span class="zy"><span class="zh">再</span><span class="zhu-wrap"><span class="zhu">ㄗㄞ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">需</span><span class="zhu-wrap"><span class="zhu">ㄒㄩ</span></span></span><span class="zy"><span class="zh">要</span><span class="zhu-wrap"><span class="zhu">ㄧㄠ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">我</span><span class="zhu-wrap"><span class="zhu">ㄨㄛ</span><span class="tone">ˇ</span></span></span><span class="zy"><span class="zh">幫</span><span class="zhu-wrap"><span class="zhu">ㄅㄤ</span></span></span><span class="zy"><span class="zh">忙</span><span class="zhu-wrap"><span class="zhu">ㄇㄤ</span><span class="tone">ˊ</span></span></span><span class="zy"><span class="zh">了</span><span class="zhu-wrap light"><span class="tone-light">˙</span><span class="zhu">ㄌㄜ</span></span></span>。」</p>
+    <p><span class="zy"><span class="zh">鉛</span><span class="zhu-wrap"><span class="zhu">ㄑㄧㄢ</span></span></span><span class="zy"><span class="zh">筆</span><span class="zhu-wrap"><span class="zhu">ㄅㄧ</span><span class="tone">ˇ</span></span></span><span class="zy"><span class="zh">笑</span><span class="zhu-wrap"><span class="zhu">ㄒㄧㄠ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">著</span><span class="zhu-wrap light"><span class="tone-light">˙</span><span class="zhu">ㄓㄜ</span></span></span><span class="zy"><span class="zh">說</span><span class="zhu-wrap"><span class="zhu">ㄕㄨㄛ</span></span></span>：「<span class="zy"><span class="zh">我</span><span class="zhu-wrap"><span class="zhu">ㄨㄛ</span><span class="tone">ˇ</span></span></span><span class="zy"><span class="zh">還</span><span class="zhu-wrap"><span class="zhu">ㄏㄞ</span><span class="tone">ˊ</span></span></span><span class="zy"><span class="zh">要</span><span class="zhu-wrap"><span class="zhu">ㄧㄠ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">學</span><span class="zhu-wrap"><span class="zhu">ㄒㄩㄝ</span><span class="tone">ˊ</span></span></span><span class="zy"><span class="zh">畫</span><span class="zhu-wrap"><span class="zhu">ㄏㄨㄚ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">畫</span><span class="zhu-wrap"><span class="zhu">ㄏㄨㄚ</span><span class="tone">ˋ</span></span></span>，<span class="zy"><span class="zh">也</span><span class="zhu-wrap"><span class="zhu">ㄧㄝ</span><span class="tone">ˇ</span></span></span><span class="zy"><span class="zh">需</span><span class="zhu-wrap"><span class="zhu">ㄒㄩ</span></span></span><span class="zy"><span class="zh">要</span><span class="zhu-wrap"><span class="zhu">ㄧㄠ</span><span class="tone">ˋ</span></span></span><span class="zy"><span class="zh">你</span><span class="zhu-wrap"><span class="zhu">ㄋㄧ</span><span class="tone">ˇ</span></span></span><span class="zy"><span class="zh">的</span><span class="zhu-wrap light"><span class="tone-light">˙</span><span class="zhu">ㄉㄜ</span></span></span><span class="zy"><span class="zh">幫</span><span class="zhu-wrap"><span class="zhu">ㄅㄤ</span></span></span><span class="zy"><span class="zh">忙</span><span class="zhu-wrap"><span class="zhu">ㄇㄤ</span><span class="tone">ˊ</span></span></span><span class="zy"><span class="zh">呢</span><span class="zhu-wrap light"><span class="tone-light">˙</span><span class="zhu">ㄋㄜ</span></span></span>！」</p>
+  </div>
+
+  <h3 style="color:#e85a8a; margin-top:24px;">▍想一想，選一選</h3>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">1.</span>故事中誰是好朋友？</div><ul class="options"><li><span class="letter">A</span>鉛筆和橡皮擦</li><li><span class="letter">B</span>鉛筆和紙</li><li><span class="letter">C</span>橡皮擦和書</li><li><span class="letter">D</span>蠟筆和彩色筆</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A　鉛筆和橡皮擦</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">2.</span>鉛筆常常為什麼煩惱？</div><ul class="options"><li><span class="letter">A</span>一直寫錯字、字寫得不好看</li><li><span class="letter">B</span>沒有人理它</li><li><span class="letter">C</span>顏色太淡</li><li><span class="letter">D</span>太短了</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="B"><div class="q"><span class="num">3.</span>橡皮擦怎麼幫鉛筆？</div><ul class="options"><li><span class="letter">A</span>陪鉛筆睡覺</li><li><span class="letter">B</span>把寫錯的字擦掉，鼓勵鉛筆加油再試試</li><li><span class="letter">C</span>送鉛筆禮物</li><li><span class="letter">D</span>替鉛筆寫字</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">4.</span>後來鉛筆的字寫得怎麼樣？</div><ul class="options"><li><span class="letter">A</span>又正確又漂亮</li><li><span class="letter">B</span>還是寫不好</li><li><span class="letter">C</span>變得更糟</li><li><span class="letter">D</span>沒有改變</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+
+  <div class="mc-question" data-answer="B"><div class="q"><span class="num">5.</span>鉛筆說以後還需要橡皮擦的幫忙做什麼？</div><ul class="options"><li><span class="letter">A</span>寫字</li><li><span class="letter">B</span>學畫畫</li><li><span class="letter">C</span>唱歌</li><li><span class="letter">D</span>玩遊戲</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B　學畫畫</div></div>
+
+  <div class="mc-question" data-answer="D"><div class="q"><span class="num">6.</span>這個故事告訴我們什麼道理？</div><ul class="options"><li><span class="letter">A</span>鉛筆比橡皮擦厲害</li><li><span class="letter">B</span>橡皮擦比鉛筆厲害</li><li><span class="letter">C</span>不要寫錯字</li><li><span class="letter">D</span>好朋友互相幫助、互相鼓勵，就會一起進步</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">D</div></div>
+</section>
+
+<section id="s2" class="sec-2">
+  <h2>二、生字筆順練習</h2>
+  <p style="color:#555;">點「▶ 播放筆順」看每一筆怎麼寫；點「✏ 我要寫寫看」可以直接練寫。</p>
+  <div class="char-grid">
+    <div class="char-card"><h3>鉛　ㄑㄧㄢ</h3><div class="char-info">部首：<b>金</b>　總筆畫：<b>13 畫</b></div><div id="anim-鉛" class="stroke-anim"></div><div class="anim-buttons"><button onclick="playStroke('鉛')">▶ 播放筆順</button><button class="quiz" onclick="quizStroke('鉛')">✏ 我要寫寫看</button></div></div>
+    <div class="char-card"><h3>皮　ㄆㄧˊ</h3><div class="char-info">部首：<b>皮</b>　總筆畫：<b>5 畫</b></div><div id="anim-皮" class="stroke-anim"></div><div class="anim-buttons"><button onclick="playStroke('皮')">▶ 播放筆順</button><button class="quiz" onclick="quizStroke('皮')">✏ 我要寫寫看</button></div></div>
+    <div class="char-card"><h3>常　ㄔㄤˊ</h3><div class="char-info">部首：<b>巾</b>　總筆畫：<b>11 畫</b></div><div id="anim-常" class="stroke-anim"></div><div class="anim-buttons"><button onclick="playStroke('常')">▶ 播放筆順</button><button class="quiz" onclick="quizStroke('常')">✏ 我要寫寫看</button></div></div>
+    <div class="char-card"><h3>錯　ㄘㄨㄛˋ</h3><div class="char-info">部首：<b>金</b>　總筆畫：<b>16 畫</b></div><div id="anim-錯" class="stroke-anim"></div><div class="anim-buttons"><button onclick="playStroke('錯')">▶ 播放筆順</button><button class="quiz" onclick="quizStroke('錯')">✏ 我要寫寫看</button></div></div>
+    <div class="char-card"><h3>久　ㄐㄧㄡˇ</h3><div class="char-info">部首：<b>丿</b>　總筆畫：<b>3 畫</b></div><div id="anim-久" class="stroke-anim"></div><div class="anim-buttons"><button onclick="playStroke('久')">▶ 播放筆順</button><button class="quiz" onclick="quizStroke('久')">✏ 我要寫寫看</button></div></div>
+    <div class="char-card"><h3>哭　ㄎㄨ</h3><div class="char-info">部首：<b>口</b>　總筆畫：<b>10 畫</b></div><div id="anim-哭" class="stroke-anim"></div><div class="anim-buttons"><button onclick="playStroke('哭')">▶ 播放筆順</button><button class="quiz" onclick="quizStroke('哭')">✏ 我要寫寫看</button></div></div>
+    <div class="char-card"><h3>加　ㄐㄧㄚ</h3><div class="char-info">部首：<b>力</b>　總筆畫：<b>5 畫</b></div><div id="anim-加" class="stroke-anim"></div><div class="anim-buttons"><button onclick="playStroke('加')">▶ 播放筆順</button><button class="quiz" onclick="quizStroke('加')">✏ 我要寫寫看</button></div></div>
+    <div class="char-card"><h3>油　ㄧㄡˊ</h3><div class="char-info">部首：<b>水（氵）</b>　總筆畫：<b>8 畫</b></div><div id="anim-油" class="stroke-anim"></div><div class="anim-buttons"><button onclick="playStroke('油')">▶ 播放筆順</button><button class="quiz" onclick="quizStroke('油')">✏ 我要寫寫看</button></div></div>
+    <div class="char-card"><h3>試　ㄕˋ</h3><div class="char-info">部首：<b>言</b>　總筆畫：<b>13 畫</b></div><div id="anim-試" class="stroke-anim"></div><div class="anim-buttons"><button onclick="playStroke('試')">▶ 播放筆順</button><button class="quiz" onclick="quizStroke('試')">✏ 我要寫寫看</button></div></div>
+    <div class="char-card"><h3>後　ㄏㄡˋ</h3><div class="char-info">部首：<b>彳</b>　總筆畫：<b>9 畫</b></div><div id="anim-後" class="stroke-anim"></div><div class="anim-buttons"><button onclick="playStroke('後')">▶ 播放筆順</button><button class="quiz" onclick="quizStroke('後')">✏ 我要寫寫看</button></div></div>
+  </div>
+</section>
+
+<section id="s3" class="sec-3">
+  <h2>三、同字異音練習</h2>
+  <p>本課的「試」搭配「試試看」時第二個「試」變成輕聲。我們複習一下這個現象：</p>
+
+  <div class="duoyin-card"><div class="big-ch">試</div><div class="reading"><b>讀音一：ㄕˋ</b>　當動詞，「嘗試、試試」的意思。<br>例句：再<b>試</b>一次。／我來<b>試</b>試看。</div><div class="reading"><b>讀音：˙ㄕ（輕聲）</b>　當「試」放在第二個位置時（如「試試看」），念輕聲。<br>例句：試<b>試</b>看。</div><div style="clear:both"></div></div>
+
+  <h3 style="color:#7b3fa0; margin-top:24px;">▍考考你！選出正確的讀音</h3>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">1.</span>「再<u>試</u>一次。」這裡的「試」念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄕˋ</li><li><span class="letter">B</span>˙ㄕ（輕聲）</li><li><span class="letter">C</span>ㄕㄣˋ</li><li><span class="letter">D</span>ㄓˋ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A　ㄕˋ</div></div>
+
+  <div class="mc-question" data-answer="B"><div class="q"><span class="num">2.</span>「試<u>試</u>看。」第二個「試」念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄕˋ</li><li><span class="letter">B</span>˙ㄕ（輕聲）</li><li><span class="letter">C</span>ㄕㄣˋ</li><li><span class="letter">D</span>ㄓˋ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B　˙ㄕ（疊字第二個多輕聲）</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">3.</span>「<u>常</u>常說」第一個「常」念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄔㄤˊ</li><li><span class="letter">B</span>˙ㄔㄤ（輕聲）</li><li><span class="letter">C</span>ㄔㄤˇ</li><li><span class="letter">D</span>ㄔㄤˋ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A　ㄔㄤˊ</div></div>
+</section>
+
+<section id="s4" class="sec-4">
+  <h2>四、相似字分辨</h2>
+  <p>下面這些字長得很像，要仔細看清楚再寫喔！</p>
+
+  <div class="similar-row"><div class="main-ch">鉛</div><div class="vs">vs.</div><div class="similar-chars"><div class="item"><span class="ch">船</span><span class="note">ㄔㄨㄢˊ<br>船</span></div><div class="item"><span class="ch">沿</span><span class="note">ㄧㄢˊ<br>沿著</span></div></div></div>
+
+  <div class="similar-row"><div class="main-ch">皮</div><div class="vs">vs.</div><div class="similar-chars"><div class="item"><span class="ch">波</span><span class="note">ㄅㄛ<br>波浪</span></div><div class="item"><span class="ch">破</span><span class="note">ㄆㄛˋ<br>破了</span></div></div></div>
+
+  <div class="similar-row"><div class="main-ch">常</div><div class="vs">vs.</div><div class="similar-chars"><div class="item"><span class="ch">堂</span><span class="note">ㄊㄤˊ<br>禮堂</span></div><div class="item"><span class="ch">嘗</span><span class="note">ㄔㄤˊ<br>嘗試</span></div></div></div>
+
+  <div class="similar-row"><div class="main-ch">錯</div><div class="vs">vs.</div><div class="similar-chars"><div class="item"><span class="ch">惜</span><span class="note">ㄒㄧ<br>可惜</span></div><div class="item"><span class="ch">借</span><span class="note">ㄐㄧㄝˋ<br>借書</span></div><div class="item"><span class="ch">措</span><span class="note">ㄘㄨㄛˋ<br>措施</span></div></div></div>
+
+  <div class="similar-row"><div class="main-ch">久</div><div class="vs">vs.</div><div class="similar-chars"><div class="item"><span class="ch">夕</span><span class="note">ㄒㄧ<br>夕陽</span></div><div class="item"><span class="ch">乆</span><span class="note">（久的異體）</span></div></div></div>
+
+  <div class="similar-row"><div class="main-ch">哭</div><div class="vs">vs.</div><div class="similar-chars"><div class="item"><span class="ch">笑</span><span class="note">ㄒㄧㄠˋ<br>笑容</span></div><div class="item"><span class="ch">器</span><span class="note">ㄑㄧˋ<br>器具</span></div></div></div>
+
+  <div class="similar-row"><div class="main-ch">加</div><div class="vs">vs.</div><div class="similar-chars"><div class="item"><span class="ch">咖</span><span class="note">ㄎㄚ<br>咖啡</span></div><div class="item"><span class="ch">架</span><span class="note">ㄐㄧㄚˋ<br>書架</span></div></div></div>
+
+  <div class="similar-row"><div class="main-ch">油</div><div class="vs">vs.</div><div class="similar-chars"><div class="item"><span class="ch">由</span><span class="note">ㄧㄡˊ<br>理由</span></div><div class="item"><span class="ch">遊</span><span class="note">ㄧㄡˊ<br>遊戲</span></div><div class="item"><span class="ch">游</span><span class="note">ㄧㄡˊ<br>游泳</span></div></div></div>
+
+  <div class="similar-row"><div class="main-ch">試</div><div class="vs">vs.</div><div class="similar-chars"><div class="item"><span class="ch">武</span><span class="note">ㄨˇ<br>武術</span></div><div class="item"><span class="ch">式</span><span class="note">ㄕˋ<br>方式</span></div></div></div>
+
+  <div class="similar-row"><div class="main-ch">後</div><div class="vs">vs.</div><div class="similar-chars"><div class="item"><span class="ch">候</span><span class="note">ㄏㄡˋ<br>等候</span></div><div class="item"><span class="ch">很</span><span class="note">ㄏㄣˇ<br>很多</span></div></div></div>
+
+  <h3 style="color:#e67700; margin-top:24px;">▍考考你！把對的字找出來</h3>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">1.</span>「<u>＿＿</u> 筆寫字。」應該填哪個字？</div><ul class="options"><li><span class="letter">A</span>鉛</li><li><span class="letter">B</span>船</li><li><span class="letter">C</span>沿</li><li><span class="letter">D</span>船</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A　鉛（鉛筆）</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">2.</span>「橡 <u>＿＿</u> 擦。」應該填哪個字？</div><ul class="options"><li><span class="letter">A</span>皮</li><li><span class="letter">B</span>波</li><li><span class="letter">C</span>破</li><li><span class="letter">D</span>坡</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A　皮</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">3.</span>「我 <u>＿＿</u> 常去公園。」應該填哪個字？</div><ul class="options"><li><span class="letter">A</span>常</li><li><span class="letter">B</span>堂</li><li><span class="letter">C</span>嘗</li><li><span class="letter">D</span>當</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A　常</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">4.</span>「寫 <u>＿＿</u> 字。」應該填哪個字？</div><ul class="options"><li><span class="letter">A</span>錯</li><li><span class="letter">B</span>惜</li><li><span class="letter">C</span>借</li><li><span class="letter">D</span>措</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A　錯</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">5.</span>「不 <u>＿＿</u> ，鉛筆哭著說。」應該填哪個字？</div><ul class="options"><li><span class="letter">A</span>久</li><li><span class="letter">B</span>夕</li><li><span class="letter">C</span>多</li><li><span class="letter">D</span>外</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A　久</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">6.</span>「弟弟 <u>＿＿</u> 著要糖果。」應該填哪個字？</div><ul class="options"><li><span class="letter">A</span>哭</li><li><span class="letter">B</span>笑</li><li><span class="letter">C</span>器</li><li><span class="letter">D</span>叫</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A　哭</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">7.</span>「 <u>＿＿</u> 油！再試一次。」應該填哪個字？</div><ul class="options"><li><span class="letter">A</span>加</li><li><span class="letter">B</span>咖</li><li><span class="letter">C</span>架</li><li><span class="letter">D</span>嫁</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A　加</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">8.</span>「炒菜要加 <u>＿＿</u>。」應該填哪個字？</div><ul class="options"><li><span class="letter">A</span>油</li><li><span class="letter">B</span>由</li><li><span class="letter">C</span>遊</li><li><span class="letter">D</span>游</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A　油</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">9.</span>「再 <u>＿＿</u> 試看。」應該填哪個字？</div><ul class="options"><li><span class="letter">A</span>試</li><li><span class="letter">B</span>武</li><li><span class="letter">C</span>式</li><li><span class="letter">D</span>戎</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A　試</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">10.</span>「下課以 <u>＿＿</u> 一起玩。」應該填哪個字？</div><ul class="options"><li><span class="letter">A</span>後</li><li><span class="letter">B</span>候</li><li><span class="letter">C</span>很</li><li><span class="letter">D</span>狠</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A　後</div></div>
+</section>
+
+<section id="s5" class="sec-5">
+  <h2>五、造樣造句</h2>
+  <p>看看課文中的句子，學一學這些常見的句型怎麼用！</p>
+
+  <div class="pattern-box"><div class="pattern">句型 ①：常常 ＿＿</div><div class="example">課文例句：鉛筆<b>常常</b>說：「我一直寫錯字！」</div><div class="example">類似句子：媽媽常常做點心。　我常常看書。</div></div>
+
+  <div class="pattern-box"><div class="pattern">句型 ②：哭著／笑著／笑著的說</div><div class="example">課文例句：鉛筆<b>哭著</b>說／橡皮擦<b>笑著</b>說</div><div class="example">類似句子：他急著說。　弟弟笑著說。　爺爺慢慢的說。</div></div>
+
+  <div class="pattern-box"><div class="pattern">句型 ③：加油！再 ＿＿ 看！</div><div class="example">課文例句：<b>加油！再試試看</b>！</div><div class="example">類似句子：加油！再寫一次！　加油！再唱一遍！</div></div>
+
+  <div class="pattern-box"><div class="pattern">句型 ④：又 ＿＿ 又 ＿＿</div><div class="example">課文例句：又正確<b>又</b>漂亮。</div><div class="example">類似句子：又快又好。　又香又甜。　又高又大。</div></div>
+
+  <div class="pattern-box"><div class="pattern">句型 ⑤：我還要學 ＿＿，也需要你的幫忙</div><div class="example">課文例句：我<b>還要學</b>畫畫，<b>也需要你的幫忙</b>呢！</div><div class="example">類似句子：我還要學跳舞，也需要你的幫忙。</div></div>
+</section>
+
+<section id="s6" class="sec-6">
+  <h2>六、生字成語</h2>
+  <p>下面這些生字可以和其他字組成有趣的成語！</p>
+
+  <div class="idiom-section"><h4>鉛</h4><div class="no-idiom">※「鉛」字相關的常用成語較少。</div></div>
+
+  <div class="idiom-section"><h4>皮</h4><ul class="idiom-list">
+    <li><span class="idiom">調皮搗蛋</span><span class="meaning">頑皮愛搗亂，形容小孩子愛玩鬧。</span></li>
+    <li><span class="idiom">皮笑肉不笑</span><span class="meaning">嘴巴在笑，心裡卻不笑，形容假裝開心。</span></li>
+  </ul></div>
+
+  <div class="idiom-section"><h4>常</h4><ul class="idiom-list">
+    <li><span class="idiom">習以為常</span><span class="meaning">經過很久就習慣了、覺得很平常。</span></li>
+    <li><span class="idiom">家常便飯</span><span class="meaning">家裡天天吃的飯菜，比喻很常見的事情。</span></li>
+  </ul></div>
+
+  <div class="idiom-section"><h4>錯</h4><ul class="idiom-list">
+    <li><span class="idiom">將錯就錯</span><span class="meaning">既然錯了就乾脆繼續做下去。</span></li>
+    <li><span class="idiom">陰錯陽差</span><span class="meaning">因為各種偶然因素造成的意外。</span></li>
+  </ul></div>
+
+  <div class="idiom-section"><h4>久</h4><ul class="idiom-list">
+    <li><span class="idiom">天長地久</span><span class="meaning">像天和地一樣長久，形容感情或時間很長久。</span></li>
+    <li><span class="idiom">日久天長</span><span class="meaning">經過很長一段時間。</span></li>
+  </ul></div>
+
+  <div class="idiom-section"><h4>哭</h4><ul class="idiom-list">
+    <li><span class="idiom">哭笑不得</span><span class="meaning">不知道該哭還是該笑，形容心情又無奈又好笑。</span></li>
+    <li><span class="idiom">大哭大叫</span><span class="meaning">用力的哭、用力的叫，形容很激動或很難過。</span></li>
+  </ul></div>
+
+  <div class="idiom-section"><h4>加</h4><ul class="idiom-list">
+    <li><span class="idiom">雪上加霜</span><span class="meaning">下了雪後再下霜，比喻本來就很不好，又遇上麻煩，更糟糕。</span></li>
+    <li><span class="idiom">無以復加</span><span class="meaning">已經到了沒辦法再增加的程度，形容很厲害。</span></li>
+  </ul></div>
+
+  <div class="idiom-section"><h4>油</h4><ul class="idiom-list">
+    <li><span class="idiom">火上加油</span><span class="meaning">在火上倒油，比喻使衝突更激烈。</span></li>
+    <li><span class="idiom">油嘴滑舌</span><span class="meaning">嘴巴很會講話，但是不老實。</span></li>
+  </ul></div>
+
+  <div class="idiom-section"><h4>試</h4><ul class="idiom-list">
+    <li><span class="idiom">屢試不爽</span><span class="meaning">試了很多次都成功，沒有失敗。</span></li>
+    <li><span class="idiom">小試身手</span><span class="meaning">先小小的試一試自己的能力。</span></li>
+  </ul></div>
+
+  <div class="idiom-section"><h4>後</h4><ul class="idiom-list">
+    <li><span class="idiom">先來後到</span><span class="meaning">先到的人先來，後到的人後來，按順序排。</span></li>
+    <li><span class="idiom">瞻前顧後</span><span class="meaning">看看前面又看看後面，形容做事很小心、太謹慎。</span></li>
+    <li><span class="idiom">後來居上</span><span class="meaning">後面來的人反而超過前面的人。</span></li>
+  </ul></div>
+
+  <h3 style="color:#c0392b; margin-top:24px;">▍考考你！選出正確的成語</h3>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">1.</span>「形容調皮的小孩子愛玩鬧」是哪個成語？</div><ul class="options"><li><span class="letter">A</span>調皮搗蛋</li><li><span class="letter">B</span>習以為常</li><li><span class="letter">C</span>家常便飯</li><li><span class="letter">D</span>陰錯陽差</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A　調皮搗蛋</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">2.</span>「不知道該哭還是該笑，形容心情又無奈又好笑」是哪個成語？</div><ul class="options"><li><span class="letter">A</span>哭笑不得</li><li><span class="letter">B</span>大哭大叫</li><li><span class="letter">C</span>火上加油</li><li><span class="letter">D</span>調皮搗蛋</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A　哭笑不得</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">3.</span>「本來就很不好，又遇上麻煩，更糟糕」是哪個成語？</div><ul class="options"><li><span class="letter">A</span>雪上加霜</li><li><span class="letter">B</span>火上加油</li><li><span class="letter">C</span>哭笑不得</li><li><span class="letter">D</span>無以復加</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A　雪上加霜</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">4.</span>「形容感情或時間很長久」是哪個成語？</div><ul class="options"><li><span class="letter">A</span>天長地久</li><li><span class="letter">B</span>日久天長</li><li><span class="letter">C</span>習以為常</li><li><span class="letter">D</span>先來後到</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A　天長地久</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">5.</span>「後面來的人反而超過前面的人」是哪個成語？</div><ul class="options"><li><span class="letter">A</span>後來居上</li><li><span class="letter">B</span>先來後到</li><li><span class="letter">C</span>瞻前顧後</li><li><span class="letter">D</span>家常便飯</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A　後來居上</div></div>
+</section>
+
+<footer><p>114 學年度下學期　一年級國語自學練習　｜　第十一課 鉛筆和橡皮擦</p></footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.5/dist/hanzi-writer.min.js"></script>
+<script>
+  const chars = ['鉛','皮','常','錯','久','哭','加','油','試','後'];
+  const writers = {};
+  window.addEventListener('load', function() {
+    if (typeof HanziWriter === 'undefined') { chars.forEach(c => { const el = document.getElementById('anim-' + c); if (el) el.innerHTML = '<div style="text-align:center;padding-top:90px;color:#999;font-size:0.95em;">需要網路連線<br>才能顯示筆順</div>'; }); return; }
+    chars.forEach(c => { try { writers[c] = HanziWriter.create('anim-' + c, c, { width: 220, height: 220, padding: 10, strokeColor: '#2e7d32', radicalColor: '#e85a8a', showOutline: true, showCharacter: true, strokeAnimationSpeed: 1, delayBetweenStrokes: 300, charDataLoader: function(char, onComplete, onError) { fetch('https://cdn.jsdelivr.net/npm/hanzi-writer-data@2/' + encodeURIComponent(char) + '.json').then(r => r.json()).then(onComplete).catch(onError); }}); } catch(e) { console.error(e); } });
+  });
+  function playStroke(c) { if (writers[c]) writers[c].animateCharacter(); }
+  function quizStroke(c) { if (writers[c]) writers[c].quiz({ showHintAfterMisses: 3 }); }
+  function revealAnswer(btn) { const q = btn.closest('.mc-question'); const correct = q.dataset.answer; const isShown = q.classList.contains('show-answer');
+    if (isShown) { q.classList.remove('show-answer'); q.querySelectorAll('.options li').forEach(li => li.classList.remove('correct')); btn.textContent = '看答案'; }
+    else { q.classList.add('show-answer'); q.querySelectorAll('.options li').forEach((li, i) => { if ('ABCD'[i] === correct) li.classList.add('correct'); }); btn.textContent = '隱藏答案'; }
+  }
+  document.addEventListener('click', function(e) { const li = e.target.closest('.mc-question .options li'); if (!li) return; const ul = li.parentElement; ul.querySelectorAll('li').forEach(l => l.classList.remove('selected')); li.classList.add('selected'); });
+</script>
+</body>
+</html>
