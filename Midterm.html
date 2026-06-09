@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>期中考總複習（一～六課） ｜ 一年級下學期國語練習</title>
+<title>期中考總複習（一～五課） ｜ 一年級下學期國語練習</title>
 <style>
   :root { --pink:#ffd6e0; --pink-dark:#e85a8a; --green:#c8e6c9; --green-dark:#4caf50; --yellow:#fff4c2; --yellow-dark:#f5a623; --blue:#cfe8ff; --blue-dark:#1976d2; --purple:#e1d5f5; --purple-dark:#7b3fa0; --orange:#ffd9b3; --orange-dark:#e67700; --red:#ffcccc; --red-dark:#c0392b; --gray-light:#f5f5f5; }
   * { box-sizing: border-box; }
@@ -47,6 +47,27 @@
   .reveal-all button:hover { background:#5b2e7a; }
   footer { text-align:center; padding:20px; color:#888; font-size:0.9em; }
   .score { display:inline-block; background:#e8f5e9; color:var(--green-dark); padding:10px 24px; border-radius:24px; font-size:1.2em; font-weight:bold; margin:14px 0; }
+  /* 手寫驗證 */
+  .hand-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px; margin-top:16px; }
+  .hand-card { background:#fff; border:2px solid #00897b; border-radius:12px; padding:14px; text-align:center; }
+  .hand-card h4 { margin:0 0 8px 0; color:#00897b; font-size:1.3em; }
+  .hand-card .charinfo { font-size:0.9em; color:#666; margin-bottom:10px; }
+  .hand-anim { width:180px; height:180px; margin:0 auto 10px; background:#fff; border:3px solid #ff6b6b; position:relative; }
+  .hand-anim::before, .hand-anim::after { content:''; position:absolute; opacity:0.5; }
+  .hand-anim::before { width:100%; height:0; top:50%; left:0; border-top:2px dashed #ff6b6b; }
+  .hand-anim::after { height:100%; width:0; left:50%; top:0; border-left:2px dashed #ff6b6b; }
+  .hand-btns button { background:#00897b; color:white; border:none; padding:7px 14px; border-radius:6px; margin:3px; cursor:pointer; font-family:inherit; font-size:0.9em; font-weight:bold; }
+  .hand-btns button:hover { background:#00695c; }
+  .hand-btns button.show { background:var(--orange-dark); }
+  .hand-btns button.show:hover { background:#b85a00; }
+  .sec-H h2 { background:var(--yellow-dark); }
+  .hint-word { background:#fff8e1; border:1px dashed var(--yellow-dark); padding:8px 12px; border-radius:8px; margin-bottom:10px; font-size:0.95em; color:#555; }
+  .hand-result { margin-top:10px; min-height:24px; font-size:0.95em; font-weight:bold; }
+  .hand-result.correct { color:#2e7d32; }
+  .hand-result.warn { color:var(--orange-dark); }
+  .hand-result.wrong { color:var(--red-dark); }
+  .hand-btns button.reset { background:#999; }
+  .hand-btns button.reset:hover { background:#666; }
 </style>
 </head>
 <body>
@@ -57,21 +78,22 @@
 <header>
   <h1>期中考總複習</h1>
   <div class="meta">114 學年度　一年級下學期　國語</div>
-  <div class="scope">範圍：第一課 ～ 第六課</div>
+  <div class="scope">範圍：第一課 ～ 第五課</div>
 </header>
 
 <div class="toc">
-  <h3>本卷七大題</h3>
+  <h3>本卷八大題</h3>
   <ol>
     <li><a href="#sA">課文內容</a>（10 題）</li>
     <li><a href="#sB">注音</a>（8 題）</li>
     <li><a href="#sC">部首與筆畫</a>（6 題）</li>
-    <li><a href="#sD">同字異音</a>（6 題）</li>
-    <li><a href="#sE">相似字</a>（10 題）</li>
-    <li><a href="#sF">成語</a>（8 題）</li>
-    <li><a href="#sG">造句句型</a>（4 題）</li>
+    <li><a href="#sD">同字異音</a>（20 題）</li>
+    <li><a href="#sE">相似字選擇題</a>（10 題）</li>
+    <li><a href="#sF">相似字手寫驗證</a>（12 字動手寫寫看）</li>
+    <li><a href="#sG">成語</a>（8 題）</li>
+    <li><a href="#sH">造句句型</a>（4 題）</li>
   </ol>
-  <p style="text-align:center; margin-top:16px;"><b>共 52 道選擇題</b>，每題點「看答案」可以對照。</p>
+  <p style="text-align:center; margin-top:16px;"><b>共 66 道選擇題＋12 字手寫驗證</b>，每題點「看答案」可以對照。</p>
 </div>
 
 <div class="reveal-all">
@@ -143,7 +165,7 @@
 
 <!-- ============ 四、同字異音 ============ -->
 <section id="sD" class="sec-D">
-  <h2>四、同字異音（6 題）</h2>
+  <h2>四、同字異音（20 題）</h2>
 
   <div class="mc-question" data-answer="A"><div class="q"><span class="num">1.</span>「弟弟<u>還</u>沒回家。」這裡的「還」念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄏㄞˊ</li><li><span class="letter">B</span>ㄏㄨㄢˊ</li><li><span class="letter">C</span>ㄏㄢˊ</li><li><span class="letter">D</span>ㄏㄨㄣˊ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
 
@@ -153,9 +175,37 @@
 
   <div class="mc-question" data-answer="B"><div class="q"><span class="num">4.</span>「他開心<u>地</u>跳起來。」這裡的「地」念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄉㄧˋ</li><li><span class="letter">B</span>˙ㄉㄜ</li><li><span class="letter">C</span>ㄉㄜˊ</li><li><span class="letter">D</span>ㄉㄚˋ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B</div></div>
 
-  <div class="mc-question" data-answer="A"><div class="q"><span class="num">5.</span>「<u>什</u>麼時候？」這裡的「什」念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄕㄜˊ</li><li><span class="letter">B</span>ㄕˊ</li><li><span class="letter">C</span>ㄕˋ</li><li><span class="letter">D</span>ㄕˇ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">5.</span>「<u>什</u>麼時候？」這裡的「什」念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄕㄣˊ</li><li><span class="letter">B</span>ㄕˊ</li><li><span class="letter">C</span>ㄕˋ</li><li><span class="letter">D</span>ㄕˇ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
 
-  <div class="mc-question" data-answer="B"><div class="q"><span class="num">6.</span>「我射<u>中</u>目標。」這裡的「中」念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄓㄨㄥ</li><li><span class="letter">B</span>ㄓㄨㄥˋ</li><li><span class="letter">C</span>ㄓㄨㄥˊ</li><li><span class="letter">D</span>ㄓㄨㄥˇ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B</div></div>
+  <div class="mc-question" data-answer="B"><div class="q"><span class="num">6.</span>「我射<u>中</u>目標。」這裡的「中」念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄓㄨㄥ</li><li><span class="letter">B</span>ㄓㄨㄥˋ</li><li><span class="letter">C</span>ㄓㄨㄥˊ</li><li><span class="letter">D</span>ㄓㄨㄥˇ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B（射中＝命中）</div></div>
+
+  <div class="mc-question" data-answer="B"><div class="q"><span class="num">7.</span>「我去學音<u>樂</u>。」這裡的「樂」要念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄌㄜˋ</li><li><span class="letter">B</span>ㄩㄝˋ</li><li><span class="letter">C</span>ㄌㄜˇ</li><li><span class="letter">D</span>ㄩㄝˇ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B（音樂）</div></div>
+
+  <div class="mc-question" data-answer="B"><div class="q"><span class="num">8.</span>「<u>樂</u>器很好聽。」這裡的「樂」要念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄌㄜˋ</li><li><span class="letter">B</span>ㄩㄝˋ</li><li><span class="letter">C</span>ㄌㄜˇ</li><li><span class="letter">D</span>ㄩㄝˇ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B（樂器）</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">9.</span>「助人為<u>樂</u>。」這裡的「樂」要念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄌㄜˋ</li><li><span class="letter">B</span>ㄩㄝˋ</li><li><span class="letter">C</span>ㄌㄜˇ</li><li><span class="letter">D</span>ㄩㄝˇ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A（幫助別人很快樂）</div></div>
+
+  <div class="mc-question" data-answer="B"><div class="q"><span class="num">10.</span>「我們在<u>樂</u>團裡表演。」這裡的「樂」要念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄌㄜˋ</li><li><span class="letter">B</span>ㄩㄝˋ</li><li><span class="letter">C</span>ㄌㄜˇ</li><li><span class="letter">D</span>ㄩㄝˇ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B（樂團＝音樂團）</div></div>
+
+  <div class="mc-question" data-answer="B"><div class="q"><span class="num">11.</span>「<u>興</u>建一棟新大樓。」這裡的「興」要念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄒㄧㄥˋ</li><li><span class="letter">B</span>ㄒㄧㄥ</li><li><span class="letter">C</span>ㄒㄧㄥˇ</li><li><span class="letter">D</span>ㄒㄧㄥˊ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B（興建＝開始建造）</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">12.</span>「他對畫畫很有<u>興</u>趣。」這裡的「興」要念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄒㄧㄥˋ</li><li><span class="letter">B</span>ㄒㄧㄥ</li><li><span class="letter">C</span>ㄒㄧㄥˇ</li><li><span class="letter">D</span>ㄒㄧㄥˊ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A（興趣）</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">13.</span>「請坐在這個草<u>地</u>上。」這裡的「地」要念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄉㄧˋ</li><li><span class="letter">B</span>˙ㄉㄜ（輕聲）</li><li><span class="letter">C</span>ㄉㄜˊ</li><li><span class="letter">D</span>ㄉㄚˋ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A（草地＝名詞）</div></div>
+
+  <div class="mc-question" data-answer="B"><div class="q"><span class="num">14.</span>「我們開心<u>地</u>唱歌。」這裡的「地」要念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄉㄧˋ</li><li><span class="letter">B</span>˙ㄉㄜ（輕聲）</li><li><span class="letter">C</span>ㄉㄜˊ</li><li><span class="letter">D</span>ㄉㄚˋ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B（副詞助詞）</div></div>
+
+  <div class="mc-question" data-answer="B"><div class="q"><span class="num">15.</span>「<u>什</u>錦炒飯。」這裡的「什」要念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄕㄣˊ</li><li><span class="letter">B</span>ㄕˊ</li><li><span class="letter">C</span>ㄕˋ</li><li><span class="letter">D</span>ㄕㄜˊ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B（什錦＝眾多）</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">16.</span>「我跟妹妹說悄悄話，像<u>呢</u>喃細語。」這裡的「呢」要念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄋㄧˊ</li><li><span class="letter">B</span>˙ㄋㄜ（輕聲）</li><li><span class="letter">C</span>ㄋㄚˇ</li><li><span class="letter">D</span>ㄋㄚˋ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A（呢喃＝小聲說話）</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">17.</span>「你在做什麼<u>呢</u>？」這裡的「呢」要念什麼？</div><ul class="options"><li><span class="letter">A</span>˙ㄋㄜ（輕聲）</li><li><span class="letter">B</span>ㄋㄧˊ</li><li><span class="letter">C</span>ㄋㄚˇ</li><li><span class="letter">D</span>ㄋㄚˋ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A（句末助詞）</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">18.</span>「窗外有幾隻麻<u>雀</u>。」這裡的「雀」要念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄑㄩㄝˋ</li><li><span class="letter">B</span>ㄑㄧㄠˇ</li><li><span class="letter">C</span>ㄔㄩㄝˋ</li><li><span class="letter">D</span>ㄐㄩˋ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A（麻雀）</div></div>
+
+  <div class="mc-question" data-answer="A"><div class="q"><span class="num">19.</span>「水<u>中</u>有許多小魚。」這裡的「中」要念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄓㄨㄥ</li><li><span class="letter">B</span>ㄓㄨㄥˋ</li><li><span class="letter">C</span>ㄓㄨㄥˊ</li><li><span class="letter">D</span>ㄓㄨㄥˇ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A（中＝裡面）</div></div>
+
+  <div class="mc-question" data-answer="B"><div class="q"><span class="num">20.</span>「我考<u>中</u>了！」這裡的「中」要念什麼？</div><ul class="options"><li><span class="letter">A</span>ㄓㄨㄥ</li><li><span class="letter">B</span>ㄓㄨㄥˋ</li><li><span class="letter">C</span>ㄓㄨㄥˊ</li><li><span class="letter">D</span>ㄓㄨㄥˇ</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">B（考中＝考上）</div></div>
 </section>
 
 <!-- ============ 五、相似字 ============ -->
@@ -183,9 +233,30 @@
   <div class="mc-question" data-answer="A"><div class="q"><span class="num">10.</span>「我來 <u>＿＿</u> 你！」應該填哪個字？</div><ul class="options"><li><span class="letter">A</span>幫</li><li><span class="letter">B</span>邦</li><li><span class="letter">C</span>綁</li><li><span class="letter">D</span>梆</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
 </section>
 
-<!-- ============ 六、成語 ============ -->
-<section id="sF" class="sec-F">
-  <h2>六、成語（8 題）</h2>
+<!-- ============ 六、相似字手寫驗證 ============ -->
+<section id="sF" class="sec-F" style="border-top:5px solid #00897b;">
+  <h2 style="background:#00897b;">六、相似字手寫驗證（動手寫寫看）</h2>
+  <p style="color:#555;">下面從第一到第六課挑出 12 個容易寫錯的字。看「提示」的詞語和注音，憑記憶在空白田字格裡寫出來。寫完後系統會告訴你寫對沒寫對、筆順正不正確。寫錯可以按「重寫」再試。</p>
+
+  <div class="hand-grid">
+    <div class="hand-card"><h4>請寫出這個字</h4><div class="hint-word">提示：<span style="color:#1976d2;font-weight:bold;">ㄔㄨㄣ</span> 天（第一課）</div><div id="hand-春" class="hand-anim"></div><div class="hand-btns"><button onclick="quizStroke('春')">✏ 開始寫</button><button class="reset" onclick="resetStroke('春')">↻ 重寫</button></div><div id="result-春" class="hand-result"></div></div>
+    <div class="hand-card"><h4>請寫出這個字</h4><div class="hint-word">提示：公園 <span style="color:#1976d2;font-weight:bold;">ㄌㄧˇ</span>（第一課）</div><div id="hand-裡" class="hand-anim"></div><div class="hand-btns"><button onclick="quizStroke('裡')">✏ 開始寫</button><button class="reset" onclick="resetStroke('裡')">↻ 重寫</button></div><div id="result-裡" class="hand-result"></div></div>
+    <div class="hand-card"><h4>請寫出這個字</h4><div class="hint-word">提示：<span style="color:#1976d2;font-weight:bold;">ㄇㄚ</span> 媽（第一課）</div><div id="hand-媽" class="hand-anim"></div><div class="hand-btns"><button onclick="quizStroke('媽')">✏ 開始寫</button><button class="reset" onclick="resetStroke('媽')">↻ 重寫</button></div><div id="result-媽" class="hand-result"></div></div>
+    <div class="hand-card"><h4>請寫出這個字</h4><div class="hint-word">提示：<span style="color:#1976d2;font-weight:bold;">ㄏㄞˊ</span> 沒回家（第一課）</div><div id="hand-還" class="hand-anim"></div><div class="hand-btns"><button onclick="quizStroke('還')">✏ 開始寫</button><button class="reset" onclick="resetStroke('還')">↻ 重寫</button></div><div id="result-還" class="hand-result"></div></div>
+    <div class="hand-card"><h4>請寫出這個字</h4><div class="hint-word">提示：唱 <span style="color:#1976d2;font-weight:bold;">ㄍㄜ</span>（第二課）</div><div id="hand-歌" class="hand-anim"></div><div class="hand-btns"><button onclick="quizStroke('歌')">✏ 開始寫</button><button class="reset" onclick="resetStroke('歌')">↻ 重寫</button></div><div id="result-歌" class="hand-result"></div></div>
+    <div class="hand-card"><h4>請寫出這個字</h4><div class="hint-word">提示：快 <span style="color:#1976d2;font-weight:bold;">ㄌㄜˋ</span>（第二課）</div><div id="hand-樂" class="hand-anim"></div><div class="hand-btns"><button onclick="quizStroke('樂')">✏ 開始寫</button><button class="reset" onclick="resetStroke('樂')">↻ 重寫</button></div><div id="result-樂" class="hand-result"></div></div>
+    <div class="hand-card"><h4>請寫出這個字</h4><div class="hint-word">提示：拍 <span style="color:#1976d2;font-weight:bold;">ㄓㄠˋ</span>（第三課）</div><div id="hand-照" class="hand-anim"></div><div class="hand-btns"><button onclick="quizStroke('照')">✏ 開始寫</button><button class="reset" onclick="resetStroke('照')">↻ 重寫</button></div><div id="result-照" class="hand-result"></div></div>
+    <div class="hand-card"><h4>請寫出這個字</h4><div class="hint-word">提示：<span style="color:#1976d2;font-weight:bold;">ㄏㄨㄥˊ</span> 色（第三課）</div><div id="hand-紅" class="hand-anim"></div><div class="hand-btns"><button onclick="quizStroke('紅')">✏ 開始寫</button><button class="reset" onclick="resetStroke('紅')">↻ 重寫</button></div><div id="result-紅" class="hand-result"></div></div>
+    <div class="hand-card"><h4>請寫出這個字</h4><div class="hint-word">提示：<span style="color:#1976d2;font-weight:bold;">ㄗㄨㄛˋ</span> 卡片（第四課）</div><div id="hand-做" class="hand-anim"></div><div class="hand-btns"><button onclick="quizStroke('做')">✏ 開始寫</button><button class="reset" onclick="resetStroke('做')">↻ 重寫</button></div><div id="result-做" class="hand-result"></div></div>
+    <div class="hand-card"><h4>請寫出這個字</h4><div class="hint-word">提示：<span style="color:#1976d2;font-weight:bold;">ㄔㄨㄤ</span> 戶（第五課）</div><div id="hand-窗" class="hand-anim"></div><div class="hand-btns"><button onclick="quizStroke('窗')">✏ 開始寫</button><button class="reset" onclick="resetStroke('窗')">↻ 重寫</button></div><div id="result-窗" class="hand-result"></div></div>
+    <div class="hand-card"><h4>請寫出這個字</h4><div class="hint-word">提示：<span style="color:#1976d2;font-weight:bold;">ㄅㄤ</span> 忙（第六課）</div><div id="hand-幫" class="hand-anim"></div><div class="hand-btns"><button onclick="quizStroke('幫')">✏ 開始寫</button><button class="reset" onclick="resetStroke('幫')">↻ 重寫</button></div><div id="result-幫" class="hand-result"></div></div>
+    <div class="hand-card"><h4>請寫出這個字</h4><div class="hint-word">提示：<span style="color:#1976d2;font-weight:bold;">ㄑㄧㄥ</span> 蛙（第六課）</div><div id="hand-青" class="hand-anim"></div><div class="hand-btns"><button onclick="quizStroke('青')">✏ 開始寫</button><button class="reset" onclick="resetStroke('青')">↻ 重寫</button></div><div id="result-青" class="hand-result"></div></div>
+  </div>
+</section>
+
+<!-- ============ 七、成語 ============ -->
+<section id="sG" class="sec-G">
+  <h2>七、成語（8 題）</h2>
 
   <div class="mc-question" data-answer="A"><div class="q"><span class="num">1.</span>「形容春天美麗的景色」用哪個成語？</div><ul class="options"><li><span class="letter">A</span>春暖花開</li><li><span class="letter">B</span>春風滿面</li><li><span class="letter">C</span>千言萬語</li><li><span class="letter">D</span>五湖四海</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
 
@@ -204,9 +275,9 @@
   <div class="mc-question" data-answer="A"><div class="q"><span class="num">8.</span>「形容做事很慌張、沒有條理」是哪個成語？</div><ul class="options"><li><span class="letter">A</span>手忙腳亂</li><li><span class="letter">B</span>忙裡偷閒</li><li><span class="letter">C</span>悠游自在</li><li><span class="letter">D</span>百發百中</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">A</div></div>
 </section>
 
-<!-- ============ 七、造句句型 ============ -->
-<section id="sG" class="sec-G">
-  <h2>七、造句句型（4 題）</h2>
+<!-- ============ 八、造句句型 ============ -->
+<section id="sH" class="sec-H">
+  <h2>八、造句句型（4 題）</h2>
 
   <div class="mc-question" data-answer="C"><div class="q"><span class="num">1.</span>下列哪一句的句型和「好美呀！」一樣？</div><ul class="options"><li><span class="letter">A</span>我去公園。</li><li><span class="letter">B</span>媽媽笑著說。</li><li><span class="letter">C</span>好大呀！</li><li><span class="letter">D</span>小狗會叫。</li></ul><button class="reveal-btn" onclick="revealAnswer(this)">看答案</button><div class="answer-text">C（「好＿呀！」句型）</div></div>
 
@@ -225,6 +296,59 @@
 
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.5/dist/hanzi-writer.min.js"></script>
+<script>
+  const handChars = ['春','裡','媽','還','歌','樂','照','紅','做','窗','幫','青'];
+  const handWriters = {};
+  window.addEventListener('load', function() {
+    if (typeof HanziWriter === 'undefined') {
+      handChars.forEach(c => { const el = document.getElementById('hand-' + c); if (el) el.innerHTML = '<div style="text-align:center;padding-top:70px;color:#999;font-size:0.9em;">需要網路連線<br>才能載入手寫</div>'; });
+      return;
+    }
+    handChars.forEach(c => {
+      try {
+        handWriters[c] = HanziWriter.create('hand-' + c, c, {
+          width: 180, height: 180, padding: 8, strokeColor: '#00897b', radicalColor: '#e85a8a',
+          showOutline: false, showCharacter: false, strokeAnimationSpeed: 1, delayBetweenStrokes: 250,
+          charDataLoader: function(char, onComplete, onError) {
+            fetch('https://cdn.jsdelivr.net/npm/hanzi-writer-data@2/' + encodeURIComponent(char) + '.json').then(r => r.json()).then(onComplete).catch(onError);
+          }
+        });
+      } catch(e) { console.error(e); }
+    });
+  });
+  function quizStroke(c) {
+    if (!handWriters[c]) return;
+    handWriters[c].cancelQuiz();
+    handWriters[c].hideCharacter();
+    const resultEl = document.getElementById('result-' + c);
+    if (resultEl) { resultEl.textContent = '✏ 開始寫…'; resultEl.className = 'hand-result'; }
+    handWriters[c].quiz({
+      showHintAfterMisses: 999,
+      onComplete: function(summary) {
+        if (!resultEl) return;
+        const m = summary.totalMistakes || 0;
+        if (m === 0) {
+          resultEl.textContent = '✓ 寫對了！筆順全部正確！';
+          resultEl.className = 'hand-result correct';
+        } else if (m <= 2) {
+          resultEl.textContent = '字寫對了，但有 ' + m + ' 筆筆順不對。可以再試一次！';
+          resultEl.className = 'hand-result warn';
+        } else {
+          resultEl.textContent = '完成了，但有 ' + m + ' 筆順／字形不對，建議再寫一次。';
+          resultEl.className = 'hand-result wrong';
+        }
+      }
+    });
+  }
+  function resetStroke(c) {
+    if (!handWriters[c]) return;
+    handWriters[c].cancelQuiz();
+    handWriters[c].hideCharacter();
+    const resultEl = document.getElementById('result-' + c);
+    if (resultEl) { resultEl.textContent = ''; resultEl.className = 'hand-result'; }
+  }
+</script>
 <script>
   function revealAnswer(btn) {
     const q = btn.closest('.mc-question'); const correct = q.dataset.answer; const isShown = q.classList.contains('show-answer');
