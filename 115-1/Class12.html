@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第十二課 詠鵝 ｜ 二年級上學期國語練習</title>
+<style>
+  :root{--pink:#ffd6e0;--pink-dark:#e85a8a;--green:#c8e6c9;--green-dark:#4caf50;--yellow:#fff4c2;--yellow-dark:#f5a623;--blue:#cfe8ff;--blue-dark:#1976d2;--purple:#e1d5f5;--purple-dark:#7b3fa0;--orange:#ffd9b3;--orange-dark:#e67700;--teal:#b2ebf2;--teal-dark:#00838f;--gray-light:#f5f5f5;}
+  *{box-sizing:border-box;}body{font-family:"標楷體","DFKai-SB","BiauKai","KaiTi",serif;margin:0;padding:0;background:#fefcf7;color:#333;line-height:1.8;}
+  .container{max-width:1000px;margin:0 auto;padding:20px;}
+  header{background:linear-gradient(135deg,#b2ebf2,#c8e6c9);padding:30px 20px;text-align:center;border-radius:16px;margin-bottom:24px;box-shadow:0 4px 12px rgba(0,0,0,0.08);}
+  header h1{font-size:2.2em;margin:0 0 6px;color:var(--teal-dark);}header .meta{color:#555;}
+  .home-link{display:inline-block;background:var(--blue);color:var(--blue-dark);padding:6px 14px;border-radius:8px;text-decoration:none;margin-bottom:16px;font-size:.95em;}
+  .home-link:hover{background:var(--blue-dark);color:#fff;}
+  section{background:#fff;border-radius:16px;padding:24px;margin-bottom:20px;box-shadow:0 2px 8px rgba(0,0,0,0.06);}
+  section h2{font-size:1.4em;margin:0 0 16px;padding:10px 16px;border-radius:8px;color:#fff;}
+  .s1 h2{background:var(--teal-dark);}.s2 h2{background:var(--green-dark);}.s3 h2{background:var(--blue-dark);}.s4 h2{background:var(--orange-dark);}
+  .lt{background:var(--teal);border-radius:12px;padding:20px 28px;font-size:1.15em;line-height:2.2;}
+  .seg{margin:14px 0;padding:12px 16px;background:rgba(255,255,255,0.85);border-radius:10px;border-left:4px solid var(--teal-dark);}
+  .poem-box{background:#fff;border:3px solid var(--teal-dark);border-radius:14px;padding:20px 28px;margin:16px 0;text-align:center;}
+  .poem-title{font-size:1.1em;color:#555;margin-bottom:6px;}
+  .poem-author{font-size:.9em;color:#888;margin-bottom:14px;}
+  .poem-text{font-size:1.5em;line-height:2.4;color:var(--teal-dark);font-weight:bold;letter-spacing:4px;}
+  .poem-note{font-size:.9em;color:#666;margin-top:12px;text-align:left;background:#f0fafb;border-radius:8px;padding:10px 14px;}
+  .who{display:inline-block;background:var(--teal-dark);color:#fff;border-radius:6px;padding:2px 8px;font-size:.8em;margin-right:6px;}
+  .vc{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;}
+  .vc span{background:var(--green);color:var(--green-dark);border-radius:8px;padding:6px 14px;font-size:1.2em;font-weight:bold;}
+  .mq{background:var(--gray-light);border-radius:10px;padding:16px 20px;margin:12px 0;border-left:5px solid var(--blue-dark);}
+  .mq .qt{font-weight:bold;margin-bottom:10px;}.mq .qt .n{color:var(--blue-dark);margin-right:6px;}
+  ul.op{list-style:none;padding:0;margin:0;}
+  ul.op li{padding:8px 12px;margin:4px 0;background:#fff;border-radius:8px;border:2px solid transparent;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:10px;}
+  ul.op li:hover{background:#fff8e1;border-color:var(--yellow-dark);}
+  ul.op li.correct{background:#e8f5e9;border-color:var(--green-dark);font-weight:bold;}
+  .lr{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--teal);color:var(--teal-dark);font-weight:bold;flex-shrink:0;}
+  ul.op li.correct .lr{background:var(--green-dark);color:#fff;}
+  .rb{margin-top:10px;background:var(--teal-dark);color:#fff;border:none;padding:7px 16px;border-radius:8px;cursor:pointer;font-family:inherit;font-size:.95em;}
+  .rb:hover{background:#005f6b;}
+  .at{margin-top:8px;padding:8px 12px;background:#fff;border-radius:6px;color:var(--green-dark);font-weight:bold;display:none;}
+  .sa .at{display:block;}
+  .fi{background:var(--gray-light);border-radius:10px;padding:14px 18px;margin:10px 0;font-size:1.1em;}
+  .bl{display:inline-block;border-bottom:2px solid var(--orange-dark);min-width:60px;text-align:center;color:transparent;user-select:none;}
+  .bl.show{color:var(--orange-dark);}
+  .fb{background:var(--orange-dark);color:#fff;border:none;padding:6px 14px;border-radius:8px;cursor:pointer;font-family:inherit;font-size:.9em;margin-left:8px;}
+  .fb:hover{background:#b85a00;}
+  .sb{text-align:center;margin:16px 0;}
+  .sb button{background:var(--teal-dark);color:#fff;border:none;padding:10px 24px;border-radius:10px;font-size:1.05em;font-family:inherit;font-weight:bold;cursor:pointer;}
+  .sd{display:inline-block;background:#e8f5e9;color:var(--green-dark);padding:8px 20px;border-radius:20px;font-size:1.1em;font-weight:bold;margin-top:10px;}
+  footer{text-align:center;padding:20px;color:#aaa;font-size:.9em;}
+</style>
+</head>
+<body>
+<div class="container">
+  <a class="home-link" href="index.html">← 回目錄</a>
+  <header>
+    <h1>第十二課　詠鵝</h1>
+    <div class="meta">作者：康逸藍　｜　二年級上學期　｜　含唐詩〈詠鵝〉</div>
+  </header>
+
+  <section class="s1">
+    <h2>📖 課文重點</h2>
+    <div class="lt">
+      <div class="seg">我們一家人到公園，看到池塘裡有幾隻白鵝在游水。姐姐說：「牠們身體胖胖的，脖子伸得好長喔！」</div>
+      <div class="seg">我念起了一首詩——</div>
+    </div>
+
+    <div class="poem-box">
+      <div class="poem-title">唐詩</div>
+      <div class="poem-author">〈詠鵝〉　作者：駱賓王（七歲時所作）</div>
+      <div class="poem-text">
+        鵝　鵝　鵝，<br>
+        曲　項　向　天　歌。<br>
+        白　毛　浮　綠　水，<br>
+        紅　掌　撥　清　波。
+      </div>
+      <div class="poem-note">
+        <b>詩意：</b>鵝啊鵝啊鵝，彎著脖子向天空唱歌。白色的羽毛漂浮在綠色的水面，紅色的腳掌划動清清的波浪。
+      </div>
+    </div>
+
+    <div class="lt" style="margin-top:14px;">
+      <div class="seg"><span class="who">媽媽說</span>「駱賓王七歲就寫出這首詩，真了不起！」</div>
+      <div class="seg"><span class="who">姐姐說</span>「你看，白鵝游水，就像詩裡說的——白毛浮綠水！」</div>
+      <div class="seg">媽媽說她小時候也背過這首詩。我想，詩能讓我們通過文字感受到大自然的美麗。</div>
+    </div>
+  </section>
+
+  <section class="s2">
+    <h2>🔤 本課生字</h2>
+    <div class="vc">
+      <span>鵝</span><span>詠</span><span>念</span><span>曲</span><span>項</span>
+      <span>浮</span><span>掌</span><span>撥</span><span>波</span><span>通</span>
+      <span>首</span><span>作</span><span>詩</span><span>指</span><span>歲</span>
+      <span>身</span><span>胖</span><span>伸</span><span>脖</span>
+    </div>
+  </section>
+
+  <section class="s3">
+    <h2>✏️ 閱讀測驗</h2>
+
+    <div class="mq" id="q1">
+      <div class="qt"><span class="n">1.</span>〈詠鵝〉這首詩的作者是誰？</div>
+      <ul class="op">
+        <li onclick="pick(this,'q1','A')"><span class="lr">A</span>王宗仁</li>
+        <li onclick="pick(this,'q1','B')"><span class="lr">B</span>李白</li>
+        <li onclick="pick(this,'q1','C')"><span class="lr">C</span>駱賓王 ✓</li>
+        <li onclick="pick(this,'q1','D')"><span class="lr">D</span>杜甫</li>
+      </ul>
+      <button class="rb" onclick="reveal('q1')">看答案</button>
+      <div class="at">✅ 答案：C　〈詠鵝〉的作者是駱賓王，他七歲時就寫出這首詩。</div>
+    </div>
+
+    <div class="mq" id="q2">
+      <div class="qt"><span class="n">2.</span>駱賓王幾歲寫出〈詠鵝〉這首詩？</div>
+      <ul class="op">
+        <li onclick="pick(this,'q2','A')"><span class="lr">A</span>五歲</li>
+        <li onclick="pick(this,'q2','B')"><span class="lr">B</span>七歲 ✓</li>
+        <li onclick="pick(this,'q2','C')"><span class="lr">C</span>十歲</li>
+        <li onclick="pick(this,'q2','D')"><span class="lr">D</span>十二歲</li>
+      </ul>
+      <button class="rb" onclick="reveal('q2')">看答案</button>
+      <div class="at">✅ 答案：B　駱賓王七歲時就寫出這首詩。</div>
+    </div>
+
+    <div class="mq" id="q3">
+      <div class="qt"><span class="n">3.</span>「白毛浮綠水」描述的是鵝的哪個樣子？</div>
+      <ul class="op">
+        <li onclick="pick(this,'q3','A')"><span class="lr">A</span>向天歌唱</li>
+        <li onclick="pick(this,'q3','B')"><span class="lr">B</span>白色羽毛漂浮在綠水上 ✓</li>
+        <li onclick="pick(this,'q3','C')"><span class="lr">C</span>用腳掌撥水</li>
+        <li onclick="pick(this,'q3','D')"><span class="lr">D</span>彎著脖子</li>
+      </ul>
+      <button class="rb" onclick="reveal('q3')">看答案</button>
+      <div class="at">✅ 答案：B　白毛浮綠水，說的是白鵝的羽毛漂浮在綠色的水面上。</div>
+    </div>
+
+    <div class="mq" id="q4">
+      <div class="qt"><span class="n">4.</span>「曲項向天歌」中的「曲項」是什麼意思？</div>
+      <ul class="op">
+        <li onclick="pick(this,'q4','A')"><span class="lr">A</span>唱歌</li>
+        <li onclick="pick(this,'q4','B')"><span class="lr">B</span>彎著脖子 ✓</li>
+        <li onclick="pick(this,'q4','C')"><span class="lr">C</span>揮動翅膀</li>
+        <li onclick="pick(this,'q4','D')"><span class="lr">D</span>展開羽毛</li>
+      </ul>
+      <button class="rb" onclick="reveal('q4')">看答案</button>
+      <div class="at">✅ 答案：B　曲＝彎曲，項＝脖子，「曲項」就是彎著脖子。</div>
+    </div>
+
+    <div class="mq" id="q5">
+      <div class="qt"><span class="n">5.</span>姐姐看到白鵝游水，聯想到詩中哪一句？</div>
+      <ul class="op">
+        <li onclick="pick(this,'q5','A')"><span class="lr">A</span>鵝鵝鵝</li>
+        <li onclick="pick(this,'q5','B')"><span class="lr">B</span>曲項向天歌</li>
+        <li onclick="pick(this,'q5','C')"><span class="lr">C</span>白毛浮綠水 ✓</li>
+        <li onclick="pick(this,'q5','D')"><span class="lr">D</span>紅掌撥清波</li>
+      </ul>
+      <button class="rb" onclick="reveal('q5')">看答案</button>
+      <div class="at">✅ 答案：C　姐姐說「你看，白鵝游水，就像詩裡說的——白毛浮綠水！」</div>
+    </div>
+
+    <div class="sb"><button onclick="calcScore()">計算分數</button><div id="scoreDisplay"></div></div>
+  </section>
+
+  <section class="s4">
+    <h2>📝 填空練習</h2>
+    <div class="fi">1. 〈詠鵝〉的作者是___，他___歲時就寫出這首詩。<span class="bl" id="f1">駱賓王／七</span><button class="fb" onclick="sf('f1')">看答案</button></div>
+    <div class="fi">2. 白___浮綠水，紅掌___清波。<span class="bl" id="f2">毛／撥</span><button class="fb" onclick="sf('f2')">看答案</button></div>
+    <div class="fi">3. 姐姐說白鵝游水就像詩裡說的「___毛浮___水」。<span class="bl" id="f3">白／綠</span><button class="fb" onclick="sf('f3')">看答案</button></div>
+    <div class="fi">4. 媽媽說她小時候也___過這首詩。<span class="bl" id="f4">背</span><button class="fb" onclick="sf('f4')">看答案</button></div>
+  </section>
+</div>
+<footer>115 學年度 二年級上學期 國語練習</footer>
+<script>
+const correct={'q1':'C','q2':'B','q3':'B','q4':'B','q5':'C'};
+const answered={};
+function pick(el,qid,letter){const q=document.getElementById(qid);q.querySelectorAll('li').forEach(l=>l.classList.remove('selected'));el.classList.add('selected');answered[qid]=letter;}
+function reveal(qid){const q=document.getElementById(qid);q.classList.add('sa');const ans=correct[qid];q.querySelectorAll('li').forEach((l,i)=>{if(String.fromCharCode(65+i)===ans)l.classList.add('correct');});}
+function calcScore(){let s=0,t=Object.keys(correct).length;Object.keys(correct).forEach(qid=>{if(answered[qid]===correct[qid])s++;reveal(qid);});document.getElementById('scoreDisplay').innerHTML=`<div class="sd">得分：${s} / ${t}（${Math.round(s/t*100)}分）</div>`;}
+function sf(id){const el=document.getElementById(id);if(el)el.classList.add('show');}
+</script>
+</body>
+</html>

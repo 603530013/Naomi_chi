@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第二課 彩色的天空 ｜ 二年級上學期國語練習</title>
+<style>
+  :root{--pink:#ffd6e0;--pink-dark:#e85a8a;--green:#c8e6c9;--green-dark:#4caf50;--yellow:#fff4c2;--yellow-dark:#f5a623;--blue:#cfe8ff;--blue-dark:#1976d2;--purple:#e1d5f5;--purple-dark:#7b3fa0;--orange:#ffd9b3;--orange-dark:#e67700;--red:#ffcccc;--red-dark:#c0392b;--gray-light:#f5f5f5;}
+  *{box-sizing:border-box;}
+  body{font-family:"標楷體","DFKai-SB","BiauKai","KaiTi","微軟正黑體",serif;margin:0;padding:0;background:#fefcf7;color:#333;line-height:1.8;}
+  .container{max-width:1000px;margin:0 auto;padding:20px;}
+  header{background:linear-gradient(135deg,#cfe8ff,#c8e6c9);padding:30px 20px;text-align:center;border-radius:16px;margin-bottom:24px;box-shadow:0 4px 12px rgba(0,0,0,0.08);}
+  header h1{font-size:2.2em;margin:0 0 6px;color:var(--blue-dark);}
+  header .meta{color:#666;font-size:1em;}
+  .home-link{display:inline-block;background:var(--blue);color:var(--blue-dark);padding:6px 14px;border-radius:8px;text-decoration:none;margin-bottom:16px;font-size:0.95em;}
+  .home-link:hover{background:var(--blue-dark);color:#fff;}
+  section{background:#fff;border-radius:16px;padding:24px;margin-bottom:20px;box-shadow:0 2px 8px rgba(0,0,0,0.06);}
+  section h2{font-size:1.4em;margin:0 0 16px;padding:10px 16px;border-radius:8px;color:#fff;}
+  .sec-text h2{background:var(--blue-dark);}
+  .sec-vocab h2{background:var(--green-dark);}
+  .sec-mc h2{background:var(--pink-dark);}
+  .sec-fill h2{background:var(--orange-dark);}
+  .lesson-text{background:var(--blue);border-radius:12px;padding:20px 28px;font-size:1.2em;line-height:2.2;}
+  .lesson-text .seg{margin:14px 0;padding:12px 16px;background:rgba(255,255,255,0.8);border-radius:10px;border-left:4px solid var(--blue-dark);}
+  .vocab-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;}
+  .vocab-chip{background:var(--green);color:var(--green-dark);border-radius:8px;padding:6px 14px;font-size:1.2em;font-weight:bold;}
+  .mc-q{background:var(--gray-light);border-radius:10px;padding:16px 20px;margin:12px 0;border-left:5px solid var(--pink-dark);}
+  .mc-q .qt{font-weight:bold;margin-bottom:10px;font-size:1.05em;}
+  .mc-q .qt .num{color:var(--pink-dark);margin-right:6px;}
+  .opts{list-style:none;padding:0;margin:0;}
+  .opts li{padding:8px 12px;margin:4px 0;background:#fff;border-radius:8px;border:2px solid transparent;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:10px;}
+  .opts li:hover{background:#fff8e1;border-color:var(--yellow-dark);}
+  .opts li.correct{background:#e8f5e9;border-color:var(--green-dark);font-weight:bold;}
+  .ltr{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--pink);color:var(--pink-dark);font-weight:bold;flex-shrink:0;}
+  .opts li.correct .ltr{background:var(--green-dark);color:#fff;}
+  .reveal-btn{margin-top:10px;background:var(--orange-dark);color:#fff;border:none;padding:7px 16px;border-radius:8px;cursor:pointer;font-family:inherit;font-size:0.95em;}
+  .reveal-btn:hover{background:#b85a00;}
+  .ans-text{margin-top:8px;padding:8px 12px;background:#fff;border-radius:6px;color:var(--green-dark);font-weight:bold;display:none;}
+  .show-ans .ans-text{display:block;}
+  .fill-item{background:var(--gray-light);border-radius:10px;padding:14px 18px;margin:10px 0;font-size:1.1em;}
+  .blank{display:inline-block;border-bottom:2px solid var(--orange-dark);min-width:60px;text-align:center;color:transparent;user-select:none;}
+  .blank.show{color:var(--orange-dark);}
+  .fill-btn{background:var(--orange-dark);color:#fff;border:none;padding:6px 14px;border-radius:8px;cursor:pointer;font-family:inherit;font-size:0.9em;margin-left:10px;}
+  .fill-btn:hover{background:#b85a00;}
+  .score-bar{text-align:center;margin:16px 0;}
+  .score-bar button{background:var(--purple-dark);color:#fff;border:none;padding:10px 24px;border-radius:10px;font-size:1.05em;font-family:inherit;font-weight:bold;cursor:pointer;}
+  .score-bar button:hover{background:#5b2e7a;}
+  .score-display{display:inline-block;background:#e8f5e9;color:var(--green-dark);padding:8px 20px;border-radius:20px;font-size:1.1em;font-weight:bold;margin-top:10px;}
+  footer{text-align:center;padding:20px;color:#aaa;font-size:0.9em;}
+</style>
+</head>
+<body>
+<div class="container">
+  <a class="home-link" href="index.html">← 回目錄</a>
+  <header>
+    <h1>第二課　彩色的天空</h1>
+    <div class="meta">作者：王宗仁　｜　二年級上學期</div>
+  </header>
+
+  <section class="sec-text">
+    <h2>📖 課文重點</h2>
+    <div class="lesson-text">
+      <div class="seg">上課時，老師給我們小雲朵卡片，要大家寫上開學新希望。大家都開始寫了，我想了好久，卻想不出來要寫什麼。</div>
+      <div class="seg">因為我是轉學生，和同學還不熟，不知道可以問誰，我心裡好緊張。</div>
+      <div class="seg">下課了，班長跑來跟我說話，同學們也過來跟我說話。緊張的心情消失了，我開心的在卡片上寫出：「我要跟同學一起快樂學習！」</div>
+      <div class="seg">最後，老師把大家的卡片掛在教室後面。家的卡片一朵朵彩色的，好像在天空跳舞，我的心情也快樂得跳起舞來。</div>
+    </div>
+  </section>
+
+  <section class="sec-vocab">
+    <h2>🔤 本課生字</h2>
+    <div class="vocab-list">
+      <span class="vocab-chip">老</span><span class="vocab-chip">師</span><span class="vocab-chip">新</span>
+      <span class="vocab-chip">希</span><span class="vocab-chip">望</span><span class="vocab-chip">卻</span>
+      <span class="vocab-chip">始</span><span class="vocab-chip">緊</span><span class="vocab-chip">辦</span>
+      <span class="vocab-chip">道</span><span class="vocab-chip">知</span><span class="vocab-chip">熟</span>
+      <span class="vocab-chip">轉</span><span class="vocab-chip">為</span><span class="vocab-chip">因</span>
+      <span class="vocab-chip">消</span><span class="vocab-chip">失</span><span class="vocab-chip">習</span>
+      <span class="vocab-chip">最</span><span class="vocab-chip">掛</span><span class="vocab-chip">舞</span>
+    </div>
+  </section>
+
+  <section class="sec-mc">
+    <h2>✏️ 閱讀測驗</h2>
+
+    <div class="mc-q" id="q1">
+      <div class="qt"><span class="num">1.</span>老師給了同學什麼？</div>
+      <ul class="opts">
+        <li onclick="pick(this,'q1','A')"><span class="ltr">A</span>彩色氣球</li>
+        <li onclick="pick(this,'q1','B')"><span class="ltr">B</span>小雲朵卡片 ✓</li>
+        <li onclick="pick(this,'q1','C')"><span class="ltr">C</span>新書包</li>
+        <li onclick="pick(this,'q1','D')"><span class="ltr">D</span>彩虹糖</li>
+      </ul>
+      <button class="reveal-btn" onclick="reveal('q1')">看答案</button>
+      <div class="ans-text">✅ 答案：B　老師給了小雲朵卡片，要大家寫上開學新希望。</div>
+    </div>
+
+    <div class="mc-q" id="q2">
+      <div class="qt"><span class="num">2.</span>「我」在學校是什麼身份？</div>
+      <ul class="opts">
+        <li onclick="pick(this,'q2','A')"><span class="ltr">A</span>班長</li>
+        <li onclick="pick(this,'q2','B')"><span class="ltr">B</span>老師</li>
+        <li onclick="pick(this,'q2','C')"><span class="ltr">C</span>轉學生 ✓</li>
+        <li onclick="pick(this,'q2','D')"><span class="ltr">D</span>新老師</li>
+      </ul>
+      <button class="reveal-btn" onclick="reveal('q2')">看答案</button>
+      <div class="ans-text">✅ 答案：C　因為我是轉學生，和同學還不熟。</div>
+    </div>
+
+    <div class="mc-q" id="q3">
+      <div class="qt"><span class="num">3.</span>「我」最後在卡片上寫了什麼新希望？</div>
+      <ul class="opts">
+        <li onclick="pick(this,'q3','A')"><span class="ltr">A</span>我要每天開心</li>
+        <li onclick="pick(this,'q3','B')"><span class="ltr">B</span>我要認識新朋友</li>
+        <li onclick="pick(this,'q3','C')"><span class="ltr">C</span>我要跟同學一起快樂學習 ✓</li>
+        <li onclick="pick(this,'q3','D')"><span class="ltr">D</span>我要考第一名</li>
+      </ul>
+      <button class="reveal-btn" onclick="reveal('q3')">看答案</button>
+      <div class="ans-text">✅ 答案：C　緊張消失後，寫下「我要跟同學一起快樂學習！」</div>
+    </div>
+
+    <div class="mc-q" id="q4">
+      <div class="qt"><span class="num">4.</span>卡片掛在教室後面，看起來像什麼？</div>
+      <ul class="opts">
+        <li onclick="pick(this,'q4','A')"><span class="ltr">A</span>彩色的星星</li>
+        <li onclick="pick(this,'q4','B')"><span class="ltr">B</span>在天空跳舞的彩色雲朵 ✓</li>
+        <li onclick="pick(this,'q4','C')"><span class="ltr">C</span>美麗的彩虹</li>
+        <li onclick="pick(this,'q4','D')"><span class="ltr">D</span>五顏六色的氣球</li>
+      </ul>
+      <button class="reveal-btn" onclick="reveal('q4')">看答案</button>
+      <div class="ans-text">✅ 答案：B　卡片一朵朵彩色的，好像在天空跳舞。</div>
+    </div>
+
+    <div class="mc-q" id="q5">
+      <div class="qt"><span class="num">5.</span>同學們來找「我」說話之後，「我」的心情怎樣了？</div>
+      <ul class="opts">
+        <li onclick="pick(this,'q5','A')"><span class="ltr">A</span>更加緊張</li>
+        <li onclick="pick(this,'q5','B')"><span class="ltr">B</span>難過想哭</li>
+        <li onclick="pick(this,'q5','C')"><span class="ltr">C</span>緊張消失，感到開心 ✓</li>
+        <li onclick="pick(this,'q5','D')"><span class="ltr">D</span>沒有改變</li>
+      </ul>
+      <button class="reveal-btn" onclick="reveal('q5')">看答案</button>
+      <div class="ans-text">✅ 答案：C　緊張的心情消失了，開心的寫上新希望。</div>
+    </div>
+
+    <div class="score-bar">
+      <button onclick="calcScore()">計算分數</button>
+      <div id="scoreDisplay"></div>
+    </div>
+  </section>
+
+  <section class="sec-fill">
+    <h2>📝 填空練習</h2>
+    <div class="fill-item">1. 老師給我們___卡片，要大家寫上開學新希望。
+      <span class="blank" id="f1">小雲朵</span>
+      <button class="fill-btn" onclick="showFill('f1')">看答案</button>
+    </div>
+    <div class="fill-item">2. 因為我是___，和同學還不熟，不知道可以問誰。
+      <span class="blank" id="f2">轉學生</span>
+      <button class="fill-btn" onclick="showFill('f2')">看答案</button>
+    </div>
+    <div class="fill-item">3. 同學們過來跟我說話後，我的___心情就消失了。
+      <span class="blank" id="f3">緊張</span>
+      <button class="fill-btn" onclick="showFill('f3')">看答案</button>
+    </div>
+    <div class="fill-item">4. 我的心情也快樂得跳起___來。
+      <span class="blank" id="f4">舞</span>
+      <button class="fill-btn" onclick="showFill('f4')">看答案</button>
+    </div>
+  </section>
+</div>
+<footer>115 學年度 二年級上學期 國語練習</footer>
+<script>
+const correct={'q1':'B','q2':'C','q3':'C','q4':'B','q5':'C'};
+const answered={};
+function pick(el,qid,letter){const q=document.getElementById(qid);q.querySelectorAll('li').forEach(l=>l.classList.remove('selected'));el.classList.add('selected');answered[qid]=letter;}
+function reveal(qid){const q=document.getElementById(qid);q.classList.add('show-ans');const ans=correct[qid];q.querySelectorAll('li').forEach((l,i)=>{if(String.fromCharCode(65+i)===ans)l.classList.add('correct');});}
+function calcScore(){let score=0,total=Object.keys(correct).length;Object.keys(correct).forEach(qid=>{if(answered[qid]===correct[qid])score++;reveal(qid);});document.getElementById('scoreDisplay').innerHTML=`<div class="score-display">得分：${score} / ${total}（${Math.round(score/total*100)}分）</div>`;}
+function showFill(id){const el=document.getElementById(id);if(el)el.classList.add('show');}
+</script>
+</body>
+</html>

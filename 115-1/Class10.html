@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第十課 加加減減 ｜ 二年級上學期國語練習</title>
+<style>
+  :root{--pink:#ffd6e0;--pink-dark:#e85a8a;--green:#c8e6c9;--green-dark:#4caf50;--yellow:#fff4c2;--yellow-dark:#f5a623;--blue:#cfe8ff;--blue-dark:#1976d2;--purple:#e1d5f5;--purple-dark:#7b3fa0;--orange:#ffd9b3;--orange-dark:#e67700;--gray-light:#f5f5f5;}
+  *{box-sizing:border-box;}body{font-family:"標楷體","DFKai-SB","BiauKai","KaiTi",serif;margin:0;padding:0;background:#fefcf7;color:#333;line-height:1.8;}
+  .container{max-width:1000px;margin:0 auto;padding:20px;}
+  header{background:linear-gradient(135deg,#cfe8ff,#e1d5f5);padding:30px 20px;text-align:center;border-radius:16px;margin-bottom:24px;box-shadow:0 4px 12px rgba(0,0,0,0.08);}
+  header h1{font-size:2.2em;margin:0 0 6px;color:var(--blue-dark);}header .meta{color:#666;}
+  .home-link{display:inline-block;background:var(--blue);color:var(--blue-dark);padding:6px 14px;border-radius:8px;text-decoration:none;margin-bottom:16px;font-size:.95em;}
+  .home-link:hover{background:var(--blue-dark);color:#fff;}
+  section{background:#fff;border-radius:16px;padding:24px;margin-bottom:20px;box-shadow:0 2px 8px rgba(0,0,0,0.06);}
+  section h2{font-size:1.4em;margin:0 0 16px;padding:10px 16px;border-radius:8px;color:#fff;}
+  .s1 h2{background:var(--blue-dark);}.s2 h2{background:var(--green-dark);}.s3 h2{background:var(--orange-dark);}.s4 h2{background:var(--purple-dark);}
+  .lt{background:var(--blue);border-radius:12px;padding:20px 28px;font-size:1.15em;line-height:2.2;}
+  .seg{margin:14px 0;padding:12px 16px;background:rgba(255,255,255,0.85);border-radius:10px;border-left:4px solid var(--blue-dark);}
+  .who{display:inline-block;background:var(--blue-dark);color:#fff;border-radius:6px;padding:2px 8px;font-size:.8em;margin-right:6px;}
+  .riddle-box{background:#fff;border:3px solid var(--blue-dark);border-radius:12px;padding:16px 20px;margin:12px 0;text-align:center;}
+  .riddle-box .q{font-size:1.3em;color:var(--blue-dark);font-weight:bold;margin-bottom:8px;}
+  .riddle-box .a{font-size:2em;color:var(--orange-dark);font-weight:bold;border:3px dashed var(--orange-dark);border-radius:8px;padding:8px 20px;display:inline-block;}
+  .riddle-box .explain{font-size:0.9em;color:#666;margin-top:8px;}
+  .vc{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;}
+  .vc span{background:var(--green);color:var(--green-dark);border-radius:8px;padding:6px 14px;font-size:1.2em;font-weight:bold;}
+  .mq{background:var(--gray-light);border-radius:10px;padding:16px 20px;margin:12px 0;border-left:5px solid var(--orange-dark);}
+  .mq .qt{font-weight:bold;margin-bottom:10px;}.mq .qt .n{color:var(--orange-dark);margin-right:6px;}
+  ul.op{list-style:none;padding:0;margin:0;}
+  ul.op li{padding:8px 12px;margin:4px 0;background:#fff;border-radius:8px;border:2px solid transparent;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:10px;}
+  ul.op li:hover{background:#fff8e1;border-color:var(--yellow-dark);}
+  ul.op li.correct{background:#e8f5e9;border-color:var(--green-dark);font-weight:bold;}
+  .lr{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--blue);color:var(--blue-dark);font-weight:bold;flex-shrink:0;}
+  ul.op li.correct .lr{background:var(--green-dark);color:#fff;}
+  .rb{margin-top:10px;background:var(--orange-dark);color:#fff;border:none;padding:7px 16px;border-radius:8px;cursor:pointer;font-family:inherit;font-size:.95em;}
+  .rb:hover{background:#b85a00;}
+  .at{margin-top:8px;padding:8px 12px;background:#fff;border-radius:6px;color:var(--green-dark);font-weight:bold;display:none;}
+  .sa .at{display:block;}
+  .fi{background:var(--gray-light);border-radius:10px;padding:14px 18px;margin:10px 0;font-size:1.1em;}
+  .bl{display:inline-block;border-bottom:2px solid var(--purple-dark);min-width:60px;text-align:center;color:transparent;user-select:none;}
+  .bl.show{color:var(--purple-dark);}
+  .fb{background:var(--purple-dark);color:#fff;border:none;padding:6px 14px;border-radius:8px;cursor:pointer;font-family:inherit;font-size:.9em;margin-left:8px;}
+  .fb:hover{background:#5b2e7a;}
+  .sb{text-align:center;margin:16px 0;}
+  .sb button{background:var(--purple-dark);color:#fff;border:none;padding:10px 24px;border-radius:10px;font-size:1.05em;font-family:inherit;font-weight:bold;cursor:pointer;}
+  .sd{display:inline-block;background:#e8f5e9;color:var(--green-dark);padding:8px 20px;border-radius:20px;font-size:1.1em;font-weight:bold;margin-top:10px;}
+  footer{text-align:center;padding:20px;color:#aaa;font-size:.9em;}
+</style>
+</head>
+<body>
+<div class="container">
+  <a class="home-link" href="index.html">← 回目錄</a>
+  <header>
+    <h1>第十課　加加減減</h1>
+    <div class="meta">二年級上學期　｜　猜字謎</div>
+  </header>
+
+  <section class="s1">
+    <h2>📖 課文重點</h2>
+    <div class="lt">
+      <div class="seg">今天表弟到家裡來，他說上學讀書真好玩，認識了很多字。我和姐姐說：「要不要來玩猜字謎？」弟點頭說好。</div>
+      <div class="seg">
+        <span class="who">我問</span>「一加一，是什麼字？」<br>
+        <span class="who">弟答</span>「我知道，是二！」✓
+      </div>
+      <div class="seg">
+        <span class="who">我問</span>「一百減一，是什麼字？」<br>
+        弟想也不想，嘟著嘴說：「你都問數學題！」
+      </div>
+      <div class="seg">姐姐趕緊寫下「王」，表弟突然搶著回答：「三！」我和姐姐異口同聲的說：「答對了！」表弟高興得笑了。</div>
+    </div>
+
+    <div style="margin-top:20px;">
+      <p style="font-weight:bold;color:var(--blue-dark);font-size:1.1em;">✨ 課文字謎解析：</p>
+      <div class="riddle-box">
+        <div class="q">一 ＋ 一 ＝ ？</div>
+        <div class="a">二</div>
+        <div class="explain">一橫 ＋ 一橫 ＝ 「二」</div>
+      </div>
+      <div class="riddle-box">
+        <div class="q">一百 － 一 ＝ ？</div>
+        <div class="a">白</div>
+        <div class="explain">「百」去掉上面一橫 ＝ 「白」</div>
+      </div>
+      <div class="riddle-box">
+        <div class="q">「王」去掉一豎 ＝ ？</div>
+        <div class="a">三</div>
+        <div class="explain">「王」去掉中間豎畫 ＝ 「三」（三條橫線）</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="s2">
+    <h2>🔤 本課生字</h2>
+    <div class="vc">
+      <span>謎</span><span>識</span><span>認</span><span>讀</span><span>表</span>
+      <span>減</span><span>搖</span><span>答</span><span>百</span><span>題</span>
+      <span>數</span><span>哥</span><span>嘴</span><span>嘟</span><span>突</span>
+      <span>趕</span><span>異</span><span>對</span><span>口</span>
+    </div>
+  </section>
+
+  <section class="s3">
+    <h2>✏️ 閱讀測驗</h2>
+
+    <div class="mq" id="q1">
+      <div class="qt"><span class="n">1.</span>表弟說他在學校學了很多什麼？</div>
+      <ul class="op">
+        <li onclick="pick(this,'q1','A')"><span class="lr">A</span>數學</li>
+        <li onclick="pick(this,'q1','B')"><span class="lr">B</span>唱歌</li>
+        <li onclick="pick(this,'q1','C')"><span class="lr">C</span>字 ✓</li>
+        <li onclick="pick(this,'q1','D')"><span class="lr">D</span>畫畫</li>
+      </ul>
+      <button class="rb" onclick="reveal('q1')">看答案</button>
+      <div class="at">✅ 答案：C　表弟說上學讀書真好玩，認識了很多字。</div>
+    </div>
+
+    <div class="mq" id="q2">
+      <div class="qt"><span class="n">2.</span>「一加一是什麼字？」答案是什麼？</div>
+      <ul class="op">
+        <li onclick="pick(this,'q2','A')"><span class="lr">A</span>王</li>
+        <li onclick="pick(this,'q2','B')"><span class="lr">B</span>三</li>
+        <li onclick="pick(this,'q2','C')"><span class="lr">C</span>二 ✓</li>
+        <li onclick="pick(this,'q2','D')"><span class="lr">D</span>土</li>
+      </ul>
+      <button class="rb" onclick="reveal('q2')">看答案</button>
+      <div class="at">✅ 答案：C　一橫加一橫等於「二」。</div>
+    </div>
+
+    <div class="mq" id="q3">
+      <div class="qt"><span class="n">3.</span>「一百減一是什麼字？」正確答案是？</div>
+      <ul class="op">
+        <li onclick="pick(this,'q3','A')"><span class="lr">A</span>日</li>
+        <li onclick="pick(this,'q3','B')"><span class="lr">B</span>白 ✓</li>
+        <li onclick="pick(this,'q3','C')"><span class="lr">C</span>目</li>
+        <li onclick="pick(this,'q3','D')"><span class="lr">D</span>自</li>
+      </ul>
+      <button class="rb" onclick="reveal('q3')">看答案</button>
+      <div class="at">✅ 答案：B　「百」去掉上面一橫等於「白」。</div>
+    </div>
+
+    <div class="mq" id="q4">
+      <div class="qt"><span class="n">4.</span>表弟嘟著嘴說了什麼？</div>
+      <ul class="op">
+        <li onclick="pick(this,'q4','A')"><span class="lr">A</span>我不想玩了</li>
+        <li onclick="pick(this,'q4','B')"><span class="lr">B</span>你都問數學題！ ✓</li>
+        <li onclick="pick(this,'q4','C')"><span class="lr">C</span>我猜不到</li>
+        <li onclick="pick(this,'q4','D')"><span class="lr">D</span>這太簡單了</li>
+      </ul>
+      <button class="rb" onclick="reveal('q4')">看答案</button>
+      <div class="at">✅ 答案：B　表弟不知道是猜字謎，嘟著嘴說「你都問數學題！」</div>
+    </div>
+
+    <div class="mq" id="q5">
+      <div class="qt"><span class="n">5.</span>「異口同聲」是什麼意思？</div>
+      <ul class="op">
+        <li onclick="pick(this,'q5','A')"><span class="lr">A</span>吵架爭論</li>
+        <li onclick="pick(this,'q5','B')"><span class="lr">B</span>不同意見</li>
+        <li onclick="pick(this,'q5','C')"><span class="lr">C</span>不同的人說出同樣的話 ✓</li>
+        <li onclick="pick(this,'q5','D')"><span class="lr">D</span>輕聲說話</li>
+      </ul>
+      <button class="rb" onclick="reveal('q5')">看答案</button>
+      <div class="at">✅ 答案：C　我和姐姐異口同聲說「答對了！」表示兩人同時說出一樣的話。</div>
+    </div>
+
+    <div class="sb"><button onclick="calcScore()">計算分數</button><div id="scoreDisplay"></div></div>
+  </section>
+
+  <section class="s4">
+    <h2>📝 填空練習</h2>
+    <div class="fi">1. 我和姐姐問表弟要不要玩猜___謎？<span class="bl" id="f1">字</span><button class="fb" onclick="sf('f1')">看答案</button></div>
+    <div class="fi">2. 「一百減一」是什麼字？答案是「___」。<span class="bl" id="f2">白</span><button class="fb" onclick="sf('f2')">看答案</button></div>
+    <div class="fi">3. 我和姐姐___口同聲說「答對了！」<span class="bl" id="f3">異</span><button class="fb" onclick="sf('f3')">看答案</button></div>
+    <div class="fi">4. 表弟高興得___了。<span class="bl" id="f4">笑</span><button class="fb" onclick="sf('f4')">看答案</button></div>
+  </section>
+</div>
+<footer>115 學年度 二年級上學期 國語練習</footer>
+<script>
+const correct={'q1':'C','q2':'C','q3':'B','q4':'B','q5':'C'};
+const answered={};
+function pick(el,qid,letter){const q=document.getElementById(qid);q.querySelectorAll('li').forEach(l=>l.classList.remove('selected'));el.classList.add('selected');answered[qid]=letter;}
+function reveal(qid){const q=document.getElementById(qid);q.classList.add('sa');const ans=correct[qid];q.querySelectorAll('li').forEach((l,i)=>{if(String.fromCharCode(65+i)===ans)l.classList.add('correct');});}
+function calcScore(){let s=0,t=Object.keys(correct).length;Object.keys(correct).forEach(qid=>{if(answered[qid]===correct[qid])s++;reveal(qid);});document.getElementById('scoreDisplay').innerHTML=`<div class="sd">得分：${s} / ${t}（${Math.round(s/t*100)}分）</div>`;}
+function sf(id){const el=document.getElementById(id);if(el)el.classList.add('show');}
+</script>
+</body>
+</html>

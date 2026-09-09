@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第十一課 奇怪的門 ｜ 二年級上學期國語練習</title>
+<style>
+  :root{--pink:#ffd6e0;--pink-dark:#e85a8a;--green:#c8e6c9;--green-dark:#4caf50;--yellow:#fff4c2;--yellow-dark:#f5a623;--blue:#cfe8ff;--blue-dark:#1976d2;--purple:#e1d5f5;--purple-dark:#7b3fa0;--orange:#ffd9b3;--orange-dark:#e67700;--gray-light:#f5f5f5;}
+  *{box-sizing:border-box;}body{font-family:"標楷體","DFKai-SB","BiauKai","KaiTi",serif;margin:0;padding:0;background:#fefcf7;color:#333;line-height:1.8;}
+  .container{max-width:1000px;margin:0 auto;padding:20px;}
+  header{background:linear-gradient(135deg,#e1d5f5,#cfe8ff);padding:30px 20px;text-align:center;border-radius:16px;margin-bottom:24px;box-shadow:0 4px 12px rgba(0,0,0,0.08);}
+  header h1{font-size:2.2em;margin:0 0 6px;color:var(--purple-dark);}header .meta{color:#666;}
+  .home-link{display:inline-block;background:var(--blue);color:var(--blue-dark);padding:6px 14px;border-radius:8px;text-decoration:none;margin-bottom:16px;font-size:.95em;}
+  .home-link:hover{background:var(--blue-dark);color:#fff;}
+  section{background:#fff;border-radius:16px;padding:24px;margin-bottom:20px;box-shadow:0 2px 8px rgba(0,0,0,0.06);}
+  section h2{font-size:1.4em;margin:0 0 16px;padding:10px 16px;border-radius:8px;color:#fff;}
+  .s1 h2{background:var(--purple-dark);}.s2 h2{background:var(--green-dark);}.s3 h2{background:var(--blue-dark);}.s4 h2{background:var(--orange-dark);}
+  .lt{background:var(--purple);border-radius:12px;padding:20px 28px;font-size:1.15em;line-height:2.2;}
+  .seg{margin:14px 0;padding:12px 16px;background:rgba(255,255,255,0.85);border-radius:10px;border-left:4px solid var(--purple-dark);}
+  .door-visitor{display:inline-block;background:var(--purple-dark);color:#fff;border-radius:6px;padding:2px 10px;font-size:.85em;margin:2px;}
+  .door-result{display:inline-block;background:var(--orange-dark);color:#fff;border-radius:6px;padding:2px 10px;font-size:.85em;margin:2px;}
+  .vc{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;}
+  .vc span{background:var(--green);color:var(--green-dark);border-radius:8px;padding:6px 14px;font-size:1.2em;font-weight:bold;}
+  .mq{background:var(--gray-light);border-radius:10px;padding:16px 20px;margin:12px 0;border-left:5px solid var(--blue-dark);}
+  .mq .qt{font-weight:bold;margin-bottom:10px;}.mq .qt .n{color:var(--blue-dark);margin-right:6px;}
+  ul.op{list-style:none;padding:0;margin:0;}
+  ul.op li{padding:8px 12px;margin:4px 0;background:#fff;border-radius:8px;border:2px solid transparent;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:10px;}
+  ul.op li:hover{background:#fff8e1;border-color:var(--yellow-dark);}
+  ul.op li.correct{background:#e8f5e9;border-color:var(--green-dark);font-weight:bold;}
+  .lr{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--purple);color:var(--purple-dark);font-weight:bold;flex-shrink:0;}
+  ul.op li.correct .lr{background:var(--green-dark);color:#fff;}
+  .rb{margin-top:10px;background:var(--blue-dark);color:#fff;border:none;padding:7px 16px;border-radius:8px;cursor:pointer;font-family:inherit;font-size:.95em;}
+  .rb:hover{background:#1255a0;}
+  .at{margin-top:8px;padding:8px 12px;background:#fff;border-radius:6px;color:var(--green-dark);font-weight:bold;display:none;}
+  .sa .at{display:block;}
+  .fi{background:var(--gray-light);border-radius:10px;padding:14px 18px;margin:10px 0;font-size:1.1em;}
+  .bl{display:inline-block;border-bottom:2px solid var(--orange-dark);min-width:60px;text-align:center;color:transparent;user-select:none;}
+  .bl.show{color:var(--orange-dark);}
+  .fb{background:var(--orange-dark);color:#fff;border:none;padding:6px 14px;border-radius:8px;cursor:pointer;font-family:inherit;font-size:.9em;margin-left:8px;}
+  .fb:hover{background:#b85a00;}
+  .sb{text-align:center;margin:16px 0;}
+  .sb button{background:var(--purple-dark);color:#fff;border:none;padding:10px 24px;border-radius:10px;font-size:1.05em;font-family:inherit;font-weight:bold;cursor:pointer;}
+  .sd{display:inline-block;background:#e8f5e9;color:var(--green-dark);padding:8px 20px;border-radius:20px;font-size:1.1em;font-weight:bold;margin-top:10px;}
+  footer{text-align:center;padding:20px;color:#aaa;font-size:.9em;}
+</style>
+</head>
+<body>
+<div class="container">
+  <a class="home-link" href="index.html">← 回目錄</a>
+  <header>
+    <h1>第十一課　奇怪的門</h1>
+    <div class="meta">作者：林世仁　｜　二年級上學期　｜　童話</div>
+  </header>
+
+  <section class="s1">
+    <h2>📖 課文重點</h2>
+    <div class="lt">
+      <div class="seg">有一扇奇怪的門——「耳」進去，立刻就變成「聞」出來（新聞主播）！</div>
+      <div class="seg">「日」想進去，卡在門口，擠啊擠，竟然變成「目」出來了！</div>
+      <div class="seg">「月」看見了，慌慌張張的閃到一邊說：「我才不要進去！」</div>
+      <div class="seg">「馬」不知道，一下子就闖進去了——結果進去，怎麼也出不來。<br>（門＋馬 ＝ 闖）</div>
+      <div class="seg">「巴」覺得很奇怪，走到門口，往裡頭看……看得嘴巴都張開了！<br>（門＋巴 ＝ 嘴——張開嘴巴在看）</div>
+    </div>
+    <div style="margin-top:16px;background:#f3f0ff;border-radius:10px;padding:16px 20px;">
+      <p style="font-weight:bold;color:var(--purple-dark);">✨ 合體字解析（部首＋字＝新字）：</p>
+      <table style="width:100%;border-collapse:collapse;font-size:1.05em;">
+        <tr style="background:var(--purple-dark);color:#fff;">
+          <th style="padding:8px;border-radius:4px 0 0 0;">進門的字</th>
+          <th style="padding:8px;">出來的字</th>
+          <th style="padding:8px;border-radius:0 4px 0 0;">說明</th>
+        </tr>
+        <tr style="background:#fff;">
+          <td style="padding:8px;text-align:center;font-size:1.5em;">耳</td>
+          <td style="padding:8px;text-align:center;font-size:1.5em;color:var(--purple-dark);">聞</td>
+          <td style="padding:8px;">門＋耳＝聞</td>
+        </tr>
+        <tr style="background:#f3f0ff;">
+          <td style="padding:8px;text-align:center;font-size:1.5em;">日</td>
+          <td style="padding:8px;text-align:center;font-size:1.5em;color:var(--purple-dark);">目</td>
+          <td style="padding:8px;">日擠變成目（多一橫）</td>
+        </tr>
+        <tr style="background:#fff;">
+          <td style="padding:8px;text-align:center;font-size:1.5em;">馬</td>
+          <td style="padding:8px;text-align:center;font-size:1.5em;color:var(--orange-dark);">闖</td>
+          <td style="padding:8px;">門＋馬＝闖（出不來了）</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <section class="s2">
+    <h2>🔤 本課生字</h2>
+    <div class="vc">
+      <span>門</span><span>怪</span><span>扇</span><span>立</span><span>刻</span>
+      <span>閃</span><span>慌</span><span>馬</span><span>闖</span><span>底</span>
+      <span>西</span><span>東</span><span>巴</span><span>嘴</span><span>仔</span>
+      <span>耳</span><span>主</span><span>播</span><span>報</span><span>力</span>
+      <span>擠</span><span>竟</span>
+    </div>
+  </section>
+
+  <section class="s3">
+    <h2>✏️ 閱讀測驗</h2>
+
+    <div class="mq" id="q1">
+      <div class="qt"><span class="n">1.</span>「耳」走進奇怪的門後，變成了什麼字？</div>
+      <ul class="op">
+        <li onclick="pick(this,'q1','A')"><span class="lr">A</span>問</li>
+        <li onclick="pick(this,'q1','B')"><span class="lr">B</span>聞 ✓</li>
+        <li onclick="pick(this,'q1','C')"><span class="lr">C</span>間</li>
+        <li onclick="pick(this,'q1','D')"><span class="lr">D</span>開</li>
+      </ul>
+      <button class="rb" onclick="reveal('q1')">看答案</button>
+      <div class="at">✅ 答案：B　門＋耳＝聞，所以「耳」進去後變成「聞」。</div>
+    </div>
+
+    <div class="mq" id="q2">
+      <div class="qt"><span class="n">2.</span>「日」進門後，因為擠啊擠，變成了什麼？</div>
+      <ul class="op">
+        <li onclick="pick(this,'q2','A')"><span class="lr">A</span>白</li>
+        <li onclick="pick(this,'q2','B')"><span class="lr">B</span>月</li>
+        <li onclick="pick(this,'q2','C')"><span class="lr">C</span>目 ✓</li>
+        <li onclick="pick(this,'q2','D')"><span class="lr">D</span>木</li>
+      </ul>
+      <button class="rb" onclick="reveal('q2')">看答案</button>
+      <div class="at">✅ 答案：C　「日」擠啊擠，多了一橫，變成「目」。</div>
+    </div>
+
+    <div class="mq" id="q3">
+      <div class="qt"><span class="n">3.</span>「月」看到發生的事，做了什麼？</div>
+      <ul class="op">
+        <li onclick="pick(this,'q3','A')"><span class="lr">A</span>衝進去看</li>
+        <li onclick="pick(this,'q3','B')"><span class="lr">B</span>慌慌張張閃到一邊 ✓</li>
+        <li onclick="pick(this,'q3','C')"><span class="lr">C</span>把門關起來</li>
+        <li onclick="pick(this,'q3','D')"><span class="lr">D</span>去找朋友</li>
+      </ul>
+      <button class="rb" onclick="reveal('q3')">看答案</button>
+      <div class="at">✅ 答案：B　「月」慌慌張張的閃到一邊說「我才不要進去！」</div>
+    </div>
+
+    <div class="mq" id="q4">
+      <div class="qt"><span class="n">4.</span>「馬」闖進去後，發生了什麼事？</div>
+      <ul class="op">
+        <li onclick="pick(this,'q4','A')"><span class="lr">A</span>變成了「問」</li>
+        <li onclick="pick(this,'q4','B')"><span class="lr">B</span>順利出來了</li>
+        <li onclick="pick(this,'q4','C')"><span class="lr">C</span>怎麼也出不來（變成「闖」） ✓</li>
+        <li onclick="pick(this,'q4','D')"><span class="lr">D</span>消失不見了</li>
+      </ul>
+      <button class="rb" onclick="reveal('q4')">看答案</button>
+      <div class="at">✅ 答案：C　門＋馬＝闖，「馬」進去後就出不來了。</div>
+    </div>
+
+    <div class="mq" id="q5">
+      <div class="qt"><span class="n">5.</span>這篇課文用了什麼方法來介紹漢字？</div>
+      <ul class="op">
+        <li onclick="pick(this,'q5','A')"><span class="lr">A</span>用數學加減說明筆畫</li>
+        <li onclick="pick(this,'q5','B')"><span class="lr">B</span>用故事說明部首加字變新字 ✓</li>
+        <li onclick="pick(this,'q5','C')"><span class="lr">C</span>用兒歌背注音</li>
+        <li onclick="pick(this,'q5','D')"><span class="lr">D</span>用圖片說明</li>
+      </ul>
+      <button class="rb" onclick="reveal('q5')">看答案</button>
+      <div class="at">✅ 答案：B　用奇怪的門這個故事，說明「門」＋某個字可以組成新字。</div>
+    </div>
+
+    <div class="sb"><button onclick="calcScore()">計算分數</button><div id="scoreDisplay"></div></div>
+  </section>
+
+  <section class="s4">
+    <h2>📝 填空練習</h2>
+    <div class="fi">1. 「耳」走進奇怪的門，立刻變成「___」出來。<span class="bl" id="f1">聞</span><button class="fb" onclick="sf('f1')">看答案</button></div>
+    <div class="fi">2. 「月」看到日的遭遇，___慌張的閃到一邊。<span class="bl" id="f2">慌慌</span><button class="fb" onclick="sf('f2')">看答案</button></div>
+    <div class="fi">3. 「馬」___進去，怎麼也出不來，變成了「闖」。<span class="bl" id="f3">闖</span><button class="fb" onclick="sf('f3')">看答案</button></div>
+    <div class="fi">4. 門＋馬＝___（衝進去出不來的字）。<span class="bl" id="f4">闖</span><button class="fb" onclick="sf('f4')">看答案</button></div>
+  </section>
+</div>
+<footer>115 學年度 二年級上學期 國語練習</footer>
+<script>
+const correct={'q1':'B','q2':'C','q3':'B','q4':'C','q5':'B'};
+const answered={};
+function pick(el,qid,letter){const q=document.getElementById(qid);q.querySelectorAll('li').forEach(l=>l.classList.remove('selected'));el.classList.add('selected');answered[qid]=letter;}
+function reveal(qid){const q=document.getElementById(qid);q.classList.add('sa');const ans=correct[qid];q.querySelectorAll('li').forEach((l,i)=>{if(String.fromCharCode(65+i)===ans)l.classList.add('correct');});}
+function calcScore(){let s=0,t=Object.keys(correct).length;Object.keys(correct).forEach(qid=>{if(answered[qid]===correct[qid])s++;reveal(qid);});document.getElementById('scoreDisplay').innerHTML=`<div class="sd">得分：${s} / ${t}（${Math.round(s/t*100)}分）</div>`;}
+function sf(id){const el=document.getElementById(id);if(el)el.classList.add('show');}
+</script>
+</body>
+</html>

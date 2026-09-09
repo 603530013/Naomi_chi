@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第一課 我的心情 ｜ 二年級上學期國語練習</title>
+<style>
+  :root{--pink:#ffd6e0;--pink-dark:#e85a8a;--green:#c8e6c9;--green-dark:#4caf50;--yellow:#fff4c2;--yellow-dark:#f5a623;--blue:#cfe8ff;--blue-dark:#1976d2;--purple:#e1d5f5;--purple-dark:#7b3fa0;--orange:#ffd9b3;--orange-dark:#e67700;--red:#ffcccc;--red-dark:#c0392b;--gray-light:#f5f5f5;}
+  *{box-sizing:border-box;}
+  body{font-family:"標楷體","DFKai-SB","BiauKai","KaiTi","微軟正黑體",serif;margin:0;padding:0;background:#fefcf7;color:#333;line-height:1.8;}
+  .container{max-width:1000px;margin:0 auto;padding:20px;}
+  header{background:linear-gradient(135deg,#ffd6e0,#e1d5f5);padding:30px 20px;text-align:center;border-radius:16px;margin-bottom:24px;box-shadow:0 4px 12px rgba(0,0,0,0.08);}
+  header h1{font-size:2.2em;margin:0 0 6px;color:var(--pink-dark);}
+  header .meta{color:#666;font-size:1em;}
+  .home-link{display:inline-block;background:var(--blue);color:var(--blue-dark);padding:6px 14px;border-radius:8px;text-decoration:none;margin-bottom:16px;font-size:0.95em;}
+  .home-link:hover{background:var(--blue-dark);color:#fff;}
+  section{background:#fff;border-radius:16px;padding:24px;margin-bottom:20px;box-shadow:0 2px 8px rgba(0,0,0,0.06);}
+  section h2{font-size:1.4em;margin:0 0 16px;padding:10px 16px;border-radius:8px;color:#fff;}
+  .sec-text h2{background:var(--pink-dark);}
+  .sec-vocab h2{background:var(--green-dark);}
+  .sec-mc h2{background:var(--blue-dark);}
+  .sec-fill h2{background:var(--orange-dark);}
+  /* 課文 */
+  .lesson-text{background:var(--yellow);border-radius:12px;padding:20px 28px;font-size:1.2em;line-height:2.2;}
+  .lesson-text p{margin:6px 0;}
+  .lesson-text .seg{margin:16px 0;padding:14px 18px;background:rgba(255,255,255,0.7);border-radius:10px;border-left:4px solid var(--pink-dark);}
+  .emotion-tag{display:inline-block;background:var(--pink-dark);color:#fff;border-radius:8px;padding:2px 10px;font-size:0.85em;margin-right:6px;}
+  /* 生字 */
+  .vocab-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;}
+  .vocab-chip{background:var(--green);color:var(--green-dark);border-radius:8px;padding:6px 14px;font-size:1.2em;font-weight:bold;cursor:default;}
+  /* 選擇題 */
+  .mc-q{background:var(--gray-light);border-radius:10px;padding:16px 20px;margin:12px 0;border-left:5px solid var(--blue-dark);}
+  .mc-q .qt{font-weight:bold;margin-bottom:10px;font-size:1.05em;}
+  .mc-q .qt .num{color:var(--blue-dark);margin-right:6px;}
+  .opts{list-style:none;padding:0;margin:0;}
+  .opts li{padding:8px 12px;margin:4px 0;background:#fff;border-radius:8px;border:2px solid transparent;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:10px;}
+  .opts li:hover{background:#fff8e1;border-color:var(--yellow-dark);}
+  .opts li.correct{background:#e8f5e9;border-color:var(--green-dark);font-weight:bold;}
+  .ltr{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--blue);color:var(--blue-dark);font-weight:bold;flex-shrink:0;}
+  .opts li.correct .ltr{background:var(--green-dark);color:#fff;}
+  .reveal-btn{margin-top:10px;background:var(--orange-dark);color:#fff;border:none;padding:7px 16px;border-radius:8px;cursor:pointer;font-family:inherit;font-size:0.95em;}
+  .reveal-btn:hover{background:#b85a00;}
+  .ans-text{margin-top:8px;padding:8px 12px;background:#fff;border-radius:6px;color:var(--green-dark);font-weight:bold;display:none;}
+  .show-ans .ans-text{display:block;}
+  /* 填空 */
+  .fill-item{background:var(--gray-light);border-radius:10px;padding:14px 18px;margin:10px 0;font-size:1.1em;}
+  .fill-item .blank{display:inline-block;border-bottom:2px solid var(--orange-dark);min-width:60px;text-align:center;color:transparent;user-select:none;}
+  .fill-item .blank.show{color:var(--orange-dark);}
+  .fill-btn{background:var(--orange-dark);color:#fff;border:none;padding:6px 14px;border-radius:8px;cursor:pointer;font-family:inherit;font-size:0.9em;margin-left:10px;}
+  .fill-btn:hover{background:#b85a00;}
+  footer{text-align:center;padding:20px;color:#aaa;font-size:0.9em;}
+  .score-bar{text-align:center;margin:16px 0;}
+  .score-bar button{background:var(--purple-dark);color:#fff;border:none;padding:10px 24px;border-radius:10px;font-size:1.05em;font-family:inherit;font-weight:bold;cursor:pointer;}
+  .score-bar button:hover{background:#5b2e7a;}
+  .score-display{display:inline-block;background:#e8f5e9;color:var(--green-dark);padding:8px 20px;border-radius:20px;font-size:1.1em;font-weight:bold;margin-top:10px;}
+</style>
+</head>
+<body>
+<div class="container">
+  <a class="home-link" href="index.html">← 回目錄</a>
+
+  <header>
+    <h1>第一課　我的心情</h1>
+    <div class="meta">作者：游珮芸　｜　二年級上學期</div>
+  </header>
+
+  <!-- 課文 -->
+  <section class="sec-text">
+    <h2>📖 課文重點</h2>
+    <div class="lesson-text">
+      <div class="seg">
+        <span class="emotion-tag">害怕</span>害怕的時候，<br>
+        心裡颳起冷冷的風，<br>
+        我好想躲起來。
+      </div>
+      <div class="seg">
+        <span class="emotion-tag">生氣</span>生氣的時候，<br>
+        心裡一會兒打雷，一會兒閃電，<br>
+        我好想叫出來。
+      </div>
+      <div class="seg">
+        <span class="emotion-tag">難過</span>難過的時候，<br>
+        心裡烏雲密布，下起傾盆大雨，<br>
+        我忍不住哭出來。
+      </div>
+      <div class="seg">
+        <span class="emotion-tag">開心</span>開心的時候，<br>
+        心裡充滿溫暖的陽光，<br>
+        我忍不住笑出來。
+      </div>
+      <div class="seg">
+        我的心情像天氣，會颳風，會打雷，<br>
+        但是，雨後放晴，也會出現美麗的彩虹。<br>
+        嘴角都跟著翹起來，好得意呀！
+      </div>
+    </div>
+  </section>
+
+  <!-- 生字 -->
+  <section class="sec-vocab">
+    <h2>🔤 本課生字</h2>
+    <div class="vocab-list">
+      <span class="vocab-chip">躲</span><span class="vocab-chip">冷</span><span class="vocab-chip">颳</span>
+      <span class="vocab-chip">候</span><span class="vocab-chip">電</span><span class="vocab-chip">閃</span>
+      <span class="vocab-chip">充</span><span class="vocab-chip">盆</span><span class="vocab-chip">傾</span>
+      <span class="vocab-chip">布</span><span class="vocab-chip">密</span><span class="vocab-chip">雲</span>
+      <span class="vocab-chip">烏</span><span class="vocab-chip">難</span><span class="vocab-chip">虹</span>
+      <span class="vocab-chip">麗</span><span class="vocab-chip">現</span><span class="vocab-chip">晴</span>
+      <span class="vocab-chip">放</span><span class="vocab-chip">滿</span>
+    </div>
+  </section>
+
+  <!-- 選擇題 -->
+  <section class="sec-mc">
+    <h2>✏️ 閱讀測驗</h2>
+
+    <div class="mc-q" id="q1">
+      <div class="qt"><span class="num">1.</span>害怕的時候，作者覺得心裡像什麼？</div>
+      <ul class="opts">
+        <li onclick="pick(this,'q1','A')"><span class="ltr">A</span>下起傾盆大雨</li>
+        <li onclick="pick(this,'q1','B')"><span class="ltr">B</span>颳起冷冷的風 ✓</li>
+        <li onclick="pick(this,'q1','C')"><span class="ltr">C</span>充滿溫暖的陽光</li>
+        <li onclick="pick(this,'q1','D')"><span class="ltr">D</span>一會兒打雷一會兒閃電</li>
+      </ul>
+      <button class="reveal-btn" onclick="reveal('q1')">看答案</button>
+      <div class="ans-text">✅ 答案：B　害怕的時候，心裡颳起冷冷的風。</div>
+    </div>
+
+    <div class="mc-q" id="q2">
+      <div class="qt"><span class="num">2.</span>生氣的時候，作者心裡會怎樣？</div>
+      <ul class="opts">
+        <li onclick="pick(this,'q2','A')"><span class="ltr">A</span>颳起冷冷的風</li>
+        <li onclick="pick(this,'q2','B')"><span class="ltr">B</span>充滿陽光</li>
+        <li onclick="pick(this,'q2','C')"><span class="ltr">C</span>一會兒打雷，一會兒閃電 ✓</li>
+        <li onclick="pick(this,'q2','D')"><span class="ltr">D</span>出現美麗彩虹</li>
+      </ul>
+      <button class="reveal-btn" onclick="reveal('q2')">看答案</button>
+      <div class="ans-text">✅ 答案：C　生氣時，心裡一會兒打雷，一會兒閃電。</div>
+    </div>
+
+    <div class="mc-q" id="q3">
+      <div class="qt"><span class="num">3.</span>難過的時候，作者忍不住做什麼？</div>
+      <ul class="opts">
+        <li onclick="pick(this,'q3','A')"><span class="ltr">A</span>笑出來</li>
+        <li onclick="pick(this,'q3','B')"><span class="ltr">B</span>叫出來</li>
+        <li onclick="pick(this,'q3','C')"><span class="ltr">C</span>躲起來</li>
+        <li onclick="pick(this,'q3','D')"><span class="ltr">D</span>哭出來 ✓</li>
+      </ul>
+      <button class="reveal-btn" onclick="reveal('q3')">看答案</button>
+      <div class="ans-text">✅ 答案：D　難過時，忍不住哭出來。</div>
+    </div>
+
+    <div class="mc-q" id="q4">
+      <div class="qt"><span class="num">4.</span>作者把心情比喻成什麼？</div>
+      <ul class="opts">
+        <li onclick="pick(this,'q4','A')"><span class="ltr">A</span>彩虹</li>
+        <li onclick="pick(this,'q4','B')"><span class="ltr">B</span>天氣 ✓</li>
+        <li onclick="pick(this,'q4','C')"><span class="ltr">C</span>大海</li>
+        <li onclick="pick(this,'q4','D')"><span class="ltr">D</span>陽光</li>
+      </ul>
+      <button class="reveal-btn" onclick="reveal('q4')">看答案</button>
+      <div class="ans-text">✅ 答案：B　「我的心情像天氣」。</div>
+    </div>
+
+    <div class="mc-q" id="q5">
+      <div class="qt"><span class="num">5.</span>雨後放晴，天空會出現什麼？</div>
+      <ul class="opts">
+        <li onclick="pick(this,'q5','A')"><span class="ltr">A</span>烏雲</li>
+        <li onclick="pick(this,'q5','B')"><span class="ltr">B</span>閃電</li>
+        <li onclick="pick(this,'q5','C')"><span class="ltr">C</span>美麗的彩虹 ✓</li>
+        <li onclick="pick(this,'q5','D')"><span class="ltr">D</span>傾盆大雨</li>
+      </ul>
+      <button class="reveal-btn" onclick="reveal('q5')">看答案</button>
+      <div class="ans-text">✅ 答案：C　雨後放晴，也會出現美麗的彩虹。</div>
+    </div>
+
+    <div class="score-bar">
+      <button onclick="calcScore()">計算分數</button>
+      <div id="scoreDisplay"></div>
+    </div>
+  </section>
+
+  <!-- 填空 -->
+  <section class="sec-fill">
+    <h2>📝 填空練習</h2>
+    <div class="fill-item">1. 害怕的時候，心裡颳起<span class="blank" id="f1">冷冷</span>的風。
+      <button class="fill-btn" onclick="showFill('f1')">看答案</button>
+    </div>
+    <div class="fill-item">2. 難過的時候，心裡烏雲<span class="blank" id="f2">密布</span>，下起傾盆大雨。
+      <button class="fill-btn" onclick="showFill('f2')">看答案</button>
+    </div>
+    <div class="fill-item">3. 雨後放晴，也會出現美麗的<span class="blank" id="f3">彩虹</span>。
+      <button class="fill-btn" onclick="showFill('f3')">看答案</button>
+    </div>
+    <div class="fill-item">4. 開心的時候，心裡充滿溫暖的<span class="blank" id="f4">陽光</span>，我忍不住<span class="blank" id="f4b">笑</span>出來。
+      <button class="fill-btn" onclick="showFill('f4');showFill('f4b')">看答案</button>
+    </div>
+  </section>
+
+</div>
+<footer>115 學年度 二年級上學期 國語練習</footer>
+<script>
+const correct={'q1':'B','q2':'C','q3':'D','q4':'B','q5':'C'};
+const answered={};
+function pick(el,qid,letter){
+  const q=document.getElementById(qid);
+  q.querySelectorAll('li').forEach(l=>l.classList.remove('selected'));
+  el.classList.add('selected');
+  answered[qid]=letter;
+}
+function reveal(qid){
+  const q=document.getElementById(qid);
+  q.classList.add('show-ans');
+  const ans=correct[qid];
+  q.querySelectorAll('li').forEach((l,i)=>{
+    const letter=String.fromCharCode(65+i);
+    if(letter===ans) l.classList.add('correct');
+  });
+}
+function calcScore(){
+  let score=0,total=Object.keys(correct).length;
+  Object.keys(correct).forEach(qid=>{
+    if(answered[qid]===correct[qid]) score++;
+    reveal(qid);
+  });
+  document.getElementById('scoreDisplay').innerHTML=`<div class="score-display">得分：${score} / ${total}（${Math.round(score/total*100)}分）</div>`;
+}
+function showFill(id){
+  const el=document.getElementById(id);
+  if(el) el.classList.add('show');
+}
+</script>
+</body>
+</html>
