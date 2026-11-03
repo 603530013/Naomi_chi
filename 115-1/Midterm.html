@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>期中考總複習（一～六課）｜ 二年級上學期國語練習</title>
+<style>
+  :root{--pink:#ffd6e0;--pink-dark:#e85a8a;--green:#c8e6c9;--green-dark:#4caf50;--yellow:#fff4c2;--yellow-dark:#f5a623;--blue:#cfe8ff;--blue-dark:#1976d2;--purple:#e1d5f5;--purple-dark:#7b3fa0;--orange:#ffd9b3;--orange-dark:#e67700;--red:#ffcccc;--red-dark:#c0392b;--teal:#b2ebf2;--teal-dark:#00838f;--gray-light:#f5f5f5;}
+  *{box-sizing:border-box;}
+  body{font-family:"標楷體","DFKai-SB","BiauKai","KaiTi","微軟正黑體",serif;margin:0;padding:0;background:#fefcf7;color:#333;line-height:1.8;}
+  .container{max-width:1100px;margin:0 auto;padding:20px;}
+  header{background:linear-gradient(135deg,#e1d5f5 0%,#ffd6e0 50%,#fff4c2 100%);padding:30px 20px;text-align:center;border-radius:16px;margin-bottom:30px;box-shadow:0 4px 12px rgba(0,0,0,0.08);}
+  header h1{font-size:2.4em;margin:0 0 10px;color:var(--red-dark);}
+  header .meta{font-size:.95em;color:#555;}
+  header .scope{display:inline-block;background:rgba(255,255,255,.7);padding:6px 16px;border-radius:20px;margin-top:10px;font-weight:bold;color:var(--purple-dark);}
+  .home-link{display:inline-block;background:var(--blue);color:var(--blue-dark);padding:6px 14px;border-radius:8px;text-decoration:none;margin-bottom:14px;font-size:.95em;}
+  .home-link:hover{background:var(--blue-dark);color:#fff;}
+  .toc{background:#fff;border:2px dashed var(--yellow-dark);border-radius:12px;padding:16px 24px;margin-bottom:30px;}
+  .toc h3{margin:0 0 10px;color:var(--orange-dark);}
+  .toc ol{margin:0;padding-left:24px;}.toc li{margin:4px 0;}
+  .toc a{color:#333;text-decoration:none;}.toc a:hover{color:var(--pink-dark);text-decoration:underline;}
+  section{background:#fff;border-radius:16px;padding:24px;margin-bottom:24px;box-shadow:0 2px 8px rgba(0,0,0,0.06);}
+  section h2{font-size:1.5em;margin:0 0 16px;padding:10px 16px;border-radius:8px;color:#fff;}
+  .sec-A h2{background:var(--pink-dark);}
+  .sec-B h2{background:var(--blue-dark);}
+  .sec-C h2{background:var(--green-dark);}
+  .sec-D h2{background:var(--purple-dark);}
+  .sec-E h2{background:var(--orange-dark);}
+  .sec-F h2{background:var(--teal-dark);}
+  .sec-G h2{background:var(--red-dark);}
+  /* vocab chips */
+  .lesson-label{display:inline-block;background:var(--purple-dark);color:#fff;border-radius:6px;padding:3px 10px;font-size:.85em;margin-bottom:10px;}
+  .vc{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 18px;}
+  .vc span{background:var(--green);color:var(--green-dark);border-radius:8px;padding:5px 12px;font-size:1.15em;font-weight:bold;}
+  /* MC */
+  .mc{background:var(--gray-light);padding:16px 20px;border-radius:10px;margin:12px 0;border-left:5px solid var(--pink-dark);}
+  .mc.blue{border-left-color:var(--blue-dark);}
+  .mc.green{border-left-color:var(--green-dark);}
+  .mc.purple{border-left-color:var(--purple-dark);}
+  .mc.orange{border-left-color:var(--orange-dark);}
+  .mc.teal{border-left-color:var(--teal-dark);}
+  .mc .q{font-weight:bold;margin-bottom:10px;font-size:1.05em;}
+  .mc .q .num{color:var(--red-dark);margin-right:6px;}
+  .mc .tag{display:inline-block;background:var(--purple);color:var(--purple-dark);border-radius:4px;padding:1px 7px;font-size:.78em;margin-right:6px;}
+  ul.op{list-style:none;padding:0;margin:0;}
+  ul.op li{padding:8px 12px;margin:5px 0;background:#fff;border-radius:8px;border:2px solid transparent;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:10px;}
+  ul.op li:hover{background:#fff8e1;border-color:var(--yellow-dark);}
+  ul.op li.correct{background:#e8f5e9;border-color:var(--green-dark);font-weight:bold;}
+  .lr{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--pink);color:var(--pink-dark);font-weight:bold;flex-shrink:0;}
+  ul.op li.correct .lr{background:var(--green-dark);color:#fff;}
+  .rb{margin-top:10px;background:var(--orange-dark);color:#fff;border:none;padding:8px 18px;border-radius:8px;cursor:pointer;font-family:inherit;font-size:1em;}
+  .rb:hover{background:#b85a00;}
+  .at{margin-top:8px;padding:8px 12px;background:#fff;border-radius:6px;color:var(--green-dark);font-weight:bold;display:none;}
+  .sa .at{display:block;}
+  /* fill-in */
+  .fi{background:var(--gray-light);border-radius:10px;padding:14px 18px;margin:10px 0;font-size:1.08em;}
+  .fi .tag{display:inline-block;background:var(--blue);color:var(--blue-dark);border-radius:4px;padding:1px 7px;font-size:.78em;margin-right:6px;}
+  .bl{display:inline-block;border-bottom:2px solid var(--purple-dark);min-width:60px;text-align:center;color:transparent;user-select:none;}
+  .bl.show{color:var(--purple-dark);}
+  .fb{background:var(--purple-dark);color:#fff;border:none;padding:5px 12px;border-radius:8px;cursor:pointer;font-family:inherit;font-size:.9em;margin-left:8px;}
+  .fb:hover{background:#5b2e7a;}
+  /* score */
+  .score-bar{text-align:center;margin:24px 0;}
+  .score-bar button{background:var(--purple-dark);color:#fff;border:none;padding:12px 28px;border-radius:10px;font-size:1.1em;font-family:inherit;font-weight:bold;cursor:pointer;}
+  .score-bar button:hover{background:#5b2e7a;}
+  .sd{display:inline-block;background:#e8f5e9;color:var(--green-dark);padding:10px 24px;border-radius:24px;font-size:1.2em;font-weight:bold;margin:14px 0;}
+  .reveal-all{text-align:center;margin:10px 0 20px;}
+  .reveal-all button{background:var(--blue-dark);color:#fff;border:none;padding:10px 24px;border-radius:10px;font-size:1em;font-family:inherit;cursor:pointer;}
+  .reveal-all button:hover{background:#1255a0;}
+  footer{text-align:center;padding:20px;color:#888;font-size:.9em;}
+</style>
+</head>
+<body>
+<div class="container">
+
+<a href="index.html" class="home-link">← 回目錄</a>
+
+<header>
+  <h1>期中考總複習</h1>
+  <div class="meta">115 學年度　二年級上學期　國語</div>
+  <div class="scope">範圍：第一課 ～ 第六課</div>
+</header>
+
+<!-- 目錄 -->
+<div class="toc">
+  <h3>📋 本頁內容</h3>
+  <ol>
+    <li><a href="#vocab">各課重點生字複習</a></li>
+    <li><a href="#mc">閱讀測驗（選擇題 20 題）</a></li>
+    <li><a href="#fill">填空練習（12 題）</a></li>
+  </ol>
+</div>
+
+<!-- A. 生字複習 -->
+<section class="sec-A" id="vocab">
+  <h2>🔤 A　各課重點生字</h2>
+
+  <div class="lesson-label">第一課　我的心情</div>
+  <div class="vc">
+    <span>情</span><span>害</span><span>怕</span><span>難</span><span>過</span>
+    <span>生</span><span>氣</span><span>開</span><span>心</span><span>快</span>
+    <span>樂</span><span>悶</span><span>熱</span><span>涼</span><span>爽</span>
+  </div>
+
+  <div class="lesson-label">第二課　彩色的天空</div>
+  <div class="vc">
+    <span>轉</span><span>校</span><span>希</span><span>望</span><span>雲</span>
+    <span>朵</span><span>夥</span><span>伴</span><span>溫</span><span>暖</span>
+    <span>連</span><span>絡</span><span>卡</span><span>張</span><span>新</span>
+  </div>
+
+  <div class="lesson-label">第三課　國王做新衣</div>
+  <div class="vc">
+    <span>設</span><span>計</span><span>料</span><span>功</span><span>服</span>
+    <span>展</span><span>示</span><span>鼓</span><span>勵</span><span>讚</span>
+    <span>美</span><span>王</span><span>新</span><span>衣</span><span>裁</span>
+  </div>
+
+  <div class="lesson-label">第四課　水草下的呱呱</div>
+  <div class="vc">
+    <span>蛙</span><span>呱</span><span>草</span><span>搖</span><span>葉</span>
+    <span>靜</span><span>隱</span><span>棲</span><span>唱</span><span>藏</span>
+    <span>水</span><span>浮</span><span>趣</span>
+  </div>
+
+  <div class="lesson-label">第五課　沙灘上的畫</div>
+  <div class="vc">
+    <span>沙</span><span>灘</span><span>浪</span><span>螃</span><span>蟹</span>
+    <span>橫</span><span>行</span><span>腳</span><span>印</span><span>退</span>
+    <span>步</span><span>向</span><span>前</span>
+  </div>
+
+  <div class="lesson-label">第六課　草叢裡的星星</div>
+  <div class="vc">
+    <span>竹</span><span>屋</span><span>散</span><span>飯</span><span>晚</span>
+    <span>奶</span><span>暗</span><span>旁</span><span>溪</span><span>聚</span>
+    <span>林</span><span>顆</span><span>叢</span><span>亮</span>
+  </div>
+</section>
+
+<!-- B. 選擇題 -->
+<section class="sec-B" id="mc">
+  <h2>✏️ B　閱讀測驗（共 20 題）</h2>
+
+  <!-- 第一課 -->
+  <div class="mc" id="q1">
+    <div class="q"><span class="num">1.</span><span class="tag">第一課</span>課文說「害怕的心情，像什麼天氣？」</div>
+    <ul class="op">
+      <li onclick="pick(this,'q1','A')"><span class="lr">A</span>晴天</li>
+      <li onclick="pick(this,'q1','B')"><span class="lr">B</span>打雷閃電的天氣</li>
+      <li onclick="pick(this,'q1','C')"><span class="lr">C</span>下雪</li>
+      <li onclick="pick(this,'q1','D')"><span class="lr">D</span>颱風天</li>
+    </ul>
+    <button class="rb" onclick="reveal('q1')">看答案</button>
+    <div class="at">✅ 答案：B　害怕的心情像打雷閃電的天氣，讓人瑟瑟發抖。</div>
+  </div>
+
+  <div class="mc" id="q2">
+    <div class="q"><span class="num">2.</span><span class="tag">第一課</span>「開心的心情」在課文裡被比喻成什麼？</div>
+    <ul class="op">
+      <li onclick="pick(this,'q2','A')"><span class="lr">A</span>烏雲蓋天</li>
+      <li onclick="pick(this,'q2','B')"><span class="lr">B</span>涼爽的風</li>
+      <li onclick="pick(this,'q2','C')"><span class="lr">C</span>陽光普照的好天氣</li>
+      <li onclick="pick(this,'q2','D')"><span class="lr">D</span>下大雨</li>
+    </ul>
+    <button class="rb" onclick="reveal('q2')">看答案</button>
+    <div class="at">✅ 答案：C　開心的心情像陽光普照的好天氣，讓人感覺溫暖快樂。</div>
+  </div>
+
+  <div class="mc blue" id="q3">
+    <div class="q"><span class="num">3.</span><span class="tag">第一課</span>課文用「天氣」來比喻什麼？</div>
+    <ul class="op">
+      <li onclick="pick(this,'q3','A')"><span class="lr">A</span>季節的變化</li>
+      <li onclick="pick(this,'q3','B')"><span class="lr">B</span>各種心情的感受</li>
+      <li onclick="pick(this,'q3','C')"><span class="lr">C</span>大自然的景色</li>
+      <li onclick="pick(this,'q3','D')"><span class="lr">D</span>食物的味道</li>
+    </ul>
+    <button class="rb" onclick="reveal('q3')">看答案</button>
+    <div class="at">✅ 答案：B　課文以各種天氣比喻人的各種心情。</div>
+  </div>
+
+  <!-- 第二課 -->
+  <div class="mc green" id="q4">
+    <div class="q"><span class="num">4.</span><span class="tag">第二課</span>彩色的天空中，轉學生在雲形卡片上寫了什麼？</div>
+    <ul class="op">
+      <li onclick="pick(this,'q4','A')"><span class="lr">A</span>自我介紹</li>
+      <li onclick="pick(this,'q4','B')"><span class="lr">B</span>對新學校的希望和心願</li>
+      <li onclick="pick(this,'q4','C')"><span class="lr">C</span>給舊朋友的信</li>
+      <li onclick="pick(this,'q4','D')"><span class="lr">D</span>今天的日記</li>
+    </ul>
+    <button class="rb" onclick="reveal('q4')">看答案</button>
+    <div class="at">✅ 答案：B　轉學生在雲形卡片上寫下對新學校新學期的希望。</div>
+  </div>
+
+  <div class="mc green" id="q5">
+    <div class="q"><span class="num">5.</span><span class="tag">第二課</span>為什麼天空變得「彩色」了？</div>
+    <ul class="op">
+      <li onclick="pick(this,'q5','A')"><span class="lr">A</span>因為出現彩虹</li>
+      <li onclick="pick(this,'q5','B')"><span class="lr">B</span>因為同學貼的各色雲形卡片飄在窗邊</li>
+      <li onclick="pick(this,'q5','C')"><span class="lr">C</span>因為老師畫了圖</li>
+      <li onclick="pick(this,'q5','D')"><span class="lr">D</span>因為同學送了氣球</li>
+    </ul>
+    <button class="rb" onclick="reveal('q5')">看答案</button>
+    <div class="at">✅ 答案：B　同學們把五顏六色的雲形卡片貼在窗邊，天空變得彩色了。</div>
+  </div>
+
+  <div class="mc green" id="q6">
+    <div class="q"><span class="num">6.</span><span class="tag">第二課</span>雲形卡片代表了什麼含義？</div>
+    <ul class="op">
+      <li onclick="pick(this,'q6','A')"><span class="lr">A</span>同學的溫暖歡迎和心願</li>
+      <li onclick="pick(this,'q6','B')"><span class="lr">B</span>美術課的作業</li>
+      <li onclick="pick(this,'q6','C')"><span class="lr">C</span>天氣預報</li>
+      <li onclick="pick(this,'q6','D')"><span class="lr">D</span>班上的規定</li>
+    </ul>
+    <button class="rb" onclick="reveal('q6')">看答案</button>
+    <div class="at">✅ 答案：A　每張卡片都代表同學對彼此的歡迎和美好心願。</div>
+  </div>
+
+  <!-- 第三課 -->
+  <div class="mc purple" id="q7">
+    <div class="q"><span class="num">7.</span><span class="tag">第三課</span>國王最喜歡做什麼？</div>
+    <ul class="op">
+      <li onclick="pick(this,'q7','A')"><span class="lr">A</span>騎馬打仗</li>
+      <li onclick="pick(this,'q7','B')"><span class="lr">B</span>穿新衣服</li>
+      <li onclick="pick(this,'q7','C')"><span class="lr">C</span>看書</li>
+      <li onclick="pick(this,'q7','D')"><span class="lr">D</span>種花</li>
+    </ul>
+    <button class="rb" onclick="reveal('q7')">看答案</button>
+    <div class="at">✅ 答案：B　國王最喜歡穿新衣服，每天都要穿不一樣的衣服。</div>
+  </div>
+
+  <div class="mc purple" id="q8">
+    <div class="q"><span class="num">8.</span><span class="tag">第三課</span>國王後來學會了什麼？</div>
+    <ul class="op">
+      <li onclick="pick(this,'q8','A')"><span class="lr">A</span>只會命令別人</li>
+      <li onclick="pick(this,'q8','B')"><span class="lr">B</span>自己設計衣服並分享給大家</li>
+      <li onclick="pick(this,'q8','C')"><span class="lr">C</span>放棄穿新衣</li>
+      <li onclick="pick(this,'q8','D')"><span class="lr">D</span>學做飯</li>
+    </ul>
+    <button class="rb" onclick="reveal('q8')">看答案</button>
+    <div class="at">✅ 答案：B　國王學會設計衣服，也懂得把心意分享給大家。</div>
+  </div>
+
+  <div class="mc purple" id="q9">
+    <div class="q"><span class="num">9.</span><span class="tag">第三課</span>這篇故事想告訴我們什麼道理？</div>
+    <ul class="op">
+      <li onclick="pick(this,'q9','A')"><span class="lr">A</span>衣服越貴越好</li>
+      <li onclick="pick(this,'q9','B')"><span class="lr">B</span>做自己喜歡的事，也要懂得分享</li>
+      <li onclick="pick(this,'q9','C')"><span class="lr">C</span>國王比大家厲害</li>
+      <li onclick="pick(this,'q9','D')"><span class="lr">D</span>新衣服要天天換</li>
+    </ul>
+    <button class="rb" onclick="reveal('q9')">看答案</button>
+    <div class="at">✅ 答案：B　努力學習自己的興趣，並把成果與大家分享。</div>
+  </div>
+
+  <!-- 第四課 -->
+  <div class="mc orange" id="q10">
+    <div class="q"><span class="num">10.</span><span class="tag">第四課</span>「水草下的呱呱」是什麼動物在唱歌？</div>
+    <ul class="op">
+      <li onclick="pick(this,'q10','A')"><span class="lr">A</span>鳥</li>
+      <li onclick="pick(this,'q10','B')"><span class="lr">B</span>青蛙</li>
+      <li onclick="pick(this,'q10','C')"><span class="lr">C</span>魚</li>
+      <li onclick="pick(this,'q10','D')"><span class="lr">D</span>蟬</li>
+    </ul>
+    <button class="rb" onclick="reveal('q10')">看答案</button>
+    <div class="at">✅ 答案：B　呱呱是青蛙的叫聲，「水草下的呱呱」就是藏在水草下的青蛙。</div>
+  </div>
+
+  <div class="mc orange" id="q11">
+    <div class="q"><span class="num">11.</span><span class="tag">第四課</span>這篇課文是用什麼文體寫成的？</div>
+    <ul class="op">
+      <li onclick="pick(this,'q11','A')"><span class="lr">A</span>日記</li>
+      <li onclick="pick(this,'q11','B')"><span class="lr">B</span>詩歌</li>
+      <li onclick="pick(this,'q11','C')"><span class="lr">C</span>說明文</li>
+      <li onclick="pick(this,'q11','D')"><span class="lr">D</span>故事</li>
+    </ul>
+    <button class="rb" onclick="reveal('q11')">看答案</button>
+    <div class="at">✅ 答案：B　水草下的呱呱是一首詩，用節奏感的語言描述青蛙的生活。</div>
+  </div>
+
+  <div class="mc orange" id="q12">
+    <div class="q"><span class="num">12.</span><span class="tag">第四課</span>青蛙藏在哪裡？</div>
+    <ul class="op">
+      <li onclick="pick(this,'q12','A')"><span class="lr">A</span>樹葉下</li>
+      <li onclick="pick(this,'q12','B')"><span class="lr">B</span>石頭縫裡</li>
+      <li onclick="pick(this,'q12','C')"><span class="lr">C</span>水草下</li>
+      <li onclick="pick(this,'q12','D')"><span class="lr">D</span>泥土裡</li>
+    </ul>
+    <button class="rb" onclick="reveal('q12')">看答案</button>
+    <div class="at">✅ 答案：C　青蛙躲藏在水草下面，呱呱唱歌。</div>
+  </div>
+
+  <!-- 第五課 -->
+  <div class="mc" id="q13" style="border-left-color:var(--pink-dark);">
+    <div class="q"><span class="num">13.</span><span class="tag">第五課</span>沙灘上的畫中，螃蟹走路有什麼特別之處？</div>
+    <ul class="op">
+      <li onclick="pick(this,'q13','A')"><span class="lr">A</span>走得很快</li>
+      <li onclick="pick(this,'q13','B')"><span class="lr">B</span>橫著走</li>
+      <li onclick="pick(this,'q13','C')"><span class="lr">C</span>倒退著走</li>
+      <li onclick="pick(this,'q13','D')"><span class="lr">D</span>跳著走</li>
+    </ul>
+    <button class="rb" onclick="reveal('q13')">看答案</button>
+    <div class="at">✅ 答案：B　螃蟹橫著走，在沙灘上留下橫走的腳印。</div>
+  </div>
+
+  <div class="mc" id="q14" style="border-left-color:var(--pink-dark);">
+    <div class="q"><span class="num">14.</span><span class="tag">第五課</span>沙灘上的「畫」是什麼？</div>
+    <ul class="op">
+      <li onclick="pick(this,'q14','A')"><span class="lr">A</span>小朋友用沙子畫的圖</li>
+      <li onclick="pick(this,'q14','B')"><span class="lr">B</span>螃蟹在沙灘上走出的腳印</li>
+      <li onclick="pick(this,'q14','C')"><span class="lr">C</span>浪花畫出的線條</li>
+      <li onclick="pick(this,'q14','D')"><span class="lr">D</span>貝殼排成的圖案</li>
+    </ul>
+    <button class="rb" onclick="reveal('q14')">看答案</button>
+    <div class="at">✅ 答案：B　螃蟹走過沙灘留下的腳印，就是沙灘上的畫。</div>
+  </div>
+
+  <div class="mc" id="q15" style="border-left-color:var(--pink-dark);">
+    <div class="q"><span class="num">15.</span><span class="tag">第五課</span>課文中，浪花打來後，沙灘上的腳印發生了什麼事？</div>
+    <ul class="op">
+      <li onclick="pick(this,'q15','A')"><span class="lr">A</span>變得更清晰</li>
+      <li onclick="pick(this,'q15','B')"><span class="lr">B</span>被沖走了</li>
+      <li onclick="pick(this,'q15','C')"><span class="lr">C</span>變成圖案</li>
+      <li onclick="pick(this,'q15','D')"><span class="lr">D</span>越來越多</li>
+    </ul>
+    <button class="rb" onclick="reveal('q15')">看答案</button>
+    <div class="at">✅ 答案：B　浪花打來，把沙灘上螃蟹的腳印沖走了。</div>
+  </div>
+
+  <!-- 第六課 -->
+  <div class="mc teal" id="q16">
+    <div class="q"><span class="num">16.</span><span class="tag">第六課</span>草叢裡的星星是用什麼文體寫的？</div>
+    <ul class="op">
+      <li onclick="pick(this,'q16','A')"><span class="lr">A</span>詩</li>
+      <li onclick="pick(this,'q16','B')"><span class="lr">B</span>日記</li>
+      <li onclick="pick(this,'q16','C')"><span class="lr">C</span>故事</li>
+      <li onclick="pick(this,'q16','D')"><span class="lr">D</span>說明文</li>
+    </ul>
+    <button class="rb" onclick="reveal('q16')">看答案</button>
+    <div class="at">✅ 答案：B　課文開頭有○月○日、星期幾、天氣，是日記格式。</div>
+  </div>
+
+  <div class="mc teal" id="q17">
+    <div class="q"><span class="num">17.</span><span class="tag">第六課</span>草叢裡的「星星」其實是什麼？</div>
+    <ul class="op">
+      <li onclick="pick(this,'q17','A')"><span class="lr">A</span>真正的星星落下來</li>
+      <li onclick="pick(this,'q17','B')"><span class="lr">B</span>螢火蟲</li>
+      <li onclick="pick(this,'q17','C')"><span class="lr">C</span>小燈籠</li>
+      <li onclick="pick(this,'q17','D')"><span class="lr">D</span>路燈的倒影</li>
+    </ul>
+    <button class="rb" onclick="reveal('q17')">看答案</button>
+    <div class="at">✅ 答案：B　草叢裡一閃一閃的光是螢火蟲，被比喻成星星。</div>
+  </div>
+
+  <div class="mc teal" id="q18">
+    <div class="q"><span class="num">18.</span><span class="tag">第六課</span>爸爸說「星星」想做什麼？</div>
+    <ul class="op">
+      <li onclick="pick(this,'q18','A')"><span class="lr">A</span>飛到天上去</li>
+      <li onclick="pick(this,'q18','B')"><span class="lr">B</span>跟你做新朋友</li>
+      <li onclick="pick(this,'q18','C')"><span class="lr">C</span>找媽媽</li>
+      <li onclick="pick(this,'q18','D')"><span class="lr">D</span>睡覺</li>
+    </ul>
+    <button class="rb" onclick="reveal('q18')">看答案</button>
+    <div class="at">✅ 答案：B　爸爸說「星星想要跟你做新朋友！」</div>
+  </div>
+
+  <div class="mc teal" id="q19">
+    <div class="q"><span class="num">19.</span><span class="tag">第六課</span>全家人散步時穿過了哪裡？</div>
+    <ul class="op">
+      <li onclick="pick(this,'q19','A')"><span class="lr">A</span>果園</li>
+      <li onclick="pick(this,'q19','B')"><span class="lr">B</span>花田</li>
+      <li onclick="pick(this,'q19','C')"><span class="lr">C</span>竹林</li>
+      <li onclick="pick(this,'q19','D')"><span class="lr">D</span>森林</li>
+    </ul>
+    <button class="rb" onclick="reveal('q19')">看答案</button>
+    <div class="at">✅ 答案：C　他們穿過屋後的竹林，竹林兩旁長滿了竹，天色很暗。</div>
+  </div>
+
+  <div class="mc" id="q20" style="border-left-color:var(--red-dark);">
+    <div class="q"><span class="num">20.</span><span class="tag">綜合</span>下列哪一課是用「詩歌」形式寫的？</div>
+    <ul class="op">
+      <li onclick="pick(this,'q20','A')"><span class="lr">A</span>第二課 彩色的天空</li>
+      <li onclick="pick(this,'q20','B')"><span class="lr">B</span>第四課 水草下的呱呱</li>
+      <li onclick="pick(this,'q20','C')"><span class="lr">C</span>第六課 草叢裡的星星</li>
+      <li onclick="pick(this,'q20','D')"><span class="lr">D</span>第三課 國王做新衣</li>
+    </ul>
+    <button class="rb" onclick="reveal('q20')">看答案</button>
+    <div class="at">✅ 答案：B　第四課「水草下的呱呱」是詩歌；第六課是日記；第二、三課是記敘文。</div>
+  </div>
+
+  <div class="reveal-all">
+    <button onclick="revealAll()">全部顯示答案</button>
+  </div>
+  <div class="score-bar">
+    <button onclick="calcScore()">計算我的分數</button>
+    <div id="scoreDisplay"></div>
+  </div>
+</section>
+
+<!-- C. 填空 -->
+<section class="sec-C" id="fill">
+  <h2>📝 C　填空練習（共 12 題）</h2>
+
+  <div class="fi"><span class="tag">第一課</span>1. 害怕的心情，就像打___閃電的天氣，讓人瑟瑟發抖。<span class="bl" id="f1">雷</span><button class="fb" onclick="sf('f1')">看答案</button></div>
+  <div class="fi"><span class="tag">第一課</span>2. 課文用各種___氣，來比喻不同的心情。<span class="bl" id="f2">天</span><button class="fb" onclick="sf('f2')">看答案</button></div>
+  <div class="fi"><span class="tag">第二課</span>3. 轉學生把心願寫在___形卡片上，貼在窗邊。<span class="bl" id="f3">雲</span><button class="fb" onclick="sf('f3')">看答案</button></div>
+  <div class="fi"><span class="tag">第二課</span>4. 窗邊掛滿了五顏六色的卡片，天空變得___色了。<span class="bl" id="f4">彩</span><button class="fb" onclick="sf('f4')">看答案</button></div>
+  <div class="fi"><span class="tag">第三課</span>5. 國王最喜歡穿___衣服，後來學會自己___計服裝。<span class="bl" id="f5">新／設</span><button class="fb" onclick="sf('f5')">看答案</button></div>
+  <div class="fi"><span class="tag">第三課</span>6. 國王把自己設計的衣服展示給大家，大家都___美他。<span class="bl" id="f6">讚</span><button class="fb" onclick="sf('f6')">看答案</button></div>
+  <div class="fi"><span class="tag">第四課</span>7. 青蛙藏在___草下，呱呱___歌。<span class="bl" id="f7">水／唱</span><button class="fb" onclick="sf('f7')">看答案</button></div>
+  <div class="fi"><span class="tag">第四課</span>8. 「水草下的呱呱」是一首___，用節奏感的語言描述青蛙。<span class="bl" id="f8">詩</span><button class="fb" onclick="sf('f8')">看答案</button></div>
+  <div class="fi"><span class="tag">第五課</span>9. 螃蟹___著走，在沙灘上留下腳印，就像沙灘上的___。<span class="bl" id="f9">橫／畫</span><button class="fb" onclick="sf('f9')">看答案</button></div>
+  <div class="fi"><span class="tag">第五課</span>10. 浪花打來，把沙灘上的腳印都___走了。<span class="bl" id="f10">沖</span><button class="fb" onclick="sf('f10')">看答案</button></div>
+  <div class="fi"><span class="tag">第六課</span>11. 草叢裡一閃一閃的光是___火蟲，被爸爸比喻成星星。<span class="bl" id="f11">螢</span><button class="fb" onclick="sf('f11')">看答案</button></div>
+  <div class="fi"><span class="tag">第六課</span>12. 「草叢裡的星星」是用___記形式寫的，開頭有日期和天氣。<span class="bl" id="f12">日</span><button class="fb" onclick="sf('f12')">看答案</button></div>
+</section>
+
+<footer>115 學年度　二年級上學期　期中考總複習　第一課 ～ 第六課</footer>
+</div>
+
+<script>
+const correct={q1:'B',q2:'C',q3:'B',q4:'B',q5:'B',q6:'A',q7:'B',q8:'B',q9:'B',q10:'B',q11:'B',q12:'C',q13:'B',q14:'B',q15:'B',q16:'B',q17:'B',q18:'B',q19:'C',q20:'B'};
+const answered={};
+function pick(el,qid,letter){const q=document.getElementById(qid);q.querySelectorAll('li').forEach(l=>l.classList.remove('selected'));el.classList.add('selected');answered[qid]=letter;}
+function reveal(qid){const q=document.getElementById(qid);q.classList.add('sa');const ans=correct[qid];q.querySelectorAll('li').forEach((l,i)=>{if(String.fromCharCode(65+i)===ans)l.classList.add('correct');});}
+function revealAll(){Object.keys(correct).forEach(qid=>reveal(qid));}
+function calcScore(){let s=0,t=Object.keys(correct).length;Object.keys(correct).forEach(qid=>{if(answered[qid]===correct[qid])s++;reveal(qid);});document.getElementById('scoreDisplay').innerHTML=`<div class="sd">得分：${s} / ${t}（${Math.round(s/t*100)}分）</div>`;}
+function sf(id){const el=document.getElementById(id);if(el)el.classList.add('show');}
+</script>
+</body>
+</html>
